@@ -4,9 +4,10 @@ import Order from "./Order";
 import SyncLog from "./SyncLog";
 import Notification from "./Notification";
 import StoreSetting from "./StoreSetting";
+import User from "./User";
 
 // Associations
 Product.hasOne(Inventory, { foreignKey: "product_id", as: "inventory" });
 Inventory.belongsTo(Product, { foreignKey: "product_id", as: "product" });
 
-export { Product, Inventory, Order, SyncLog, Notification, StoreSetting };
+export { Product, Inventory, Order, SyncLog, Notification, StoreSetting, User };

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const shopName = process.env.SHOPIFY_SHOP_NAME; 
-const apiVersion = process.env.SHOPIFY_API_VERSION || "2023-10";
+const apiVersion = process.env.SHOPIFY_API_VERSION || "2025-10";
 const adminAPI = process.env.SHOPIFY_ADMIN_API ;
 
 
