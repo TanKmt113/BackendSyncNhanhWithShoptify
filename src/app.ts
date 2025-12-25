@@ -1,5 +1,4 @@
 import express from "express";
-import session from "express-session";
 import morgan from "morgan";
 import bodyParser from "body-parser";
 import cors from "cors";
