@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    // File Layout
+    // "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment Settings - DÙNG COMMONJS CHO ts-node-dev
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "lib": ["ES2020"],
+    "types": ["node"],
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Recommended Options
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+
+    // TẮT MẤY CÁI GÂY LỖI VỚI CJS
+    "verbatimModuleSyntax": false,
+    "isolatedModules": false,
+    "moduleDetection": "auto"
+
+    // Nếu bạn không dùng React thì bỏ luôn jsx
+    // "jsx": "react-jsx",
+    // "noUncheckedSideEffectImports": true
+  }
+}
