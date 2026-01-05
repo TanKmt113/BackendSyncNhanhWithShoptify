@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize";
-import mysql2 from "mysql2"; // 1. Import mysql2 thủ công
+import mysql2 from "mysql2";
 import dotenv from "dotenv";
 
 dotenv.config();
