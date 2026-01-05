@@ -1,6 +1,7 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../models/User";
+import { Op } from "sequelize";
 
 const JWT_SECRET = process.env.JWT_SECRET || "default_secret";
 const SALT_ROUNDS = 10;
@@ -8,7 +9,7 @@ const SALT_ROUNDS = 10;
 class AuthService {
     async register(data: any) {
         const { username, password, email } = data;
-        
+
         const existingUser = await User.findOne({ where: { username } });
         if (existingUser) {
             throw new Error("Username already exists");
@@ -22,7 +23,7 @@ class AuthService {
         }
 
         const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
-        
+
         const user = await User.create({
             username,
             password: hashedPassword,
@@ -35,13 +36,21 @@ class AuthService {
     async login(data: any) {
         const { username, password } = data;
 
-        const user = await User.findOne({ where: { username } });
+        const user = await User.findOne({
+            where: {
+                [Op.or]: [
+                    { username: username },
+                    { email: username }
+                ]
+            }
+        });
+
         if (!user) {
-            throw new Error("User not found");
+            throw new Error("User not found 1");
         }
 
         if (!user.password) {
-             throw new Error("Invalid credentials"); // Or specific message: "Please login with Google"
+            throw new Error("Invalid credentials"); // Or specific message: "Please login with Google"
         }
 
         const isMatch = await bcrypt.compare(password, user.password);
@@ -58,11 +67,11 @@ class AuthService {
         const user = await User.findByPk(userId, {
             attributes: { exclude: ["password"] }
         });
-        
+
         if (!user) {
             throw new Error("User not found");
         }
-        
+
         return user;
     }
 }

@@ -19,30 +19,36 @@ User.init(
       autoIncrement: true,
       primaryKey: true,
     },
+
     username: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(100),
       allowNull: false,
-      unique: true,
+      unique: "uniq_users_username",
     },
+
+    email: {
+      type: DataTypes.STRING(150),
+      allowNull: true,
+      unique: "uniq_users_email",
+    },
+
     password: {
       type: DataTypes.STRING,
-      allowNull: true, // Changed to true
-    },
-    email: {
-      type: DataTypes.STRING,
       allowNull: true,
-      unique: true,
     },
+
     googleId: {
       type: DataTypes.STRING,
       allowNull: true,
-      unique: true,
+      unique: "uniq_users_google_id",
     },
   },
   {
     sequelize,
     tableName: "users",
+    timestamps: true,
   }
 );
+
 
 export default User;

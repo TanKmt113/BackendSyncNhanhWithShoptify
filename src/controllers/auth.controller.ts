@@ -27,7 +27,7 @@ class AuthController {
         try {
             // User is already attached to req.user by passport
             const user: any = req.user;
-            
+
             if (!user) {
                 return res.status(401).json({ success: false, message: "Authentication failed" });
             }
