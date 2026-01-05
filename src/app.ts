@@ -5,6 +5,7 @@ import cors from "cors";
 import passport from "./config/passport"; // Import passport config
 import routes from "./routes";
 import { errorHandler } from "./middlewares/error.middleware";
+import cookieParser from "cookie-parser";
 
 const app = express();
 
@@ -14,20 +15,18 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
     if (allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
-      // Optionally allow all for dev, or fail
-      // callback(new Error('Not allowed by CORS'));
-      // For development convenience with your specific issue:
       callback(null, true);
     }
   },
-  credentials: true
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 }));
-
+app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(bodyParser.json({
   limit: "2mb",
@@ -36,11 +35,7 @@ app.use(bodyParser.json({
   }
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// Initialize Passport
 app.use(passport.initialize());
-
-// Middleware xử lý lỗi JSON (ví dụ: body gửi lên không đúng định dạng)
 app.use((err: any, req: any, res: any, next: any) => {
   if (err instanceof SyntaxError && "body" in err) {
     console.error("⚠️ Bad JSON received:", err.message);
@@ -51,10 +46,7 @@ app.use((err: any, req: any, res: any, next: any) => {
   }
   next();
 });
-
-// Gắn routes
 app.use("/api", routes);
-
 app.use(errorHandler);
 
 export default app;

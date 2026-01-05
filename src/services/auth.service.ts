@@ -7,6 +7,7 @@ const JWT_SECRET = process.env.JWT_SECRET || "default_secret";
 const SALT_ROUNDS = 10;
 
 class AuthService {
+
     async register(data: any) {
         const { username, password, email } = data;
 
@@ -34,13 +35,13 @@ class AuthService {
     }
 
     async login(data: any) {
-        const { username, password } = data;
+        const { email, password } = data;
 
         const user = await User.findOne({
             where: {
                 [Op.or]: [
-                    { username: username },
-                    { email: username }
+                    { username: email },
+                    { email: email }
                 ]
             }
         });
@@ -62,6 +63,7 @@ class AuthService {
 
         return { token, user };
     }
+
 
     async getMe(userId: number) {
         const user = await User.findByPk(userId, {
