@@ -7238,3 +7238,112 @@
   "input": "/product/list?appId=76651&businessId=106124"
 }
 [2026-01-16 15:34:28] [ERROR] Lỗi khi lấy danh sách sản phẩm: null
+[2026-01-16 15:59:52] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50}}).
+[2026-01-16 15:59:53] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754027}}}).
+[2026-01-16 15:59:53] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753976}}}).
+[2026-01-16 15:59:53] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753926}}}).
+[2026-01-16 15:59:53] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753876}}}).
+[2026-01-16 15:59:53] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753702}}}).
+[2026-01-16 15:59:53] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753650}}}).
+[2026-01-16 15:59:54] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753597}}}).
+[2026-01-16 15:59:54] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753546}}}).
+[2026-01-16 15:59:54] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753495}}}).
+[2026-01-16 15:59:54] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753423}}}).
+[2026-01-16 15:59:54] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753346}}}).
+[2026-01-16 15:59:55] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753296}}}).
+[2026-01-16 15:59:55] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753238}}}).
+[2026-01-16 15:59:55] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753188}}}).
+[2026-01-16 15:59:55] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753136}}}).
+[2026-01-16 15:59:55] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753086}}}).
+[2026-01-16 15:59:56] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753036}}}).
+[2026-01-16 15:59:56] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752986}}}).
+[2026-01-16 15:59:56] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752931}}}).
+[2026-01-16 15:59:56] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752879}}}).
+[2026-01-16 15:59:56] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752829}}}).
+[2026-01-16 15:59:57] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752772}}}).
+[2026-01-16 15:59:57] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752721}}}).
+[2026-01-16 15:59:57] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752669}}}).
+[2026-01-16 15:59:57] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752583}}}).
+[2026-01-16 15:59:57] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752509}}}).
+[2026-01-16 15:59:58] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752446}}}).
+[2026-01-16 15:59:58] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752356}}}).
+[2026-01-16 15:59:58] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752215}}}).
+[2026-01-16 15:59:58] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752126}}}).
+[2026-01-16 15:59:58] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752063}}}).
+[2026-01-16 15:59:59] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40751970}}}).
+[2026-01-16 15:59:59] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40751910}}}).
+[2026-01-16 15:59:59] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40486789}}}).
+[2026-01-16 15:59:59] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40025478}}}).
+[2026-01-16 15:59:59] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":39406935}}}).
+[2026-01-16 15:59:59] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":38007722}}}).
+[2026-01-16 16:00:00] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273205 trên Shopify.
+[2026-01-16 16:00:00] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273199 trên Shopify.
+[2026-01-16 16:00:01] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273182 trên Shopify.
+[2026-01-16 16:00:01] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273175 trên Shopify.
+[2026-01-16 16:00:01] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273168 trên Shopify.
+[2026-01-16 16:00:02] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273151 trên Shopify.
+[2026-01-16 16:00:02] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273144 trên Shopify.
+[2026-01-16 16:00:02] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273137 trên Shopify.
+[2026-01-16 16:00:03] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273120 trên Shopify.
+[2026-01-16 16:00:03] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273113 trên Shopify.
+[2026-01-16 16:00:03] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273106 trên Shopify.
+[2026-01-16 16:00:03] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273090 trên Shopify.
+[2026-01-16 16:00:04] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273083 trên Shopify.
+[2026-01-16 16:00:04] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273076 trên Shopify.
+[2026-01-16 16:00:04] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273069 trên Shopify.
+[2026-01-16 16:00:05] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273052 trên Shopify.
+[2026-01-16 16:00:05] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273045 trên Shopify.
+[2026-01-16 16:00:05] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273038 trên Shopify.
+[2026-01-16 16:00:06] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273021 trên Shopify.
+[2026-01-16 16:00:06] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273014 trên Shopify.
+[2026-01-16 16:00:06] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273007 trên Shopify.
+[2026-01-16 16:00:07] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272994 trên Shopify.
+[2026-01-16 16:00:07] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272987 trên Shopify.
+[2026-01-16 16:00:07] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272970 trên Shopify.
+[2026-01-16 16:00:07] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272963 trên Shopify.
+[2026-01-16 16:00:08] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272956 trên Shopify.
+[2026-01-16 16:00:08] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272949 trên Shopify.
+[2026-01-16 16:00:08] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272932 trên Shopify.
+[2026-01-16 16:00:09] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272925 trên Shopify.
+[2026-01-16 16:00:09] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272918 trên Shopify.
+[2026-01-16 16:00:09] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272901 trên Shopify.
+[2026-01-16 16:00:10] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272895 trên Shopify.
+[2026-01-16 16:00:10] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272888 trên Shopify.
+[2026-01-16 16:00:10] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272871 trên Shopify.
+[2026-01-16 16:00:11] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272864 trên Shopify.
+[2026-01-16 16:00:11] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272857 trên Shopify.
+[2026-01-16 16:00:11] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272840 trên Shopify.
+[2026-01-16 16:00:11] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272833 trên Shopify.
+[2026-01-16 16:00:12] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272826 trên Shopify.
+[2026-01-16 16:00:12] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272819 trên Shopify.
+[2026-01-16 16:00:12] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272802 trên Shopify.
+[2026-01-16 16:00:13] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272796 trên Shopify.
+[2026-01-16 16:00:13] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272789 trên Shopify.
+[2026-01-16 16:00:13] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272772 trên Shopify.
+[2026-01-16 16:00:14] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272765 trên Shopify.
+[2026-01-16 16:00:14] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272758 trên Shopify.
+[2026-01-16 16:00:14] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272741 trên Shopify.
+[2026-01-16 16:00:15] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272734 trên Shopify.
+[2026-01-16 16:00:15] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272727 trên Shopify.
+[2026-01-16 16:00:15] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272710 trên Shopify.
+[2026-01-16 16:00:16] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272703 trên Shopify.
+[2026-01-16 16:00:16] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272697 trên Shopify.
+[2026-01-16 16:00:16] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272680 trên Shopify.
+[2026-01-16 16:00:17] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272673 trên Shopify.
+[2026-01-16 16:00:17] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272666 trên Shopify.
+[2026-01-16 16:00:17] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272659 trên Shopify.
+[2026-01-16 16:00:18] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272642 trên Shopify.
+[2026-01-16 16:00:18] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272635 trên Shopify.
+[2026-01-16 16:00:18] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272628 trên Shopify.
+[2026-01-16 16:00:19] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272611 trên Shopify.
+[2026-01-16 16:00:19] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272604 trên Shopify.
+[2026-01-16 16:00:19] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272598 trên Shopify.
+[2026-01-16 16:00:19] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272581 trên Shopify.
+[2026-01-16 16:00:20] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272574 trên Shopify.
+[2026-01-16 16:00:20] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272567 trên Shopify.
+[2026-01-16 16:00:21] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272550 trên Shopify.
+[2026-01-16 16:00:21] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272543 trên Shopify.
+[2026-01-16 16:00:21] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272536 trên Shopify.
+[2026-01-16 16:00:21] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272529 trên Shopify.
+[2026-01-16 16:00:22] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272512 trên Shopify.
+[2026-01-16 16:00:22] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272505 trên Shopify.
