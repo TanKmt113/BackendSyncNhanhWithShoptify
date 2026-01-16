@@ -1,16 +1,21 @@
 import axios from "axios";
+import { StoreSettingAttributes } from "../types/config";
 
-const shopName = process.env.SHOPIFY_SHOP_NAME; 
-const apiVersion = process.env.SHOPIFY_API_VERSION || "2025-10";
-const adminAPI = process.env.SHOPIFY_ADMIN_API ;
+const createShoptify = (configDB: StoreSettingAttributes) => {
 
+  const shopName = configDB.shop_name;
+  const apiVersion = configDB.shopify_api_version;
+  const adminAPI = configDB.shopify_admin_api;
 
-const shopifyClient = axios.create({
-  baseURL: `https://${shopName}.myshopify.com/admin/api/${apiVersion}`,
-  headers: {
-    "X-Shopify-Access-Token": adminAPI, 
-    "Content-Type": "application/json",
-  },
-});
+  const client = axios.create({
+    baseURL: `https://${shopName}.myshopify.com/admin/api/${apiVersion}`,
+    headers: {
+      "X-Shopify-Access-Token": adminAPI,
+      "Content-Type": "application/json",
+    },
+  });
 
-export default shopifyClient;
+  return client;
+};
+
+export default createShoptify;

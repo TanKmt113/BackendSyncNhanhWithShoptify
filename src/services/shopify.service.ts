@@ -1,6 +1,7 @@
-import shopifyClient from "../integrations/shopifyClient";
 import axios from "axios";
 import { logger } from "../utils/logger";
+import createShoptify from "../integrations/shopifyClient";
+import { getConfig } from "./config.service";
 
 /**
  * Cập nhật số lượng tồn kho trên Shopify dựa trên mã SKU (Barcode).
@@ -9,7 +10,10 @@ import { logger } from "../utils/logger";
  * @returns true nếu cập nhật thành công, false nếu có lỗi.
  */
 export async function updateInventoryByBarcode(sku: string, newQuantity: number) {
+  const config = await getConfig();
   try {
+
+
     // 1. Truy vấn GraphQL để lấy ID của InventoryItem từ SKU và Location ID của cửa hàng.
     const query = `
       {
@@ -34,7 +38,8 @@ export async function updateInventoryByBarcode(sku: string, newQuantity: number)
     `;
 
     // Gửi request query đến Shopify
-    const queryRes = await shopifyClient.post("/graphql.json", { query });
+    const client = createShoptify(config)
+    const queryRes = await client.post("/graphql.json", { query });
 
     // Kiểm tra lỗi trong phản hồi query
     if (queryRes.data.errors) {
@@ -92,7 +97,7 @@ export async function updateInventoryByBarcode(sku: string, newQuantity: number)
     `;
 
     // Gửi request mutation cập nhật tồn kho
-    const mutationRes = await shopifyClient.post("/graphql.json", { query: mutation });
+    const mutationRes = await client.post("/graphql.json", { query: mutation });
 
     // Kiểm tra lỗi trong phản hồi mutation
     if (mutationRes.data.errors) {
@@ -129,8 +134,9 @@ export async function updateInventoryByBarcode(sku: string, newQuantity: number)
 }
 
 export async function getInventoryBySku(sku: string): Promise<number | null> {
-    try {
-        const query = `
+  const config = await getConfig();
+  try {
+    const query = `
           {
             productVariants(first: 1, query: "sku:${sku}") {
               edges {
@@ -141,18 +147,20 @@ export async function getInventoryBySku(sku: string): Promise<number | null> {
             }
           }
         `;
-        const queryRes = await shopifyClient.post("/graphql.json", { query });
-        if (queryRes.data.errors) return null;
-        
-        const edges = queryRes.data?.data?.productVariants?.edges;
-        if (edges && edges.length > 0) {
-            return edges[0].node.inventoryQuantity;
-        }
-        return null;
-    } catch (error) {
-        logger.error(`Error getting inventory for SKU ${sku}:`, error);
-        return null;
+
+    const client = createShoptify(config)
+    const queryRes = await client.post("/graphql.json", { query });
+    if (queryRes.data.errors) return null;
+
+    const edges = queryRes.data?.data?.productVariants?.edges;
+    if (edges && edges.length > 0) {
+      return edges[0].node.inventoryQuantity;
     }
+    return null;
+  } catch (error) {
+    logger.error(`Error getting inventory for SKU ${sku}:`, error);
+    return null;
+  }
 }
 
 /**
@@ -177,12 +185,14 @@ export async function updateOrderStatus(shopifyOrderId: number, status: string) 
 }
 
 async function updateOrderArchived(shopifyOrderId: number) {
+  const config = await getConfig();
   try {
     // 1. Cố gắng cập nhật trạng thái Fulfilled trước (nếu chưa Fulfilled)
     // Điều này đảm bảo đơn hàng Archive là đơn hàng đã hoàn tất giao hàng
     await updateOrderFulfilled(shopifyOrderId);
     // 2. Sau đó thực hiện lưu trữ (Close order)
-    await shopifyClient.post(`/orders/${shopifyOrderId}/close.json`);
+    const client = createShoptify(config)
+    await client.post(`/orders/${shopifyOrderId}/close.json`);
     logger.info(`Đã lưu trữ (archive) đơn hàng ${shopifyOrderId} trên Shopify.`);
     return true;
   } catch (error: any) {
@@ -196,9 +206,11 @@ async function updateOrderArchived(shopifyOrderId: number) {
 }
 
 async function updateOrderFulfilled(shopifyOrderId: number) {
+  const config = await getConfig();
   try {
     // 1. Lấy danh sách các yêu cầu thực hiện đơn hàng (fulfillment orders) cho đơn hàng này.
-    const fulfillmentOrdersRes = await shopifyClient.get(`/orders/${shopifyOrderId}/fulfillment_orders.json`);
+    const client = createShoptify(config)
+    const fulfillmentOrdersRes = await client.get(`/orders/${shopifyOrderId}/fulfillment_orders.json`);
     const fulfillmentOrders = fulfillmentOrdersRes.data.fulfillment_orders;
 
     if (!fulfillmentOrders || fulfillmentOrders.length === 0) {
@@ -227,7 +239,7 @@ async function updateOrderFulfilled(shopifyOrderId: number) {
     };
 
     // Gửi request tạo fulfillment
-    const fulfillRes = await shopifyClient.post("/fulfillments.json", fulfillmentPayload);
+    const fulfillRes = await client.post("/fulfillments.json", fulfillmentPayload);
     logger.info(`Đã cập nhật giao hàng thành công cho đơn hàng ${shopifyOrderId}. ID Fulfillment: ${fulfillRes.data.fulfillment.id}`);
 
     return true;
@@ -244,8 +256,10 @@ async function updateOrderFulfilled(shopifyOrderId: number) {
 }
 
 async function updateOrderCanceled(shopifyOrderId: number) {
+  const config = await getConfig();
   try {
-    await shopifyClient.post(`/orders/${shopifyOrderId}/cancel.json`);
+    const client = createShoptify(config)
+    await client.post(`/orders/${shopifyOrderId}/cancel.json`);
     logger.info(`Đã hủy đơn hàng ${shopifyOrderId} trên Shopify.`);
     return true;
   } catch (error: any) {
@@ -253,7 +267,7 @@ async function updateOrderCanceled(shopifyOrderId: number) {
       // Shopify trả về lỗi 422 nếu đơn hàng đã bị hủy hoặc không thể hủy
       if (error.response?.status === 422) {
         logger.warn(`Đơn hàng ${shopifyOrderId} có thể đã được hủy trước đó hoặc không thể hủy: ${JSON.stringify(error.response.data)}`);
-        return true; 
+        return true;
       }
       logger.error("Lỗi khi hủy đơn hàng trên Shopify:", error.response?.data || error.message);
     } else {

@@ -1,9 +1,12 @@
 import { Request, Response, NextFunction } from "express";
 import crypto from "crypto";
+import { getConfig } from "../services/config.service";
 
-export function validateShopifyWebhook(req: Request, res: Response, next: NextFunction) {
+export async function validateShopifyWebhook(req: Request, res: Response, next: NextFunction) {
+
+  const config = await getConfig();
   const hmacHeader = req.get("X-Shopify-Hmac-Sha256");
-  const secret = process.env.SHOPIFY_WEBHOOK_SECRET;
+  const secret = config.shopify_webhook_secret;
 
   if (!secret) {
     console.warn("Skipping Webhook Validation: SHOPIFY_WEBHOOK_SECRET not configured in .env");
