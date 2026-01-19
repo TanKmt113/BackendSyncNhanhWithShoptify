@@ -1,23 +1,11 @@
 import { Request, Response } from "express";
-import { Product, Inventory, Order, SyncLog } from "../models";
+import { Product, Inventory} from "../models";
 import * as NhanhService from "../services/nhanh.service";
 import * as ShopifyService from "../services/shopify.service";
 import * as SyncService from "../services/sync.service";
-import { getIO } from "../utils/socket";
 import { NotificationController } from "./notification.controller";
 
-export class DashboardController {
-
-  static async getInventory(req: Request, res: Response) {
-    try {
-      const inventory = await Inventory.findAll({
-        include: [{ model: Product, as: "product" }],
-      });
-      res.json(inventory);
-    } catch (error: any) {
-      res.status(500).json({ error: error.message });
-    }
-  }
+export class SyncController {
 
   static async syncAllProducts(req: Request, res: Response) {
     try {
@@ -35,18 +23,6 @@ export class DashboardController {
     }
   }
 
-  static async testSocket(req: Request, res: Response) {
-    try {
-      const io = getIO();
-      io.emit("test_event", {
-        message: "Hello từ Server Shoptify!",
-        time: new Date().toISOString()
-      });
-      res.json({ message: "Đã bắn sự kiện 'test_event' tới tất cả client." });
-    } catch (error: any) {
-      res.status(500).json({ error: error.message });
-    }
-  }
 
   static async syncInventory(req: Request, res: Response) {
     const { id } = req.params;
@@ -110,33 +86,4 @@ export class DashboardController {
     }
   }
 
-  static async getOrders(req: Request, res: Response) {
-    try {
-      const orders = await Order.findAll({
-        order: [['createdAt', 'DESC']]
-      });
-      res.json(orders);
-    } catch (error: any) {
-      res.status(500).json({ error: error.message });
-    }
-  }
-
-  static async getStats(req: Request, res: Response) {
-    try {
-      const totalOrders = await Order.count();
-      const failedOrders = await Order.count({ where: { status: "FAILED" } });
-      const inventoryCount = await Inventory.count();
-      const matchCount = await Inventory.count({ where: { status: "MATCH" } });
-
-      const matchRate = inventoryCount > 0 ? (matchCount / inventoryCount) * 100 : 0;
-
-      res.json({
-        totalOrders,
-        failedOrders,
-        matchRate: parseFloat(matchRate.toFixed(2)),
-      });
-    } catch (error: any) {
-      res.status(500).json({ error: error.message });
-    }
-  }
 }

@@ -21,8 +21,8 @@ class AuthController {
             res.cookie("auth_token", token, {
                 httpOnly: true,
                 secure: process.env.NODE_ENV === "production",
-                domain: ".tandotrong.online",
-                sameSite: "none",
+                domain: process.env.NODE_ENV === "production" ? ".tandotrong.online" : 'localhost',
+                sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
                 maxAge: 24 * 60 * 60 * 1000,
                 path: "/",
             });
@@ -37,8 +37,8 @@ class AuthController {
     async logout(req: Request, res: Response) {
         res.clearCookie("auth_token", {
             httpOnly: true,
-            sameSite: "none",
-            domain: ".tandotrong.online",
+            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+            domain: process.env.NODE_ENV === "production" ? ".tandotrong.online" : 'localhost',
             secure: process.env.NODE_ENV === "production",
             path: "/",
         });
