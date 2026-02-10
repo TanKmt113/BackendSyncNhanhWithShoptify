@@ -33,6 +33,11 @@ export class SyncController {
         return;
       }
 
+      if (!product.sku_shopify) {
+        res.status(400).json({ error: "Product not synced to Shopify yet" });
+        return;
+      }
+
       // 1. Get Nhanh Stock
       // Assuming sku_nhanh is actually the barcode or ID used for lookup. 
       // NhanhService.getItemWithBarCode returns ID.
@@ -95,18 +100,51 @@ export class SyncController {
         return;
       }
 
-      // Create product on Shopify
-      const success = await ShopifyService.createProductOnShopify(product);
+      // Check if product already exists on Shopify
+      const existsOnShopify = await ShopifyService.checkProductExistsBySku(product.sku_nhanh);
+
+      let success = false;
+      let message = "";
+
+      if (existsOnShopify) {
+        // Product already on Shopify, just update inventory
+        console.log(`Product ${product.name} already exists on Shopify, updating inventory...`);
+        
+        // Get latest data from Nhanh to update
+        if (product.nhanh_id) {
+          const nhanhData = await NhanhService.getByIdProduct(parseInt(product.nhanh_id));
+          const stock = nhanhData?.data?.inventory?.available || 0;
+          
+          success = await ShopifyService.updateInventoryByBarcode(product.sku_nhanh, stock);
+          message = success 
+            ? `Đã cập nhật lại tồn kho cho sản phẩm ${product.name} trên Shopify` 
+            : `Lỗi cập nhật tồn kho cho sản phẩm ${product.name}`;
+        } else {
+          message = `Không thể cập nhật: thiếu Nhanh ID`;
+        }
+      } else {
+        // Product not on Shopify, create new
+        console.log(`Creating product ${product.name} on Shopify...`);
+        success = await ShopifyService.createProductOnShopify(product);
+        message = success
+          ? `Đã tạo sản phẩm ${product.name} trên Shopify`
+          : `Lỗi tạo sản phẩm ${product.name} trên Shopify`;
+      }
 
       if (success) {
-        await NotificationController.createSystemNotification("SUCCESS", `Đã tạo sản phẩm ${product.name} trên Shopify`);
-        res.json({ message: `Product ${id} created on Shopify successfully` });
+        // Update sku_shopify if not set
+        if (!product.sku_shopify) {
+          await product.update({ sku_shopify: product.sku_nhanh });
+        }
+        await NotificationController.createSystemNotification("SUCCESS", message);
+        res.json({ message, success: true });
       } else {
-        await NotificationController.createSystemNotification("ERROR", `Lỗi tạo sản phẩm ${product.name} trên Shopify`);
-        res.status(500).json({ error: "Failed to create product on Shopify" });
+        await NotificationController.createSystemNotification("ERROR", message);
+        res.status(500).json({ error: message, success: false });
       }
     } catch (error: any) {
-      await NotificationController.createSystemNotification("ERROR", `Lỗi tạo sản phẩm ID ${id} trên Shopify: ${error.message}`);
+      const errorMsg = `Lỗi đồng bộ sản phẩm ID ${id}: ${error.message}`;
+      await NotificationController.createSystemNotification("ERROR", errorMsg);
       res.status(500).json({ error: error.message });
     }
   }

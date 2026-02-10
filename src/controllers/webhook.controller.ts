@@ -68,6 +68,7 @@ export async function syncDataNhanh(req: Request, res: Response, next: NextFunct
   }
   try {
     const webhookData = req.body;
+    console.log("Received Nhanh webhook:", webhookData);
     const { event, data } = webhookData;
     switch (event) {
       case 'orderUpdate':
@@ -86,9 +87,7 @@ export async function syncDataNhanh(req: Request, res: Response, next: NextFunct
         await SyncService.syncInventoryFromNhanhWebhook(data);
         break;
       case 'productAdd':
-        console.log('productAdd')
-        console.log(data)
-        // await SyncService.syncProductAddFromNhanhWebhook(data);
+        await SyncService.syncProductAddFromNhanhWebhook(data);
         break;
       default:
         break;

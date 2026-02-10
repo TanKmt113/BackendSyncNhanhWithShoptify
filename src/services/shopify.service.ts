@@ -454,7 +454,7 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
         ]
       }
     };
-
+    console.log("Creating product on Shopify with payload:", JSON.stringify(productPayload, null, 2));
     const response = await client.post("/products.json", productPayload);
 
     if (response.data?.product?.id) {

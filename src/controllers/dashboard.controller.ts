@@ -57,6 +57,11 @@ export class DashboardController {
         return;
       }
 
+      if (!product.sku_shopify) {
+        res.status(400).json({ error: "Product not synced to Shopify yet" });
+        return;
+      }
+
       // 1. Get Nhanh Stock
       // Assuming sku_nhanh is actually the barcode or ID used for lookup. 
       // NhanhService.getItemWithBarCode returns ID.
@@ -142,14 +147,32 @@ export class DashboardController {
 
   static async getNhanhProducts(req: Request, res: Response) {
     try {
-      const products = await Product.findAll({
-        where: {
-          sku_shopify: null
-        },
+      // Get all products from Nhanh
+      const allProducts = await Product.findAll({
         order: [['createdAt', 'DESC']]
       });
-      res.json(products);
+      
+      // Add sync status to each product
+      const productsWithStatus = allProducts.map(p => {
+        const isSynced = !!(p.sku_shopify && p.sku_shopify !== '');
+        return {
+          id: p.id,
+          nhanh_id: p.nhanh_id,
+          sku_nhanh: p.sku_nhanh,
+          sku_shopify: p.sku_shopify,
+          name: p.name,
+          image: p.image,
+          createdAt: p.createdAt,
+          updatedAt: p.updatedAt,
+          syncStatus: isSynced ? 'SYNCED' : 'NOT_SYNCED'
+        };
+      });
+      
+      console.log(`Total products: ${productsWithStatus.length}, Synced: ${productsWithStatus.filter(p => p.syncStatus === 'SYNCED').length}, Not synced: ${productsWithStatus.filter(p => p.syncStatus === 'NOT_SYNCED').length}`);
+      
+      res.json(productsWithStatus);
     } catch (error: any) {
+      console.error('Error fetching Nhanh products:', error);
       res.status(500).json({ error: error.message });
     }
   }

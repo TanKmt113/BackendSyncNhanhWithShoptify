@@ -76,7 +76,7 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
             product = await Product.create({
                 nhanh_id: nhanhId,
                 sku_nhanh: barcode,
-                sku_shopify: null,
+                sku_shopify: null, // Will be set after successful Shopify creation
                 name: name,
                 image: image
             });

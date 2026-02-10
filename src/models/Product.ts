@@ -5,9 +5,11 @@ class Product extends Model {
   public id!: number;
   public nhanh_id!: string;
   public sku_nhanh!: string;
-  public sku_shopify!: string;
+  public sku_shopify!: string | null;
   public name!: string;
   public image!: string | null;
+  public createdAt!: Date;
+  public updatedAt!: Date;
 }
 
 Product.init(
@@ -27,7 +29,7 @@ Product.init(
     },
     sku_shopify: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     name: {
       type: DataTypes.STRING,
