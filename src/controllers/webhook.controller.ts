@@ -84,7 +84,12 @@ export async function syncDataNhanh(req: Request, res: Response, next: NextFunct
         break
       case 'inventoryChange':
         await SyncService.syncInventoryFromNhanhWebhook(data);
-        break
+        break;
+      case 'productAdd':
+        console.log('productAdd')
+        console.log(data)
+        // await SyncService.syncProductAddFromNhanhWebhook(data);
+        break;
       default:
         break;
     }

@@ -164,6 +164,45 @@ export async function getInventoryBySku(sku: string): Promise<number | null> {
 }
 
 /**
+ * Check if a product exists on Shopify by SKU
+ * @param sku The SKU to search for
+ * @returns Product variant ID if exists, null otherwise
+ */
+export async function checkProductExistsBySku(sku: string): Promise<string | null> {
+  const config = await getConfig();
+  try {
+    const query = `
+      {
+        productVariants(first: 1, query: "sku:${sku}") {
+          edges {
+            node {
+              id
+              product {
+                id
+              }
+            }
+          }
+        }
+      }
+    `;
+
+    const client = createShoptify(config);
+    const queryRes = await client.post("/graphql.json", { query });
+    
+    if (queryRes.data.errors) return null;
+
+    const edges = queryRes.data?.data?.productVariants?.edges;
+    if (edges && edges.length > 0) {
+      return edges[0].node.id;
+    }
+    return null;
+  } catch (error) {
+    logger.error(`Error checking product exists for SKU ${sku}:`, error);
+    return null;
+  }
+}
+
+/**
  * Cập nhật trạng thái đơn hàng trên Shopify (Cụ thể là Fulfillment).
  * @param shopifyOrderId ID của đơn hàng trên Shopify.
  * @param status Trạng thái mới từ hệ thống bên ngoài (ví dụ: Nhanh.vn).
@@ -272,6 +311,171 @@ async function updateOrderCanceled(shopifyOrderId: number) {
       logger.error("Lỗi khi hủy đơn hàng trên Shopify:", error.response?.data || error.message);
     } else {
       logger.error("Lỗi khi hủy đơn hàng trên Shopify:", error);
+    }
+    return false;
+  }
+}
+
+/**
+ * Create a new product on Shopify with full details from Nhanh.vn
+ * @param product Product object from database
+ * @param nhanhData Full product data from Nhanh.vn API (optional, will fetch if not provided)
+ * @returns true if successful, false otherwise
+ */
+export async function createProductOnShopify(product: any, nhanhData?: any): Promise<boolean> {
+  const config = await getConfig();
+  try {
+    const client = createShoptify(config);
+
+    // If nhanhData is not provided, fetch it from Nhanh API
+    let productDetails = nhanhData;
+    if (!productDetails && product.nhanh_id) {
+      const { getByIdProduct } = await import("./nhanh.service");
+      const response = await getByIdProduct(parseInt(product.nhanh_id));
+      productDetails = response?.data;
+    }
+
+    // Build description from Nhanh data
+    let bodyHtml = productDetails?.description || productDetails?.content || "<p>Product from Nhanh.vn</p>";
+    
+    // Add product details to description
+    if (productDetails?.content) {
+      bodyHtml += `<br><br>${productDetails.content}`;
+    }
+
+    // Build images array
+    const images: any[] = [];
+    if (productDetails?.images?.avatar) {
+      images.push({ src: productDetails.images.avatar });
+    }
+    if (productDetails?.images?.others && Array.isArray(productDetails.images.others)) {
+      productDetails.images.others.forEach((img: string) => {
+        images.push({ src: img });
+      });
+    }
+    // Fallback to product.image from database
+    if (images.length === 0 && product.image) {
+      images.push({ src: product.image });
+    }
+
+    // Build variant with full info
+    const variant: any = {
+      sku: productDetails?.barcode || productDetails?.code || product.sku_nhanh,
+      price: productDetails?.prices?.retail?.toString() || "0",
+      compare_at_price: productDetails?.prices?.old?.toString() || undefined,
+      cost: productDetails?.prices?.import?.toString() || undefined,
+      inventory_management: "shopify",
+      inventory_policy: "deny",
+      inventory_quantity: productDetails?.inventory?.available || 0,
+    };
+
+    // Add shipping dimensions if available
+    if (productDetails?.shipping) {
+      if (productDetails.shipping.weight) {
+        variant.weight = productDetails.shipping.weight;
+        variant.weight_unit = "g"; // Nhanh.vn uses grams
+      }
+    }
+
+    // Handle product variants (childs) if exists
+    const variants: any[] = [];
+    if (productDetails?.childs && Array.isArray(productDetails.childs) && productDetails.childs.length > 0) {
+      // Product has variants
+      productDetails.childs.forEach((child: any) => {
+        const childVariant: any = {
+          sku: child.barcode || child.code,
+          price: child.prices?.retail?.toString() || "0",
+          compare_at_price: child.prices?.old?.toString() || undefined,
+          cost: child.prices?.import?.toString() || undefined,
+          inventory_management: "shopify",
+          inventory_policy: "deny",
+          inventory_quantity: child.inventory?.available || 0,
+        };
+
+        // Add variant options from attributes
+        if (child.attributes && Array.isArray(child.attributes)) {
+          child.attributes.forEach((attr: any, index: number) => {
+            childVariant[`option${index + 1}`] = attr.value;
+          });
+        }
+
+        if (child.shipping?.weight) {
+          childVariant.weight = child.shipping.weight;
+          childVariant.weight_unit = "g";
+        }
+
+        variants.push(childVariant);
+      });
+    } else {
+      // Single product, no variants
+      variants.push(variant);
+    }
+
+    // Build product options from parent attributes
+    const options: any[] = [];
+    if (productDetails?.attributes && Array.isArray(productDetails.attributes)) {
+      productDetails.attributes.forEach((attr: any) => {
+        options.push({
+          name: attr.name,
+          values: [attr.value]
+        });
+      });
+    }
+
+    // Build final product payload
+    const productPayload = {
+      product: {
+        title: productDetails?.name || product.name || product.sku_nhanh,
+        body_html: bodyHtml,
+        vendor: productDetails?.brand?.name || "Nhanh.vn",
+        product_type: productDetails?.category?.name || productDetails?.internalCategory?.name || "Imported",
+        status: "draft", // Set to draft for user review before publishing
+        tags: [
+          productDetails?.category?.name,
+          productDetails?.brand?.name,
+          productDetails?.type?.name
+        ].filter(Boolean).join(", "),
+        variants: variants,
+        images: images.length > 0 ? images : undefined,
+        options: options.length > 0 ? options : undefined,
+        metafields: [
+          {
+            namespace: "nhanh",
+            key: "product_id",
+            value: productDetails?.id?.toString() || product.nhanh_id,
+            type: "single_line_text_field"
+          },
+          {
+            namespace: "nhanh",
+            key: "product_code",
+            value: productDetails?.code || product.sku_nhanh,
+            type: "single_line_text_field"
+          }
+        ]
+      }
+    };
+
+    const response = await client.post("/products.json", productPayload);
+
+    if (response.data?.product?.id) {
+      logger.info(`Successfully created product ${productDetails?.name || product.name} on Shopify with ID: ${response.data.product.id}`);
+
+      // Update product in database with shopify SKU
+      if (product.update) {
+        await product.update({
+          sku_shopify: productDetails?.barcode || productDetails?.code || product.sku_nhanh
+        });
+      }
+
+      return true;
+    }
+
+    return false;
+  } catch (error: any) {
+    if (axios.isAxiosError(error)) {
+      logger.error("Error creating product on Shopify:", error.response?.data || error.message);
+    } else {
+      logger.error("Error creating product on Shopify:", error);
     }
     return false;
   }

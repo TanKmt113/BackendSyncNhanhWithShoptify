@@ -86,4 +86,29 @@ export class SyncController {
     }
   }
 
+  static async syncProductToShopify(req: Request, res: Response) {
+    const { id } = req.params;
+    try {
+      const product = await Product.findByPk(id);
+      if (!product) {
+        res.status(404).json({ error: "Product not found" });
+        return;
+      }
+
+      // Create product on Shopify
+      const success = await ShopifyService.createProductOnShopify(product);
+
+      if (success) {
+        await NotificationController.createSystemNotification("SUCCESS", `Đã tạo sản phẩm ${product.name} trên Shopify`);
+        res.json({ message: `Product ${id} created on Shopify successfully` });
+      } else {
+        await NotificationController.createSystemNotification("ERROR", `Lỗi tạo sản phẩm ${product.name} trên Shopify`);
+        res.status(500).json({ error: "Failed to create product on Shopify" });
+      }
+    } catch (error: any) {
+      await NotificationController.createSystemNotification("ERROR", `Lỗi tạo sản phẩm ID ${id} trên Shopify: ${error.message}`);
+      res.status(500).json({ error: error.message });
+    }
+  }
+
 }

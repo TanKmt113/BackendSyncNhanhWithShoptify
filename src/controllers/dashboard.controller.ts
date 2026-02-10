@@ -139,4 +139,18 @@ export class DashboardController {
       res.status(500).json({ error: error.message });
     }
   }
+
+  static async getNhanhProducts(req: Request, res: Response) {
+    try {
+      const products = await Product.findAll({
+        where: {
+          sku_shopify: null
+        },
+        order: [['createdAt', 'DESC']]
+      });
+      res.json(products);
+    } catch (error: any) {
+      res.status(500).json({ error: error.message });
+    }
+  }
 }
