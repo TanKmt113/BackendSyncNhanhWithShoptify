@@ -57,7 +57,7 @@ export async function saveLogo(req: Request, res: Response, next: NextFunction) 
       logo_url,
       logo_name: logo_name || undefined,
       file_type: file_type || undefined,
-      file_size: file_size ? parseInt(file_size) : undefined,
+      file_size: file_size ? parseInt(file_size) : 0,
     };
 
     const savedLogo = await LogoService.saveLogo(logoData);
