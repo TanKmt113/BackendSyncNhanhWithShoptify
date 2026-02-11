@@ -21,6 +21,10 @@ router.post(
   WebhookController.testSync
 );
 
+// router.post(
+//   "/test-product-add",
+//   WebhookController.testProductAdd
+// );
 
 
 export default router;

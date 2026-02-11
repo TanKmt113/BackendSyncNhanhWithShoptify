@@ -1,6 +1,5 @@
 import { getItemWithID, getAllProducts } from "./nhanh.service";
 import * as ShopifyService from "./shopify.service";
-import { Request } from "express";
 import { Product, Inventory } from "../models";
 import { getIO } from "../utils/socket";
 import { NotificationController } from "../controllers/notification.controller";
@@ -17,7 +16,7 @@ export async function syncInventoryFromNhanhWebhook(data: any[]) {
         const success = await ShopifyService.updateInventoryByBarcode(sku, available);
         if (success) count++;
     }
-    
+
     if (count > 0) {
         await NotificationController.createSystemNotification("SUCCESS", `Webhook Nhanh.vn: Đã cập nhật tồn kho cho ${count} sản phẩm.`);
     }
@@ -31,7 +30,7 @@ export async function syncOrderStatusFromNhanhWebhook(id: number, status: string
     }
 
     const success = await ShopifyService.updateOrderStatus(id, status);
-    
+
     if (success) {
         await NotificationController.createSystemNotification("SUCCESS", `Webhook Nhanh.vn: Đã cập cập nhật trạng thái đơn hàng ${id} sang ${status}.`);
     } else {
@@ -41,8 +40,10 @@ export async function syncOrderStatusFromNhanhWebhook(id: number, status: string
 
 export async function syncProductAddFromNhanhWebhook(productData: any) {
     try {
-        if (!productData || !productData.id) {
-            console.warn("Missing product data in Nhanh webhook");
+        console.log(`[syncProductAdd] Starting - Product ID: ${productData?.id}`);
+
+        if (!productData || !productData.id || productData.parentId > 0) {
+            console.warn("Missing product data in Nhanh webhook or product is a variant");
             return;
         }
 
@@ -56,23 +57,57 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
             return;
         }
 
-        // Check if product already exists on Shopify
+        // Check if product has variants (childs)
+        const hasVariants = productData.childs && Array.isArray(productData.childs) && productData.childs.length > 0;
+
+        if (hasVariants) {
+            console.log(`[syncProductAdd] Product ${name} has ${productData.childs.length} variants`);
+        }
+
+        console.log(`[syncProductAdd] Checking if product exists on Shopify: ${barcode}`);
+
+        // Check if product already exists on Shopify (check parent barcode)
         const productExists = await ShopifyService.checkProductExistsBySku(barcode);
+
+        console.log(`[syncProductAdd] Product exists check result: ${productExists ? 'YES' : 'NO'}`);
 
         if (productExists) {
             console.log(`Product ${barcode} already exists on Shopify, skipping...`);
-            await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Sản phẩm ${name} đã tồn tại trên Shopify.`);
+            const variantInfo = hasVariants ? ` (${productData.childs.length} biến thể)` : "";
+            await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Sản phẩm ${name}${variantInfo} đã tồn tại trên Shopify.`);
             return;
         }
 
+        // If product has variants, check first variant only (optimization)
+        // Instead of checking all variants, just check the first one as sample
+        if (hasVariants && productData.childs.length > 0) {
+            const firstChild = productData.childs[0];
+            const childBarcode = firstChild.barcode || firstChild.code;
+
+            if (childBarcode) {
+                console.log(`[syncProductAdd] Checking first variant: ${childBarcode}`);
+                const variantExists = await ShopifyService.checkProductExistsBySku(childBarcode);
+                console.log(`[syncProductAdd] Variant exists check result: ${variantExists ? 'YES' : 'NO'}`);
+
+                if (variantExists) {
+                    console.log(`Variant ${childBarcode} already exists on Shopify, skipping entire product...`);
+                    await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Sản phẩm ${name} (biến thể đã tồn tại) trên Shopify.`);
+                    return;
+                }
+            }
+        }
+
+        console.log(`[syncProductAdd] Product not exists, proceeding to create...`);
+
         // Find or create product in local database
         let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
-        
+
         if (!product) {
             product = await Product.findOne({ where: { sku_nhanh: barcode } });
         }
 
         if (!product) {
+            console.log(`[syncProductAdd] Creating new product in database`);
             product = await Product.create({
                 nhanh_id: nhanhId,
                 sku_nhanh: barcode,
@@ -81,45 +116,64 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
                 image: image
             });
         } else {
-            await product.update({ 
+            console.log(`[syncProductAdd] Updating existing product in database`);
+            await product.update({
                 nhanh_id: nhanhId,
                 name: name,
-                image: image 
+                image: image
             });
         }
 
-        // Create product on Shopify with full data from webhook
+        console.log(`[syncProductAdd] Creating product on Shopify...`);
+
+        // Create product on Shopify with full data from webhook (including variants)
         const success = await ShopifyService.createProductOnShopify(product, productData);
+
+        console.log(`[syncProductAdd] Shopify creation result: ${success ? 'SUCCESS' : 'FAILED'}`);
 
         if (success) {
             await product.update({ sku_shopify: barcode });
-            await NotificationController.createSystemNotification("SUCCESS", `Webhook Nhanh.vn: Đã tạo sản phẩm mới "${name}" trên Shopify (Draft).`);
-            console.log(`Successfully created product ${name} on Shopify from webhook`);
+
+            const variantInfo = hasVariants ? ` với ${productData.childs.length} biến thể` : "";
+            await NotificationController.createSystemNotification("SUCCESS", `Webhook Nhanh.vn: Đã tạo sản phẩm mới "${name}"${variantInfo} trên Shopify (Draft).`);
+            console.log(`[syncProductAdd] Successfully created product ${name}${variantInfo} on Shopify from webhook`);
+
+            // Log variant details for debugging
+            if (hasVariants) {
+                productData.childs.forEach((child: any, index: number) => {
+                    const childBarcode = child.barcode || child.code;
+                    const attrs = child.attributes?.map((a: any) => `${a.name}: ${a.value}`).join(", ") || "";
+                    console.log(`  Variant ${index + 1}: ${childBarcode} - ${attrs}`);
+                });
+            }
         } else {
-            await NotificationController.createSystemNotification("ERROR", `Webhook Nhanh.vn: Lỗi tạo sản phẩm "${name}" trên Shopify.`);
-            console.error(`Failed to create product ${name} on Shopify`);
+            const variantInfo = hasVariants ? ` (${productData.childs.length} biến thể)` : "";
+            await NotificationController.createSystemNotification("ERROR", `Webhook Nhanh.vn: Lỗi tạo sản phẩm "${name}"${variantInfo} trên Shopify.`);
+            console.error(`[syncProductAdd] Failed to create product ${name} on Shopify`);
         }
+
+        console.log(`[syncProductAdd] Completed`);
     } catch (error: any) {
-        console.error("Error in syncProductAddFromNhanhWebhook:", error);
+        console.error("[syncProductAdd] Error:", error);
         await NotificationController.createSystemNotification("ERROR", `Webhook Nhanh.vn: Lỗi xử lý sản phẩm mới - ${error.message}`);
     }
 }
 
 export async function syncAllProductsFromNhanh() {
-    console.log("Starting full product sync...");
+    console.log("Starting inventory sync for existing products...");
     const io = getIO(); // Get socket instance
-    
+
     try {
         const products = await getAllProducts();
-        
+
         console.log(`Found ${products.length} products from Nhanh.`);
-        io.emit("sync_progress", { message: `Found ${products.length} products. Starting sync...`, total: products.length });
+        io.emit("sync_progress", { message: `Found ${products.length} products. Starting inventory sync...`, total: products.length });
 
         // Tạo thông báo bắt đầu
-        await NotificationController.createSystemNotification("INFO", `Bắt đầu đồng bộ ${products.length} sản phẩm.`);
+        await NotificationController.createSystemNotification("INFO", `Bắt đầu đồng bộ tồn kho ${products.length} sản phẩm.`);
 
         let syncedCount = 0;
-        let createdCount = 0;
+        let skippedCount = 0;
 
         for (const [index, p] of products.entries()) {
             const nhanhId = String(p.id);
@@ -136,41 +190,19 @@ export async function syncAllProductsFromNhanh() {
             let success = false;
 
             if (!productExists) {
-                // Product doesn't exist on Shopify, create it
-                console.log(`Creating new product on Shopify: ${name}`);
-                
-                // Find or create product in local database first
-                let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
-                if (!product) {
-                    product = await Product.findOne({ where: { sku_nhanh: barcode } });
-                }
-                
-                if (!product) {
-                    product = await Product.create({
-                        nhanh_id: nhanhId,
-                        sku_nhanh: barcode,
-                        sku_shopify: null, // Will be updated after creation
-                        name: name,
-                        image: image
-                    });
-                }
-
-                // Create product on Shopify with full Nhanh data
-                success = await ShopifyService.createProductOnShopify(product, p);
-                if (success) {
-                    createdCount++;
-                    // Update sku_shopify after creation
-                    await product.update({ sku_shopify: barcode });
-                }
+                // Product doesn't exist on Shopify, skip it
+                console.log(`Skipping product ${name} (${barcode}) - not found on Shopify`);
+                skippedCount++;
+                continue;
             } else {
-                // Product exists, just update inventory
+                // Product exists, update inventory
                 success = await ShopifyService.updateInventoryByBarcode(barcode, stock);
             }
 
             if (success) {
                 syncedCount++;
                 let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
-                
+
                 if (!product) {
                     product = await Product.findOne({ where: { sku_nhanh: barcode } });
                     if (product) {
@@ -185,8 +217,8 @@ export async function syncAllProductsFromNhanh() {
                         });
                     }
                 } else {
-                    await product.update({ 
-                        sku_nhanh: barcode, 
+                    await product.update({
+                        sku_nhanh: barcode,
                         sku_shopify: barcode,
                         name: name,
                         image: image
@@ -198,7 +230,7 @@ export async function syncAllProductsFromNhanh() {
                     await Inventory.create({
                         product_id: product.id,
                         nhanh_stock: stock,
-                        shopify_stock: stock, 
+                        shopify_stock: stock,
                         status: "MATCH"
                     });
                 } else {
@@ -209,45 +241,41 @@ export async function syncAllProductsFromNhanh() {
                     });
                 }
             }
-            
+
             if ((index + 1) % 10 === 0) {
-                 io.emit("sync_progress", { 
-                     message: `Synced ${index + 1}/${products.length}... (${createdCount} created)`, 
-                     processed: index + 1, 
-                     total: products.length 
-                 });
+                io.emit("sync_progress", {
+                    message: `Synced ${index + 1}/${products.length}... (${skippedCount} skipped)`,
+                    processed: index + 1,
+                    total: products.length
+                });
             }
         }
-        
-        console.log(`Synced ${syncedCount} products (${createdCount} created, ${syncedCount - createdCount} updated).`);
-        
-        const successMsg = `Đồng bộ hoàn tất! Tạo mới ${createdCount}, cập nhật ${syncedCount - createdCount}/${products.length} sản phẩm.`;
-        
-        io.emit("sync_complete", { 
-            status: "success", 
-            total: products.length, 
+        console.log(`Synced ${syncedCount} products (${skippedCount} skipped - not found on Shopify).`);
+        const successMsg = `Đồng bộ hoàn tất! Cập nhật ${syncedCount}/${products.length} sản phẩm (${skippedCount} chưa có trên Shopify).`;
+
+        io.emit("sync_complete", {
+            status: "success",
+            total: products.length,
             synced: syncedCount,
-            created: createdCount,
+            skipped: skippedCount,
             message: successMsg
         });
 
         // Tạo thông báo thành công
         await NotificationController.createSystemNotification("SUCCESS", successMsg);
 
-        return { total: products.length, synced: syncedCount, created: createdCount };
+        return { total: products.length, synced: syncedCount, skipped: skippedCount };
 
     } catch (error: any) {
-        console.error("Full sync error:", error);
-        
-        const errorMsg = `Lỗi đồng bộ: ${error.message}`;
-        io.emit("sync_error", { 
-            status: "error", 
-            message: errorMsg 
-        });
+        console.error("Inventory sync error:", error);
 
+        const errorMsg = `Lỗi đồng bộ tồn kho: ${error.message}`;
+        io.emit("sync_error", {
+            status: "error",
+            message: errorMsg
+        });
         // Tạo thông báo lỗi
         await NotificationController.createSystemNotification("ERROR", errorMsg);
-
         throw error;
     }
 }

@@ -188,7 +188,7 @@ export async function checkProductExistsBySku(sku: string): Promise<string | nul
 
     const client = createShoptify(config);
     const queryRes = await client.post("/graphql.json", { query });
-    
+
     if (queryRes.data.errors) return null;
 
     const edges = queryRes.data?.data?.productVariants?.edges;
@@ -324,6 +324,7 @@ async function updateOrderCanceled(shopifyOrderId: number) {
  */
 export async function createProductOnShopify(product: any, nhanhData?: any): Promise<boolean> {
   const config = await getConfig();
+  let productPayload: any; // Declare outside try block to access in catch
   try {
     const client = createShoptify(config);
 
@@ -337,7 +338,7 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
 
     // Build description from Nhanh data
     let bodyHtml = productDetails?.description || productDetails?.content || "<p>Product from Nhanh.vn</p>";
-    
+
     // Add product details to description
     if (productDetails?.content) {
       bodyHtml += `<br><br>${productDetails.content}`;
@@ -379,8 +380,53 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
 
     // Handle product variants (childs) if exists
     const variants: any[] = [];
+    const optionsMap = new Map<string, Set<string>>(); // To collect all option names and their values
+
     if (productDetails?.childs && Array.isArray(productDetails.childs) && productDetails.childs.length > 0) {
       // Product has variants
+
+      // Check if parent barcode is different from all child barcodes
+      const parentBarcode = productDetails.barcode || productDetails.code;
+      const childBarcodes = productDetails.childs.map((c: any) => c.barcode || c.code);
+      const parentIsDifferent = parentBarcode && !childBarcodes.includes(parentBarcode);
+
+      // If parent has unique barcode, add it as first variant
+      if (parentIsDifferent) {
+        console.log(`[createProductOnShopify] Parent has unique barcode: ${parentBarcode}, adding as variant`);
+
+        const parentVariant: any = {
+          sku: parentBarcode,
+          price: productDetails.prices?.retail?.toString() || "0",
+          compare_at_price: productDetails.prices?.old?.toString() || undefined,
+          cost: productDetails.prices?.import?.toString() || undefined,
+          inventory_management: "shopify",
+          inventory_policy: "deny",
+          inventory_quantity: productDetails.inventory?.available || 0,
+        };
+
+        // Add default option values for parent and collect them
+        if (productDetails.childs[0].attributes && Array.isArray(productDetails.childs[0].attributes)) {
+          productDetails.childs[0].attributes.forEach((attr: any, index: number) => {
+            const optionKey = `option${index + 1}`;
+            parentVariant[optionKey] = "Default"; // Or use parent's attribute if exists
+
+            // Collect option name and "Default" value
+            if (!optionsMap.has(attr.name)) {
+              optionsMap.set(attr.name, new Set<string>());
+            }
+            optionsMap.get(attr.name)!.add("Default");
+          });
+        }
+
+        if (productDetails.shipping?.weight) {
+          parentVariant.weight = productDetails.shipping.weight;
+          parentVariant.weight_unit = "g";
+        }
+
+        variants.push(parentVariant);
+      }
+
+      // Add child variants
       productDetails.childs.forEach((child: any) => {
         const childVariant: any = {
           sku: child.barcode || child.code,
@@ -395,7 +441,14 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
         // Add variant options from attributes
         if (child.attributes && Array.isArray(child.attributes)) {
           child.attributes.forEach((attr: any, index: number) => {
-            childVariant[`option${index + 1}`] = attr.value;
+            const optionKey = `option${index + 1}`;
+            childVariant[optionKey] = attr.value;
+
+            // Collect option names and values for product options
+            if (!optionsMap.has(attr.name)) {
+              optionsMap.set(attr.name, new Set<string>());
+            }
+            optionsMap.get(attr.name)!.add(attr.value);
           });
         }
 
@@ -411,9 +464,18 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
       variants.push(variant);
     }
 
-    // Build product options from parent attributes
+    // Build product options from collected variant attributes
     const options: any[] = [];
-    if (productDetails?.attributes && Array.isArray(productDetails.attributes)) {
+    if (optionsMap.size > 0) {
+      // Build options from variants attributes
+      optionsMap.forEach((values, name) => {
+        options.push({
+          name: name,
+          values: Array.from(values)
+        });
+      });
+    } else if (productDetails?.attributes && Array.isArray(productDetails.attributes)) {
+      // Fallback: Build from parent attributes if no variants
       productDetails.attributes.forEach((attr: any) => {
         options.push({
           name: attr.name,
@@ -423,7 +485,7 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
     }
 
     // Build final product payload
-    const productPayload = {
+    productPayload = {
       product: {
         title: productDetails?.name || product.name || product.sku_nhanh,
         body_html: bodyHtml,
@@ -454,22 +516,16 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
         ]
       }
     };
-    console.log("Creating product on Shopify with payload:", JSON.stringify(productPayload, null, 2));
     const response = await client.post("/products.json", productPayload);
-
     if (response.data?.product?.id) {
       logger.info(`Successfully created product ${productDetails?.name || product.name} on Shopify with ID: ${response.data.product.id}`);
-
-      // Update product in database with shopify SKU
       if (product.update) {
         await product.update({
           sku_shopify: productDetails?.barcode || productDetails?.code || product.sku_nhanh
         });
       }
-
       return true;
     }
-
     return false;
   } catch (error: any) {
     if (axios.isAxiosError(error)) {

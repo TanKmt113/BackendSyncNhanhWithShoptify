@@ -68,7 +68,6 @@ export async function syncDataNhanh(req: Request, res: Response, next: NextFunct
   }
   try {
     const webhookData = req.body;
-    console.log("Received Nhanh webhook:", webhookData);
     const { event, data } = webhookData;
     switch (event) {
       case 'orderUpdate':
@@ -81,7 +80,6 @@ export async function syncDataNhanh(req: Request, res: Response, next: NextFunct
         }
         break;
       case 'orderDelete':
-        console.log('orderDelete')
         break
       case 'inventoryChange':
         await SyncService.syncInventoryFromNhanhWebhook(data);
@@ -108,4 +106,51 @@ export async function testSync(req: Request, res: Response, next: NextFunction) 
   }
 }
 
+// export async function testProductAdd(req: Request, res: Response, next: NextFunction) {
 
+//   try {
+//     const productData = req.body;
+
+//     console.log(`[testProductAdd] Received request for product: ${productData?.name || productData?.id}`);
+
+//     // Validate basic product data
+//     if (!productData || !productData.id) {
+//       return res.status(400).json({
+//         success: false,
+//         message: "Missing product data or product ID"
+//       });
+//     }
+
+//     // Set timeout for the operation (60 seconds)
+//     const timeoutPromise = new Promise((_, reject) =>
+//       setTimeout(() => reject(new Error('Operation timeout after 60 seconds')), 60000)
+//     );
+
+//     // Call the sync function with timeout
+//     await Promise.race([
+//       SyncService.syncProductAddFromNhanhWebhook(productData),
+//       timeoutPromise
+//     ]);
+
+//     console.log(`[testProductAdd] Request completed successfully`);
+
+//     return res.status(200).json({
+//       success: true,
+//       message: `Product ${productData.name || productData.id} processed successfully`,
+//       hasVariants: !!(productData.childs && productData.childs.length > 0),
+//       variantsCount: productData.childs?.length || 0
+//     });
+//   } catch (err: any) {
+//     console.error(`[testProductAdd] Error:`, err.message);
+
+//     if (err.message?.includes('timeout')) {
+//       return res.status(408).json({
+//         success: false,
+//         message: 'Request timeout - operation took too long',
+//         error: err.message
+//       });
+//     }
+
+//     next(err);
+//   }
+// }

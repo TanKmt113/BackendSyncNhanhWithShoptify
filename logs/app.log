@@ -8009,3 +8009,315 @@
 [2026-02-10 13:54:34] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214275070 trên Shopify.
 [2026-02-10 13:54:34] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214265156 trên Shopify.
 [2026-02-10 13:55:36] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214262988 trên Shopify.
+[2026-02-11 10:26:36] [INFO] Successfully created product Sản phẩm test 04 on Shopify with ID: 10402817376565
+[2026-02-11 10:28:43] [INFO] Successfully created product Sản phẩm test 04 on Shopify with ID: 10402817671477
+[2026-02-11 10:30:41] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274417 trên Shopify.
+[2026-02-11 10:30:41] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274363 trên Shopify.
+[2026-02-11 10:30:42] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274318 trên Shopify.
+[2026-02-11 10:30:42] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274264 trên Shopify.
+[2026-02-11 10:30:43] [INFO] Đã đồng bộ SKU 2000214256994: Số lượng mới 77
+[2026-02-11 10:31:18] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214278507 trên Shopify.
+[2026-02-11 10:31:19] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214278491 trên Shopify.
+[2026-02-11 10:33:27] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}
+[2026-02-11 10:33:27] [ERROR] Failed payload: {
+  "product": {
+    "title": "Sản phẩm test biến thể - Xanh navy - M",
+    "body_html": "<p>Product from Nhanh.vn</p>",
+    "vendor": "Nhanh.vn",
+    "product_type": "Imported",
+    "status": "draft",
+    "tags": "Sản phẩm",
+    "variants": [
+      {
+        "sku": "2000214278521",
+        "price": "0",
+        "compare_at_price": "0",
+        "cost": "0",
+        "inventory_management": "shopify",
+        "inventory_policy": "deny",
+        "inventory_quantity": 1
+      }
+    ],
+    "options": [
+      {
+        "name": "Màu sắc 2",
+        "values": [
+          "Xanh navy"
+        ]
+      },
+      {
+        "name": "Size áo",
+        "values": [
+          "37"
+        ]
+      },
+      {
+        "name": "Size",
+        "values": [
+          "M"
+        ]
+      }
+    ],
+    "metafields": [
+      {
+        "namespace": "nhanh",
+        "key": "product_id",
+        "value": "40754611",
+        "type": "single_line_text_field"
+      },
+      {
+        "namespace": "nhanh",
+        "key": "product_code",
+        "value": "2000214278521",
+        "type": "single_line_text_field"
+      }
+    ]
+  }
+}
+[2026-02-11 10:33:27] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}
+[2026-02-11 10:33:27] [ERROR] Failed payload: {
+  "product": {
+    "title": "Sản phẩm test biến thể - Xanh navy - L",
+    "body_html": "<p>Product from Nhanh.vn</p>",
+    "vendor": "Nhanh.vn",
+    "product_type": "Imported",
+    "status": "draft",
+    "tags": "Sản phẩm",
+    "variants": [
+      {
+        "sku": "2000214278538",
+        "price": "0",
+        "compare_at_price": "0",
+        "cost": "0",
+        "inventory_management": "shopify",
+        "inventory_policy": "deny",
+        "inventory_quantity": 1
+      }
+    ],
+    "options": [
+      {
+        "name": "Màu sắc 2",
+        "values": [
+          "Xanh navy"
+        ]
+      },
+      {
+        "name": "Size áo",
+        "values": [
+          "37"
+        ]
+      },
+      {
+        "name": "Size",
+        "values": [
+          "L"
+        ]
+      }
+    ],
+    "metafields": [
+      {
+        "namespace": "nhanh",
+        "key": "product_id",
+        "value": "40754612",
+        "type": "single_line_text_field"
+      },
+      {
+        "namespace": "nhanh",
+        "key": "product_code",
+        "value": "2000214278538",
+        "type": "single_line_text_field"
+      }
+    ]
+  }
+}
+[2026-02-11 10:33:28] [INFO] Successfully created product Sản phẩm test biến thể on Shopify with ID: 10402818326837
+[2026-02-11 10:37:18] [INFO] Đã đồng bộ SKU 2000214278538: Số lượng mới 0
+[2026-02-11 10:37:19] [INFO] Đã đồng bộ SKU 2000214278521: Số lượng mới 0
+[2026-02-11 10:40:07] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}
+[2026-02-11 10:40:07] [ERROR] Failed payload: {
+  "product": {
+    "title": "Sản phẩm test by Tan - M - Ghi",
+    "body_html": "<p>Product from Nhanh.vn</p>",
+    "vendor": "Nhanh.vn",
+    "product_type": "Imported",
+    "status": "draft",
+    "tags": "Sản phẩm",
+    "variants": [
+      {
+        "sku": "2000214278552",
+        "price": "0",
+        "compare_at_price": "0",
+        "cost": "0",
+        "inventory_management": "shopify",
+        "inventory_policy": "deny",
+        "inventory_quantity": 1
+      }
+    ],
+    "options": [
+      {
+        "name": "Size",
+        "values": [
+          "M"
+        ]
+      },
+      {
+        "name": "Màu",
+        "values": [
+          "Ghi"
+        ]
+      }
+    ],
+    "metafields": [
+      {
+        "namespace": "nhanh",
+        "key": "product_id",
+        "value": "40754614",
+        "type": "single_line_text_field"
+      },
+      {
+        "namespace": "nhanh",
+        "key": "product_code",
+        "value": "sp_test_by_tan_01-M-Ghi",
+        "type": "single_line_text_field"
+      }
+    ]
+  }
+}
+[2026-02-11 10:40:07] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}
+[2026-02-11 10:40:07] [ERROR] Failed payload: {
+  "product": {
+    "title": "Sản phẩm test by Tan - XL - Ghi",
+    "body_html": "<p>Product from Nhanh.vn</p>",
+    "vendor": "Nhanh.vn",
+    "product_type": "Imported",
+    "status": "draft",
+    "tags": "Sản phẩm",
+    "variants": [
+      {
+        "sku": "2000214278576",
+        "price": "0",
+        "compare_at_price": "0",
+        "cost": "0",
+        "inventory_management": "shopify",
+        "inventory_policy": "deny",
+        "inventory_quantity": 1
+      }
+    ],
+    "options": [
+      {
+        "name": "Size",
+        "values": [
+          "XL"
+        ]
+      },
+      {
+        "name": "Màu",
+        "values": [
+          "Ghi"
+        ]
+      }
+    ],
+    "metafields": [
+      {
+        "namespace": "nhanh",
+        "key": "product_id",
+        "value": "40754616",
+        "type": "single_line_text_field"
+      },
+      {
+        "namespace": "nhanh",
+        "key": "product_code",
+        "value": "sp_test_by_tan_01-XL-Ghi",
+        "type": "single_line_text_field"
+      }
+    ]
+  }
+}
+[2026-02-11 10:40:08] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}
+[2026-02-11 10:40:08] [ERROR] Failed payload: {
+  "product": {
+    "title": "Sản phẩm test by Tan - L - Ghi",
+    "body_html": "<p>Product from Nhanh.vn</p>",
+    "vendor": "Nhanh.vn",
+    "product_type": "Imported",
+    "status": "draft",
+    "tags": "Sản phẩm",
+    "variants": [
+      {
+        "sku": "2000214278569",
+        "price": "0",
+        "compare_at_price": "0",
+        "cost": "0",
+        "inventory_management": "shopify",
+        "inventory_policy": "deny",
+        "inventory_quantity": 1
+      }
+    ],
+    "options": [
+      {
+        "name": "Size",
+        "values": [
+          "L"
+        ]
+      },
+      {
+        "name": "Màu",
+        "values": [
+          "Ghi"
+        ]
+      }
+    ],
+    "metafields": [
+      {
+        "namespace": "nhanh",
+        "key": "product_id",
+        "value": "40754615",
+        "type": "single_line_text_field"
+      },
+      {
+        "namespace": "nhanh",
+        "key": "product_code",
+        "value": "sp_test_by_tan_01-L-Ghi",
+        "type": "single_line_text_field"
+      }
+    ]
+  }
+}
+[2026-02-11 10:40:09] [INFO] Successfully created product Sản phẩm test by Tan on Shopify with ID: 10402819670325
+[2026-02-11 10:41:22] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214269659 trên Shopify.
+[2026-02-11 10:41:33] [INFO] Đã đồng bộ SKU 2000214258028: Số lượng mới 1
