@@ -6,6 +6,7 @@ import syncRoutes from "./sync.routes";
 import notificationRoutes from "./notification.routes";
 import configRoutes from "./config.routes";
 import authRoutes from "./auth.routes";
+import logoRoutes from "./logo.routes";
 import { LogController } from "../controllers/log.controller";
 
 const router = Router();
@@ -17,6 +18,7 @@ router.use("/settings", configRoutes);
 router.use("/nhanh", nhanhRoutes);
 router.use("/webhooks", webhookRoutes);
 router.use("/auth", authRoutes);
+router.use("/logo", logoRoutes);
 router.get("/logs", LogController.viewLogs);
 
 

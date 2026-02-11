@@ -8321,3 +8321,1117 @@
 [2026-02-11 10:40:09] [INFO] Successfully created product Sản phẩm test by Tan on Shopify with ID: 10402819670325
 [2026-02-11 10:41:22] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214269659 trên Shopify.
 [2026-02-11 10:41:33] [INFO] Đã đồng bộ SKU 2000214258028: Số lượng mới 1
+[2026-02-11 10:44:44] [INFO] Đã đồng bộ SKU 2000214257366: Số lượng mới 20
+[2026-02-11 10:45:02] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272550 trên Shopify.
+[2026-02-11 10:45:18] [INFO] Đã đồng bộ SKU 2000214259698: Số lượng mới 14
+[2026-02-11 10:45:41] [INFO] Đã đồng bộ SKU 2000214278576: Số lượng mới 0
+[2026-02-11 10:45:42] [INFO] Đã đồng bộ SKU 2000214278569: Số lượng mới 0
+[2026-02-11 10:45:43] [INFO] Đã đồng bộ SKU 2000214278552: Số lượng mới 0
+[2026-02-11 10:46:17] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50}}).
+[2026-02-11 10:46:17] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754546}}}).
+[2026-02-11 10:46:17] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754496}}}).
+[2026-02-11 10:46:17] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754446}}}).
+[2026-02-11 10:46:18] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754396}}}).
+[2026-02-11 10:46:18] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754346}}}).
+[2026-02-11 10:46:18] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754296}}}).
+[2026-02-11 10:46:18] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754246}}}).
+[2026-02-11 10:46:19] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754176}}}).
+[2026-02-11 10:46:19] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754106}}}).
+[2026-02-11 10:46:19] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754056}}}).
+[2026-02-11 10:46:19] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40754006}}}).
+[2026-02-11 10:46:20] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753955}}}).
+[2026-02-11 10:46:20] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753905}}}).
+[2026-02-11 10:46:20] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753731}}}).
+[2026-02-11 10:46:20] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753681}}}).
+[2026-02-11 10:46:20] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753624}}}).
+[2026-02-11 10:46:21] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753573}}}).
+[2026-02-11 10:46:21] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753521}}}).
+[2026-02-11 10:46:21] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753471}}}).
+[2026-02-11 10:46:21] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753375}}}).
+[2026-02-11 10:46:21] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753317}}}).
+[2026-02-11 10:46:22] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753259}}}).
+[2026-02-11 10:46:22] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753209}}}).
+[2026-02-11 10:46:22] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753159}}}).
+[2026-02-11 10:46:23] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753107}}}).
+[2026-02-11 10:46:23] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753057}}}).
+[2026-02-11 10:46:23] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40753007}}}).
+[2026-02-11 10:46:23] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752952}}}).
+[2026-02-11 10:46:23] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752900}}}).
+[2026-02-11 10:46:23] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752850}}}).
+[2026-02-11 10:46:24] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752796}}}).
+[2026-02-11 10:46:24] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752742}}}).
+[2026-02-11 10:46:24] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752692}}}).
+[2026-02-11 10:46:24] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752613}}}).
+[2026-02-11 10:46:24] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752547}}}).
+[2026-02-11 10:46:25] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752480}}}).
+[2026-02-11 10:46:25] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752395}}}).
+[2026-02-11 10:46:25] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752222}}}).
+[2026-02-11 10:46:25] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752129}}}).
+[2026-02-11 10:46:25] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40752075}}}).
+[2026-02-11 10:46:26] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40751977}}}).
+[2026-02-11 10:46:26] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40751913}}}).
+[2026-02-11 10:46:26] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40486792}}}).
+[2026-02-11 10:46:26] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":40025481}}}).
+[2026-02-11 10:46:27] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":39491850}}}).
+[2026-02-11 10:46:27] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":38116605}}}).
+[2026-02-11 10:46:27] [INFO] Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: {"paginator":{"size":50,"next":{"id":33835887}}}).
+[2026-02-11 10:46:27] [ERROR] Error checking product exists for SKU 2000214278392:
+{
+  "message": "Error",
+  "name": "AggregateError",
+  "stack": "AggregateError: Error\n    at AxiosError.from (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\core\\AxiosError.js:96:14)\n    at RedirectableRequest.handleRequestError (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\adapters\\http.js:817:25)\n    at RedirectableRequest.emit (node:events:508:28)\n    at ClientRequest.eventHandlers.<computed> (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\follow-redirects\\index.js:49:24)\n    at ClientRequest.emit (node:events:508:28)\n    at emitErrorEvent (node:_http_client:107:11)\n    at TLSSocket.socketErrorListener (node:_http_client:574:5)\n    at TLSSocket.emit (node:events:508:28)\n    at emitErrorNT (node:internal/streams/destroy:170:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\n    at Axios.request (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\core\\Axios.js:45:41)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at Object.checkProductExistsBySku (D:\\SyncNhanhWithShoptify\\backend\\src\\services\\shopify.service.ts:190:22)\n    at Object.syncAllProductsFromNhanh (D:\\SyncNhanhWithShoptify\\backend\\src\\services\\sync.service.ts:188:35)",
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "adapter": [
+      "xhr",
+      "http",
+      "fetch"
+    ],
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "env": {},
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+      "X-Shopify-Access-Token": "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",
+      "User-Agent": "axios/1.13.2",
+      "Content-Length": "261",
+      "Accept-Encoding": "gzip, compress, deflate, br"
+    },
+    "baseURL": "https://setagovn.myshopify.com/admin/api/2025-10",
+    "method": "post",
+    "url": "/graphql.json",
+    "data": "{\"query\":\"\\n      {\\n        productVariants(first: 1, query: \\\"sku:2000214278392\\\") {\\n          edges {\\n            node {\\n              id\\n              product {\\n                id\\n              }\\n            }\\n          }\\n        }\\n      }\\n    \"}",
+    "allowAbsoluteUrls": true
+  },
+  "code": "ETIMEDOUT"
+}
+[2026-02-11 10:46:28] [ERROR] Error checking product exists for SKU 2000214278385:
+{
+  "message": "Error",
+  "name": "AggregateError",
+  "stack": "AggregateError: Error\n    at AxiosError.from (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\core\\AxiosError.js:96:14)\n    at RedirectableRequest.handleRequestError (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\adapters\\http.js:817:25)\n    at RedirectableRequest.emit (node:events:508:28)\n    at ClientRequest.eventHandlers.<computed> (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\follow-redirects\\index.js:49:24)\n    at ClientRequest.emit (node:events:508:28)\n    at emitErrorEvent (node:_http_client:107:11)\n    at TLSSocket.socketErrorListener (node:_http_client:574:5)\n    at TLSSocket.emit (node:events:508:28)\n    at emitErrorNT (node:internal/streams/destroy:170:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\n    at Axios.request (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\core\\Axios.js:45:41)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at Object.checkProductExistsBySku (D:\\SyncNhanhWithShoptify\\backend\\src\\services\\shopify.service.ts:190:22)\n    at Object.syncAllProductsFromNhanh (D:\\SyncNhanhWithShoptify\\backend\\src\\services\\sync.service.ts:188:35)",
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "adapter": [
+      "xhr",
+      "http",
+      "fetch"
+    ],
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "env": {},
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+      "X-Shopify-Access-Token": "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",
+      "User-Agent": "axios/1.13.2",
+      "Content-Length": "261",
+      "Accept-Encoding": "gzip, compress, deflate, br"
+    },
+    "baseURL": "https://setagovn.myshopify.com/admin/api/2025-10",
+    "method": "post",
+    "url": "/graphql.json",
+    "data": "{\"query\":\"\\n      {\\n        productVariants(first: 1, query: \\\"sku:2000214278385\\\") {\\n          edges {\\n            node {\\n              id\\n              product {\\n                id\\n              }\\n            }\\n          }\\n        }\\n      }\\n    \"}",
+    "allowAbsoluteUrls": true
+  },
+  "code": "ETIMEDOUT"
+}
+[2026-02-11 10:46:28] [ERROR] Error checking product exists for SKU 2000214278378:
+{
+  "message": "Error",
+  "name": "AggregateError",
+  "stack": "AggregateError: Error\n    at AxiosError.from (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\core\\AxiosError.js:96:14)\n    at RedirectableRequest.handleRequestError (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\adapters\\http.js:817:25)\n    at RedirectableRequest.emit (node:events:508:28)\n    at ClientRequest.eventHandlers.<computed> (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\follow-redirects\\index.js:49:24)\n    at ClientRequest.emit (node:events:508:28)\n    at emitErrorEvent (node:_http_client:107:11)\n    at TLSSocket.socketErrorListener (node:_http_client:574:5)\n    at TLSSocket.emit (node:events:508:28)\n    at emitErrorNT (node:internal/streams/destroy:170:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\n    at Axios.request (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\core\\Axios.js:45:41)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at Object.checkProductExistsBySku (D:\\SyncNhanhWithShoptify\\backend\\src\\services\\shopify.service.ts:190:22)\n    at Object.syncAllProductsFromNhanh (D:\\SyncNhanhWithShoptify\\backend\\src\\services\\sync.service.ts:188:35)",
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "adapter": [
+      "xhr",
+      "http",
+      "fetch"
+    ],
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "env": {},
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+      "X-Shopify-Access-Token": "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",
+      "User-Agent": "axios/1.13.2",
+      "Content-Length": "261",
+      "Accept-Encoding": "gzip, compress, deflate, br"
+    },
+    "baseURL": "https://setagovn.myshopify.com/admin/api/2025-10",
+    "method": "post",
+    "url": "/graphql.json",
+    "data": "{\"query\":\"\\n      {\\n        productVariants(first: 1, query: \\\"sku:2000214278378\\\") {\\n          edges {\\n            node {\\n              id\\n              product {\\n                id\\n              }\\n            }\\n          }\\n        }\\n      }\\n    \"}",
+    "allowAbsoluteUrls": true
+  },
+  "code": "ETIMEDOUT"
+}
+[2026-02-11 10:50:25] [INFO] Đã đồng bộ SKU 2000214271904: Số lượng mới 6
+[2026-02-11 10:50:26] [INFO] Đã đồng bộ SKU 2000214271898: Số lượng mới 0
+[2026-02-11 10:50:49] [INFO] Đã đồng bộ SKU 2000214271317: Số lượng mới 0
+[2026-02-11 10:50:50] [INFO] Đã đồng bộ SKU 2000214271300: Số lượng mới 0
+[2026-02-11 10:50:51] [INFO] Đã đồng bộ SKU 2000214271294: Số lượng mới 0
+[2026-02-11 10:50:53] [INFO] Đã đồng bộ SKU 2000214271287: Số lượng mới 0
+[2026-02-11 10:51:06] [INFO] Đã đồng bộ SKU 2000214269710: Số lượng mới 0
+[2026-02-11 10:51:20] [INFO] Đã đồng bộ SKU 2000214269222: Số lượng mới 7
+[2026-02-11 10:51:22] [INFO] Đã đồng bộ SKU 2000214269215: Số lượng mới 11
+[2026-02-11 10:51:23] [INFO] Đã đồng bộ SKU 2000214269208: Số lượng mới 11
+[2026-02-11 10:51:25] [INFO] Đã đồng bộ SKU 2000214269185: Số lượng mới 0
+[2026-02-11 10:51:33] [INFO] Đã đồng bộ SKU 2000214268966: Số lượng mới 0
+[2026-02-11 10:51:35] [INFO] Đã đồng bộ SKU 2000214268959: Số lượng mới 0
+[2026-02-11 10:51:36] [INFO] Đã đồng bộ SKU 2000214268942: Số lượng mới 0
+[2026-02-11 10:51:37] [INFO] Đã đồng bộ SKU 2000214268935: Số lượng mới 15
+[2026-02-11 10:51:39] [INFO] Đã đồng bộ SKU 2000214268928: Số lượng mới 5
+[2026-02-11 10:51:40] [INFO] Đã đồng bộ SKU 2000214268911: Số lượng mới 3
+[2026-02-11 10:51:41] [INFO] Đã đồng bộ SKU 2000214268904: Số lượng mới 2
+[2026-02-11 10:51:43] [INFO] Đã đồng bộ SKU 2000214268898: Số lượng mới 0
+[2026-02-11 10:51:44] [INFO] Đã đồng bộ SKU 2000214268881: Số lượng mới 9
+[2026-02-11 10:51:45] [INFO] Đã đồng bộ SKU 2000214268874: Số lượng mới 0
+[2026-02-11 10:51:47] [INFO] Đã đồng bộ SKU 2000214268867: Số lượng mới 0
+[2026-02-11 10:51:48] [INFO] Đã đồng bộ SKU 2000214268850: Số lượng mới 6
+[2026-02-11 10:51:49] [INFO] Đã đồng bộ SKU 2000214268843: Số lượng mới 10
+[2026-02-11 10:51:51] [INFO] Đã đồng bộ SKU 2000214268836: Số lượng mới 10
+[2026-02-11 10:51:52] [INFO] Đã đồng bộ SKU 2000214268829: Số lượng mới 4
+[2026-02-11 10:51:53] [INFO] Đã đồng bộ SKU 2000214268812: Số lượng mới 7
+[2026-02-11 10:51:55] [INFO] Đã đồng bộ SKU 2000214268805: Số lượng mới 6
+[2026-02-11 10:51:56] [INFO] Đã đồng bộ SKU 2000214268799: Số lượng mới 7
+[2026-02-11 10:51:57] [INFO] Đã đồng bộ SKU 2000214268782: Số lượng mới 0
+[2026-02-11 10:51:58] [INFO] Đã đồng bộ SKU 2000214268775: Số lượng mới 5
+[2026-02-11 10:52:00] [INFO] Đã đồng bộ SKU 2000214268751: Số lượng mới 9
+[2026-02-11 10:52:01] [INFO] Đã đồng bộ SKU 2000214268744: Số lượng mới 4
+[2026-02-11 10:52:02] [INFO] Đã đồng bộ SKU 2000214268737: Số lượng mới 12
+[2026-02-11 10:52:04] [INFO] Đã đồng bộ SKU 2000214268713: Số lượng mới 0
+[2026-02-11 10:52:06] [INFO] Đã đồng bộ SKU 2000214268706: Số lượng mới 0
+[2026-02-11 10:52:07] [INFO] Đã đồng bộ SKU 2000214268690: Số lượng mới 0
+[2026-02-11 10:52:08] [INFO] Đã đồng bộ SKU 2000214268683: Số lượng mới 0
+[2026-02-11 10:52:09] [INFO] Đã đồng bộ SKU 2000214268676: Số lượng mới 0
+[2026-02-11 10:52:10] [INFO] Đã đồng bộ SKU 2000214268669: Số lượng mới 0
+[2026-02-11 10:52:12] [INFO] Đã đồng bộ SKU 2000214268652: Số lượng mới 0
+[2026-02-11 10:52:13] [INFO] Đã đồng bộ SKU 2000214268645: Số lượng mới 0
+[2026-02-11 10:52:15] [INFO] Đã đồng bộ SKU 2000214268621: Số lượng mới 0
+[2026-02-11 10:52:16] [INFO] Đã đồng bộ SKU 2000214268614: Số lượng mới 0
+[2026-02-11 10:52:17] [INFO] Đã đồng bộ SKU 2000214268607: Số lượng mới 0
+[2026-02-11 10:52:19] [INFO] Đã đồng bộ SKU 2000214268591: Số lượng mới 0
+[2026-02-11 10:52:19] [ERROR] Error checking product exists for SKU 2000214268539:
+{
+  "message": "Request failed with status code 502",
+  "name": "AxiosError",
+  "stack": "AxiosError: Request failed with status code 502\n    at settle (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\core\\settle.js:19:12)\n    at IncomingMessage.handleStreamEnd (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\adapters\\http.js:793:11)\n    at IncomingMessage.emit (node:events:520:35)\n    at endReadableNT (node:internal/streams/readable:1701:12)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)\n    at Axios.request (D:\\SyncNhanhWithShoptify\\backend\\node_modules\\axios\\lib\\core\\Axios.js:45:41)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at Object.checkProductExistsBySku (D:\\SyncNhanhWithShoptify\\backend\\src\\services\\shopify.service.ts:190:22)\n    at Object.syncAllProductsFromNhanh (D:\\SyncNhanhWithShoptify\\backend\\src\\services\\sync.service.ts:188:35)",
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "adapter": [
+      "xhr",
+      "http",
+      "fetch"
+    ],
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "env": {},
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+      "X-Shopify-Access-Token": "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",
+      "User-Agent": "axios/1.13.2",
+      "Content-Length": "261",
+      "Accept-Encoding": "gzip, compress, deflate, br"
+    },
+    "baseURL": "https://setagovn.myshopify.com/admin/api/2025-10",
+    "method": "post",
+    "url": "/graphql.json",
+    "data": "{\"query\":\"\\n      {\\n        productVariants(first: 1, query: \\\"sku:2000214268539\\\") {\\n          edges {\\n            node {\\n              id\\n              product {\\n                id\\n              }\\n            }\\n          }\\n        }\\n      }\\n    \"}",
+    "allowAbsoluteUrls": true
+  },
+  "code": "ERR_BAD_RESPONSE",
+  "status": 502
+}
+[2026-02-11 10:52:20] [INFO] Đã đồng bộ SKU 2000214268522: Số lượng mới -1
+[2026-02-11 10:52:21] [INFO] Đã đồng bộ SKU 2000214268515: Số lượng mới 4
+[2026-02-11 10:52:23] [INFO] Đã đồng bộ SKU 2000214268508: Số lượng mới 6
+[2026-02-11 10:52:25] [INFO] Đã đồng bộ SKU 2000214268478: Số lượng mới 0
+[2026-02-11 10:52:26] [INFO] Đã đồng bộ SKU 2000214268461: Số lượng mới 0
+[2026-02-11 10:52:27] [INFO] Đã đồng bộ SKU 2000214268454: Số lượng mới 0
+[2026-02-11 10:52:28] [INFO] Đã đồng bộ SKU 2000214268447: Số lượng mới 0
+[2026-02-11 10:52:31] [INFO] Đã đồng bộ SKU 2000214268393: Số lượng mới 0
+[2026-02-11 10:52:39] [INFO] Đã đồng bộ SKU 2000214268225: Số lượng mới 0
+[2026-02-11 10:52:40] [INFO] Đã đồng bộ SKU 2000214268218: Số lượng mới 0
+[2026-02-11 10:52:41] [INFO] Đã đồng bộ SKU 2000214268201: Số lượng mới 0
+[2026-02-11 10:52:43] [INFO] Đã đồng bộ SKU 2000214268188: Số lượng mới 0
+[2026-02-11 10:52:44] [INFO] Đã đồng bộ SKU 2000214268171: Số lượng mới 0
+[2026-02-11 10:52:45] [INFO] Đã đồng bộ SKU 2000214268164: Số lượng mới 0
+[2026-02-11 10:52:47] [INFO] Đã đồng bộ SKU 2000214268140: Số lượng mới 0
+[2026-02-11 10:52:48] [INFO] Đã đồng bộ SKU 2000214268133: Số lượng mới 0
+[2026-02-11 10:52:50] [INFO] Đã đồng bộ SKU 2000214268126: Số lượng mới 0
+[2026-02-11 10:52:51] [INFO] Đã đồng bộ SKU 2000214268102: Số lượng mới 0
+[2026-02-11 10:52:52] [INFO] Đã đồng bộ SKU 2000214268096: Số lượng mới 1
+[2026-02-11 10:52:54] [INFO] Đã đồng bộ SKU 2000214268089: Số lượng mới 0
+[2026-02-11 10:52:55] [INFO] Đã đồng bộ SKU 2000214268065: Số lượng mới 0
+[2026-02-11 10:52:56] [INFO] Đã đồng bộ SKU 2000214268058: Số lượng mới 0
+[2026-02-11 10:52:58] [INFO] Đã đồng bộ SKU 2000214268041: Số lượng mới 0
+[2026-02-11 10:53:00] [INFO] Đã đồng bộ SKU 2000214268010: Số lượng mới 10
+[2026-02-11 10:53:01] [INFO] Đã đồng bộ SKU 2000214268003: Số lượng mới 4
+[2026-02-11 10:53:02] [INFO] Đã đồng bộ SKU 2000214267990: Số lượng mới 19
+[2026-02-11 10:53:03] [INFO] Đã đồng bộ SKU 2000214267983: Số lượng mới 12
+[2026-02-11 10:53:05] [INFO] Đã đồng bộ SKU 2000214267976: Số lượng mới 16
+[2026-02-11 10:53:06] [INFO] Đã đồng bộ SKU 2000214267969: Số lượng mới 14
+[2026-02-11 10:53:07] [INFO] Đã đồng bộ SKU 2000214267952: Số lượng mới 17
+[2026-02-11 10:53:08] [INFO] Đã đồng bộ SKU 2000214267945: Số lượng mới 7
+[2026-02-11 10:53:19] [INFO] Đã đồng bộ SKU 2000214267662: Số lượng mới 3
+[2026-02-11 10:53:21] [INFO] Đã đồng bộ SKU 2000214267655: Số lượng mới 6
+[2026-02-11 10:53:22] [INFO] Đã đồng bộ SKU 2000214267648: Số lượng mới 0
+[2026-02-11 10:53:28] [INFO] Đã đồng bộ SKU 2000214267518: Số lượng mới 0
+[2026-02-11 10:53:29] [INFO] Đã đồng bộ SKU 2000214267501: Số lượng mới 13
+[2026-02-11 10:53:30] [INFO] Đã đồng bộ SKU 2000214267495: Số lượng mới 14
+[2026-02-11 10:53:31] [INFO] Đã đồng bộ SKU 2000214267488: Số lượng mới 8
+[2026-02-11 10:53:33] [INFO] Đã đồng bộ SKU 2000214267471: Số lượng mới 5
+[2026-02-11 10:53:35] [INFO] Đã đồng bộ SKU 2000214267426: Số lượng mới 0
+[2026-02-11 10:53:36] [INFO] Đã đồng bộ SKU 2000214267419: Số lượng mới 0
+[2026-02-11 10:53:38] [INFO] Đã đồng bộ SKU 2000214267402: Số lượng mới 0
+[2026-02-11 10:53:39] [INFO] Đã đồng bộ SKU 2000214267396: Số lượng mới 0
+[2026-02-11 10:53:40] [INFO] Đã đồng bộ SKU 2000214267389: Số lượng mới 0
+[2026-02-11 10:53:41] [INFO] Đã đồng bộ SKU 2000214267372: Số lượng mới 0
+[2026-02-11 10:53:44] [INFO] Đã đồng bộ SKU 2000214267334: Số lượng mới 0
+[2026-02-11 10:53:45] [INFO] Đã đồng bộ SKU 2000214267327: Số lượng mới 0
+[2026-02-11 10:53:46] [INFO] Đã đồng bộ SKU 2000214267310: Số lượng mới 0
+[2026-02-11 10:53:47] [INFO] Đã đồng bộ SKU 2000214267303: Số lượng mới 1
+[2026-02-11 10:53:48] [INFO] Đã đồng bộ SKU 2000214267297: Số lượng mới 1
+[2026-02-11 10:53:50] [INFO] Đã đồng bộ SKU 2000214267280: Số lượng mới 0
+[2026-02-11 10:53:52] [INFO] Đã đồng bộ SKU 2000214267242: Số lượng mới 0
+[2026-02-11 10:53:53] [INFO] Đã đồng bộ SKU 2000214267235: Số lượng mới 0
+[2026-02-11 10:53:54] [INFO] Đã đồng bộ SKU 2000214267228: Số lượng mới 0
+[2026-02-11 10:53:56] [INFO] Đã đồng bộ SKU 2000214267211: Số lượng mới 0
+[2026-02-11 10:53:57] [INFO] Đã đồng bộ SKU 2000214267204: Số lượng mới 0
+[2026-02-11 10:53:58] [INFO] Đã đồng bộ SKU 2000214267198: Số lượng mới 0
+[2026-02-11 10:54:02] [INFO] Đã đồng bộ SKU 2000214267112: Số lượng mới 0
+[2026-02-11 10:54:03] [INFO] Đã đồng bộ SKU 2000214267105: Số lượng mới 0
+[2026-02-11 10:54:04] [INFO] Đã đồng bộ SKU 2000214267099: Số lượng mới 8
+[2026-02-11 10:54:06] [INFO] Đã đồng bộ SKU 2000214267082: Số lượng mới 1
+[2026-02-11 10:54:07] [INFO] Đã đồng bộ SKU 2000214267075: Số lượng mới 3
+[2026-02-11 10:54:08] [INFO] Đã đồng bộ SKU 2000214267068: Số lượng mới 0
+[2026-02-11 10:54:09] [INFO] Đã đồng bộ SKU 2000214267051: Số lượng mới 0
+[2026-02-11 10:54:10] [INFO] Đã đồng bộ SKU 2000214267044: Số lượng mới 1
+[2026-02-11 10:54:12] [INFO] Đã đồng bộ SKU 2000214267037: Số lượng mới 6
+[2026-02-11 10:54:13] [INFO] Đã đồng bộ SKU 2000214267020: Số lượng mới 4
+[2026-02-11 10:54:14] [INFO] Đã đồng bộ SKU 2000214267013: Số lượng mới 0
+[2026-02-11 10:54:15] [INFO] Đã đồng bộ SKU 2000214267006: Số lượng mới 10
+[2026-02-11 10:54:16] [INFO] Đã đồng bộ SKU 2000214266993: Số lượng mới 7
+[2026-02-11 10:54:18] [INFO] Đã đồng bộ SKU 2000214266986: Số lượng mới 0
+[2026-02-11 10:54:19] [INFO] Đã đồng bộ SKU 2000214266979: Số lượng mới 3
+[2026-02-11 10:54:20] [INFO] Đã đồng bộ SKU 2000214266962: Số lượng mới 3
+[2026-02-11 10:54:22] [INFO] Đã đồng bộ SKU 2000214266771: Số lượng mới 6
+[2026-02-11 10:54:23] [INFO] Đã đồng bộ SKU 2000214266764: Số lượng mới 15
+[2026-02-11 10:54:24] [INFO] Đã đồng bộ SKU 2000214266757: Số lượng mới 31
+[2026-02-11 10:54:26] [INFO] Đã đồng bộ SKU 2000214266740: Số lượng mới 8
+[2026-02-11 10:54:29] [INFO] Đã đồng bộ SKU 2000214266634: Số lượng mới 0
+[2026-02-11 10:54:30] [INFO] Đã đồng bộ SKU 2000214266627: Số lượng mới 0
+[2026-02-11 10:54:31] [INFO] Đã đồng bộ SKU 2000214266603: Số lượng mới 2
+[2026-02-11 10:54:33] [INFO] Đã đồng bộ SKU 2000214266597: Số lượng mới 3
+[2026-02-11 10:54:34] [INFO] Đã đồng bộ SKU 2000214266580: Số lượng mới 0
+[2026-02-11 10:54:35] [INFO] Đã đồng bộ SKU 2000214266573: Số lượng mới 0
+[2026-02-11 10:54:36] [INFO] Đã đồng bộ SKU 2000214266566: Số lượng mới 0
+[2026-02-11 10:54:37] [INFO] Đã đồng bộ SKU 2000214266559: Số lượng mới 0
+[2026-02-11 10:54:39] [INFO] Đã đồng bộ SKU 2000214266542: Số lượng mới 0
+[2026-02-11 10:54:40] [INFO] Đã đồng bộ SKU 2000214266528: Số lượng mới 2
+[2026-02-11 10:54:41] [INFO] Đã đồng bộ SKU 2000214266511: Số lượng mới 8
+[2026-02-11 10:54:43] [INFO] Đã đồng bộ SKU 2000214266504: Số lượng mới 11
+[2026-02-11 10:54:44] [INFO] Đã đồng bộ SKU 2000214266498: Số lượng mới 0
+[2026-02-11 10:54:45] [INFO] Đã đồng bộ SKU 2000214266481: Số lượng mới 0
+[2026-02-11 10:54:46] [INFO] Đã đồng bộ SKU 2000214266474: Số lượng mới 14
+[2026-02-11 10:54:47] [INFO] Đã đồng bộ SKU 2000214266467: Số lượng mới 0
+[2026-02-11 10:54:49] [INFO] Đã đồng bộ SKU 2000214266450: Số lượng mới 21
+[2026-02-11 10:54:50] [INFO] Đã đồng bộ SKU 2000214266443: Số lượng mới 12
+[2026-02-11 10:54:51] [INFO] Đã đồng bộ SKU 2000214266191: Số lượng mới 29
+[2026-02-11 10:54:53] [INFO] Đã đồng bộ SKU 2000214266184: Số lượng mới 0
+[2026-02-11 10:54:54] [INFO] Đã đồng bộ SKU 2000214266177: Số lượng mới 0
+[2026-02-11 10:54:55] [INFO] Đã đồng bộ SKU 2000214266160: Số lượng mới 0
+[2026-02-11 10:54:57] [INFO] Đã đồng bộ SKU 2000214266146: Số lượng mới 0
+[2026-02-11 10:54:58] [INFO] Đã đồng bộ SKU 2000214266122: Số lượng mới 25
+[2026-02-11 10:54:59] [INFO] Đã đồng bộ SKU 2000214266115: Số lượng mới 0
+[2026-02-11 10:55:00] [INFO] Đã đồng bộ SKU 2000214266108: Số lượng mới 29
+[2026-02-11 10:55:02] [INFO] Đã đồng bộ SKU 2000214266092: Số lượng mới 19
+[2026-02-11 10:55:03] [INFO] Đã đồng bộ SKU 2000214266078: Số lượng mới 0
+[2026-02-11 10:55:04] [INFO] Đã đồng bộ SKU 2000214266061: Số lượng mới 1
+[2026-02-11 10:55:06] [INFO] Đã đồng bộ SKU 2000214266047: Số lượng mới 2
+[2026-02-11 10:55:07] [INFO] Đã đồng bộ SKU 2000214266030: Số lượng mới 1
+[2026-02-11 10:55:09] [INFO] Đã đồng bộ SKU 2000214266023: Số lượng mới 1
+[2026-02-11 10:55:10] [INFO] Đã đồng bộ SKU 2000214266016: Số lượng mới 0
+[2026-02-11 10:55:11] [INFO] Đã đồng bộ SKU 2000214266009: Số lượng mới 0
+[2026-02-11 10:55:12] [INFO] Đã đồng bộ SKU 2000214265996: Số lượng mới 2
+[2026-02-11 10:55:14] [INFO] Đã đồng bộ SKU 2000214265989: Số lượng mới 2
+[2026-02-11 10:55:15] [INFO] Đã đồng bộ SKU 2000214265972: Số lượng mới 2
+[2026-02-11 10:55:16] [INFO] Đã đồng bộ SKU 2000214265965: Số lượng mới 0
+[2026-02-11 10:55:18] [INFO] Đã đồng bộ SKU 2000214265941: Số lượng mới 1
+[2026-02-11 10:55:19] [INFO] Đã đồng bộ SKU 2000214265934: Số lượng mới 74
+[2026-02-11 10:55:20] [INFO] Đã đồng bộ SKU 2000214265927: Số lượng mới 20
+[2026-02-11 10:55:21] [INFO] Đã đồng bộ SKU 2000214265910: Số lượng mới 10
+[2026-02-11 10:55:23] [INFO] Đã đồng bộ SKU 2000214265903: Số lượng mới 16
+[2026-02-11 10:55:24] [INFO] Đã đồng bộ SKU 2000214265842: Số lượng mới 0
+[2026-02-11 10:55:25] [INFO] Đã đồng bộ SKU 2000214265798: Số lượng mới 1
+[2026-02-11 10:55:27] [INFO] Đã đồng bộ SKU 2000214265781: Số lượng mới 1
+[2026-02-11 10:55:28] [INFO] Đã đồng bộ SKU 2000214265774: Số lượng mới 0
+[2026-02-11 10:55:29] [INFO] Đã đồng bộ SKU 2000214265750: Số lượng mới 0
+[2026-02-11 10:55:31] [INFO] Đã đồng bộ SKU 2000214265743: Số lượng mới 0
+[2026-02-11 10:55:32] [INFO] Đã đồng bộ SKU 2000214265736: Số lượng mới 0
+[2026-02-11 10:55:33] [INFO] Đã đồng bộ SKU 2000214265729: Số lượng mới 0
+[2026-02-11 10:55:34] [INFO] Đã đồng bộ SKU 2000214265712: Số lượng mới 0
+[2026-02-11 10:55:36] [INFO] Đã đồng bộ SKU 2000214265705: Số lượng mới 6
+[2026-02-11 10:55:37] [INFO] Đã đồng bộ SKU 2000214265699: Số lượng mới 8
+[2026-02-11 10:55:38] [INFO] Đã đồng bộ SKU 2000214265682: Số lượng mới 4
+[2026-02-11 10:55:39] [INFO] Đã đồng bộ SKU 2000214265675: Số lượng mới 21
+[2026-02-11 10:55:41] [INFO] Đã đồng bộ SKU 2000214265668: Số lượng mới 17
+[2026-02-11 10:55:42] [INFO] Đã đồng bộ SKU 2000214265651: Số lượng mới 21
+[2026-02-11 10:55:43] [INFO] Đã đồng bộ SKU 2000214265644: Số lượng mới 13
+[2026-02-11 10:55:44] [INFO] Đã đồng bộ SKU 2000214265637: Số lượng mới 3
+[2026-02-11 10:55:45] [INFO] Đã đồng bộ SKU 2000214265620: Số lượng mới 20
+[2026-02-11 10:55:47] [INFO] Đã đồng bộ SKU 2000214265613: Số lượng mới 28
+[2026-02-11 10:55:48] [INFO] Đã đồng bộ SKU 2000214265606: Số lượng mới 11
+[2026-02-11 10:55:49] [INFO] Đã đồng bộ SKU 2000214265590: Số lượng mới 32
+[2026-02-11 10:55:52] [INFO] Đã đồng bộ SKU 2000214265538: Số lượng mới 0
+[2026-02-11 10:55:53] [INFO] Đã đồng bộ SKU 2000214265521: Số lượng mới 13
+[2026-02-11 10:55:55] [INFO] Đã đồng bộ SKU 2000214265514: Số lượng mới 42
+[2026-02-11 10:55:56] [INFO] Đã đồng bộ SKU 2000214265507: Số lượng mới 0
+[2026-02-11 10:56:03] [INFO] Đã đồng bộ SKU 2000214265347: Số lượng mới 15
+[2026-02-11 10:56:04] [INFO] Đã đồng bộ SKU 2000214265330: Số lượng mới 32
+[2026-02-11 10:56:06] [INFO] Đã đồng bộ SKU 2000214265323: Số lượng mới 9
+[2026-02-11 10:56:07] [INFO] Đã đồng bộ SKU 2000214265316: Số lượng mới 24
+[2026-02-11 10:56:11] [INFO] Đã đồng bộ SKU 2000214265170: Số lượng mới 7
+[2026-02-11 10:56:12] [INFO] Đã đồng bộ SKU 2000214265163: Số lượng mới 23
+[2026-02-11 10:56:13] [INFO] Đã đồng bộ SKU 2000214265156: Số lượng mới 41
+[2026-02-11 10:56:14] [INFO] Đã đồng bộ SKU 2000214265149: Số lượng mới 0
+[2026-02-11 10:56:15] [INFO] Đã đồng bộ SKU 2000214265132: Số lượng mới 0
+[2026-02-11 10:56:30] [INFO] Đã đồng bộ SKU 2000214264753: Số lượng mới 0
+[2026-02-11 10:56:32] [INFO] Đã đồng bộ SKU 2000214264746: Số lượng mới 0
+[2026-02-11 10:56:34] [INFO] Đã đồng bộ SKU 2000214264715: Số lượng mới 0
+[2026-02-11 10:56:35] [INFO] Đã đồng bộ SKU 2000214264708: Số lượng mới 0
+[2026-02-11 10:56:36] [INFO] Đã đồng bộ SKU 2000214264692: Số lượng mới 0
+[2026-02-11 10:56:37] [INFO] Đã đồng bộ SKU 2000214264685: Số lượng mới 0
+[2026-02-11 10:56:38] [INFO] Đã đồng bộ SKU 2000214264678: Số lượng mới 0
+[2026-02-11 10:56:40] [INFO] Đã đồng bộ SKU 2000214264661: Số lượng mới -1
+[2026-02-11 10:56:41] [INFO] Đã đồng bộ SKU 2000214264654: Số lượng mới 0
+[2026-02-11 10:56:42] [INFO] Đã đồng bộ SKU 2000214264647: Số lượng mới 0
+[2026-02-11 10:56:43] [INFO] Đã đồng bộ SKU 2000214264630: Số lượng mới 0
+[2026-02-11 10:56:44] [INFO] Đã đồng bộ SKU 2000214264623: Số lượng mới 0
+[2026-02-11 10:56:46] [INFO] Đã đồng bộ SKU 2000214264616: Số lượng mới 0
+[2026-02-11 10:56:47] [INFO] Đã đồng bộ SKU 2000214264609: Số lượng mới 0
+[2026-02-11 10:56:48] [INFO] Đã đồng bộ SKU 2000214264593: Số lượng mới 0
+[2026-02-11 10:56:49] [INFO] Đã đồng bộ SKU 2000214264586: Số lượng mới 0
+[2026-02-11 10:56:50] [INFO] Đã đồng bộ SKU 2000214264579: Số lượng mới 0
+[2026-02-11 10:56:52] [INFO] Đã đồng bộ SKU 2000214264555: Số lượng mới 0
+[2026-02-11 10:56:53] [INFO] Đã đồng bộ SKU 2000214264548: Số lượng mới 0
+[2026-02-11 10:56:54] [INFO] Đã đồng bộ SKU 2000214264531: Số lượng mới 0
+[2026-02-11 10:56:56] [INFO] Đã đồng bộ SKU 2000214264517: Số lượng mới 0
+[2026-02-11 10:56:57] [INFO] Đã đồng bộ SKU 2000214264500: Số lượng mới 0
+[2026-02-11 10:56:58] [INFO] Đã đồng bộ SKU 2000214264494: Số lượng mới 0
+[2026-02-11 10:56:59] [INFO] Đã đồng bộ SKU 2000214264487: Số lượng mới 0
+[2026-02-11 10:57:05] [INFO] Đã đồng bộ SKU 2000214264371: Số lượng mới 0
+[2026-02-11 10:57:06] [INFO] Đã đồng bộ SKU 2000214264364: Số lượng mới 0
+[2026-02-11 10:57:07] [INFO] Đã đồng bộ SKU 2000214264357: Số lượng mới 6
+[2026-02-11 10:57:09] [INFO] Đã đồng bộ SKU 2000214264333: Số lượng mới 0
+[2026-02-11 10:57:26] [INFO] Đã đồng bộ SKU 2000214263893: Số lượng mới 0
+[2026-02-11 10:57:27] [INFO] Đã đồng bộ SKU 2000214263886: Số lượng mới 0
+[2026-02-11 10:57:29] [INFO] Đã đồng bộ SKU 2000214263879: Số lượng mới 0
+[2026-02-11 10:57:30] [INFO] Đã đồng bộ SKU 2000214263862: Số lượng mới 0
+[2026-02-11 10:57:31] [INFO] Đã đồng bộ SKU 2000214263855: Số lượng mới 0
+[2026-02-11 10:57:32] [INFO] Đã đồng bộ SKU 2000214263848: Số lượng mới 0
+[2026-02-11 10:57:33] [INFO] Đã đồng bộ SKU 2000214263831: Số lượng mới 0
+[2026-02-11 10:57:35] [INFO] Đã đồng bộ SKU 2000214263824: Số lượng mới 0
+[2026-02-11 10:57:36] [INFO] Đã đồng bộ SKU 2000214263817: Số lượng mới 0
+[2026-02-11 10:57:37] [INFO] Đã đồng bộ SKU 2000214263800: Số lượng mới 0
+[2026-02-11 10:57:38] [INFO] Đã đồng bộ SKU 2000214263794: Số lượng mới 0
+[2026-02-11 10:57:39] [INFO] Đã đồng bộ SKU 2000214263787: Số lượng mới 0
+[2026-02-11 10:57:41] [INFO] Đã đồng bộ SKU 2000214263763: Số lượng mới 12
+[2026-02-11 10:57:42] [INFO] Đã đồng bộ SKU 2000214263732: Số lượng mới 20
+[2026-02-11 10:57:44] [INFO] Đã đồng bộ SKU 2000214263725: Số lượng mới 25
+[2026-02-11 10:57:53] [INFO] Đã đồng bộ SKU 2000214263503: Số lượng mới 1
+[2026-02-11 10:57:54] [INFO] Đã đồng bộ SKU 2000214263497: Số lượng mới 0
+[2026-02-11 10:57:55] [INFO] Đã đồng bộ SKU 2000214263480: Số lượng mới 0
+[2026-02-11 10:57:59] [INFO] Đã đồng bộ SKU 2000214263404: Số lượng mới 0
+[2026-02-11 10:58:01] [INFO] Đã đồng bộ SKU 2000214263398: Số lượng mới 0
+[2026-02-11 10:58:02] [INFO] Đã đồng bộ SKU 2000214263381: Số lượng mới 0
+[2026-02-11 10:58:03] [INFO] Đã đồng bộ SKU 2000214263367: Số lượng mới 0
+[2026-02-11 10:58:05] [INFO] Đã đồng bộ SKU 2000214263350: Số lượng mới 0
+[2026-02-11 10:58:06] [INFO] Đã đồng bộ SKU 2000214263343: Số lượng mới 0
+[2026-02-11 10:58:20] [INFO] Đã đồng bộ SKU 2000214263008: Số lượng mới 0
+[2026-02-11 10:58:21] [INFO] Đã đồng bộ SKU 2000214262988: Số lượng mới 12
+[2026-02-11 10:58:22] [INFO] Đã đồng bộ SKU 2000214262971: Số lượng mới 12
+[2026-02-11 10:58:24] [INFO] Đã đồng bộ SKU 2000214262957: Số lượng mới 1
+[2026-02-11 10:58:25] [INFO] Đã đồng bộ SKU 2000214262940: Số lượng mới 0
+[2026-02-11 10:58:27] [INFO] Đã đồng bộ SKU 2000214262933: Số lượng mới 5
+[2026-02-11 10:58:28] [INFO] Đã đồng bộ SKU 2000214262926: Số lượng mới 0
+[2026-02-11 10:58:29] [INFO] Đã đồng bộ SKU 2000214262919: Số lượng mới 0
+[2026-02-11 10:58:31] [INFO] Đã đồng bộ SKU 2000214262902: Số lượng mới 0
+[2026-02-11 10:58:32] [INFO] Đã đồng bộ SKU 2000214262896: Số lượng mới 0
+[2026-02-11 10:58:33] [INFO] Đã đồng bộ SKU 2000214262889: Số lượng mới 16
+[2026-02-11 10:58:34] [INFO] Đã đồng bộ SKU 2000214262872: Số lượng mới 19
+[2026-02-11 10:58:35] [INFO] Đã đồng bộ SKU 2000214262865: Số lượng mới 14
+[2026-02-11 10:58:37] [INFO] Đã đồng bộ SKU 2000214262858: Số lượng mới 0
+[2026-02-11 10:58:38] [INFO] Đã đồng bộ SKU 2000214262841: Số lượng mới 0
+[2026-02-11 10:58:39] [INFO] Đã đồng bộ SKU 2000214262834: Số lượng mới 0
+[2026-02-11 10:58:40] [INFO] Đã đồng bộ SKU 2000214262827: Số lượng mới 29
+[2026-02-11 10:58:42] [INFO] Đã đồng bộ SKU 2000214262810: Số lượng mới 24
+[2026-02-11 10:58:43] [INFO] Đã đồng bộ SKU 2000214262803: Số lượng mới 19
+[2026-02-11 10:58:44] [INFO] Đã đồng bộ SKU 2000214262797: Số lượng mới 0
+[2026-02-11 10:58:45] [INFO] Đã đồng bộ SKU 2000214262780: Số lượng mới 0
+[2026-02-11 10:58:46] [INFO] Đã đồng bộ SKU 2000214262773: Số lượng mới 0
+[2026-02-11 10:58:48] [INFO] Đã đồng bộ SKU 2000214262766: Số lượng mới 15
+[2026-02-11 10:58:49] [INFO] Đã đồng bộ SKU 2000214262759: Số lượng mới 18
+[2026-02-11 10:58:50] [INFO] Đã đồng bộ SKU 2000214262742: Số lượng mới 12
+[2026-02-11 10:58:51] [INFO] Đã đồng bộ SKU 2000214262735: Số lượng mới 0
+[2026-02-11 10:58:53] [INFO] Đã đồng bộ SKU 2000214262728: Số lượng mới 0
+[2026-02-11 10:58:54] [INFO] Đã đồng bộ SKU 2000214262704: Số lượng mới 6
+[2026-02-11 10:58:55] [INFO] Đã đồng bộ SKU 2000214262698: Số lượng mới 0
+[2026-02-11 10:58:57] [INFO] Đã đồng bộ SKU 2000214262681: Số lượng mới 0
+[2026-02-11 10:58:58] [INFO] Đã đồng bộ SKU 2000214262674: Số lượng mới 0
+[2026-02-11 10:58:59] [INFO] Đã đồng bộ SKU 2000214262667: Số lượng mới 4
+[2026-02-11 10:59:00] [INFO] Đã đồng bộ SKU 2000214262650: Số lượng mới 0
+[2026-02-11 10:59:02] [INFO] Đã đồng bộ SKU 2000214262643: Số lượng mới 1
+[2026-02-11 10:59:03] [INFO] Đã đồng bộ SKU 2000214262636: Số lượng mới 7
+[2026-02-11 10:59:04] [INFO] Đã đồng bộ SKU 2000214262629: Số lượng mới 1
+[2026-02-11 10:59:05] [INFO] Đã đồng bộ SKU 2000214262612: Số lượng mới 1
+[2026-02-11 10:59:07] [INFO] Đã đồng bộ SKU 2000214262605: Số lượng mới 0
+[2026-02-11 10:59:08] [INFO] Đã đồng bộ SKU 2000214262599: Số lượng mới 1
+[2026-02-11 10:59:09] [INFO] Đã đồng bộ SKU 2000214262582: Số lượng mới 7
+[2026-02-11 10:59:10] [INFO] Đã đồng bộ SKU 2000214262575: Số lượng mới 8
+[2026-02-11 10:59:12] [INFO] Đã đồng bộ SKU 2000214262568: Số lượng mới 10
+[2026-02-11 10:59:13] [INFO] Đã đồng bộ SKU 2000214262551: Số lượng mới 2
+[2026-02-11 10:59:14] [INFO] Đã đồng bộ SKU 2000214262544: Số lượng mới 6
+[2026-02-11 10:59:15] [INFO] Đã đồng bộ SKU 2000214262537: Số lượng mới 20
+[2026-02-11 10:59:17] [INFO] Đã đồng bộ SKU 2000214262520: Số lượng mới 0
+[2026-02-11 10:59:18] [INFO] Đã đồng bộ SKU 2000214262513: Số lượng mới 0
+[2026-02-11 10:59:19] [INFO] Đã đồng bộ SKU 2000214262506: Số lượng mới 2
+[2026-02-11 10:59:21] [INFO] Đã đồng bộ SKU 2000214262490: Số lượng mới 0
+[2026-02-11 10:59:22] [INFO] Đã đồng bộ SKU 2000214262483: Số lượng mới -1
+[2026-02-11 10:59:23] [INFO] Đã đồng bộ SKU 2000214262476: Số lượng mới 8
+[2026-02-11 10:59:24] [INFO] Đã đồng bộ SKU 2000214262469: Số lượng mới 0
+[2026-02-11 10:59:39] [INFO] Đã đồng bộ SKU 2000214262117: Số lượng mới 0
+[2026-02-11 10:59:40] [INFO] Đã đồng bộ SKU 2000214262100: Số lượng mới 0
+[2026-02-11 10:59:43] [INFO] Đã đồng bộ SKU 2000214262001: Số lượng mới 0
+[2026-02-11 10:59:45] [INFO] Đã đồng bộ SKU 2000214261998: Số lượng mới 0
+[2026-02-11 10:59:46] [INFO] Đã đồng bộ SKU 2000214261981: Số lượng mới 0
+[2026-02-11 10:59:48] [INFO] Đã đồng bộ SKU 2000214261967: Số lượng mới 0
+[2026-02-11 10:59:49] [INFO] Đã đồng bộ SKU 2000214261929: Số lượng mới 0
+[2026-02-11 10:59:50] [INFO] Đã đồng bộ SKU 2000214261912: Số lượng mới 6
+[2026-02-11 10:59:52] [INFO] Đã đồng bộ SKU 2000214261899: Số lượng mới 0
+[2026-02-11 10:59:53] [INFO] Đã đồng bộ SKU 2000214261882: Số lượng mới 2
+[2026-02-11 10:59:55] [INFO] Đã đồng bộ SKU 2000214261875: Số lượng mới 1
+[2026-02-11 10:59:56] [INFO] Đã đồng bộ SKU 2000214261868: Số lượng mới 0
+[2026-02-11 10:59:57] [INFO] Đã đồng bộ SKU 2000214261844: Số lượng mới 3
+[2026-02-11 10:59:59] [INFO] Đã đồng bộ SKU 2000214261837: Số lượng mới 5
+[2026-02-11 11:00:00] [INFO] Đã đồng bộ SKU 2000214261820: Số lượng mới 3
+[2026-02-11 11:00:01] [INFO] Đã đồng bộ SKU 2000214261813: Số lượng mới 3
+[2026-02-11 11:00:03] [INFO] Đã đồng bộ SKU 2000214261790: Số lượng mới 4
+[2026-02-11 11:00:04] [INFO] Đã đồng bộ SKU 2000214261783: Số lượng mới 4
+[2026-02-11 11:00:04] [INFO] Đã đồng bộ SKU 2000214259889: Số lượng mới 3
+[2026-02-11 11:00:06] [INFO] Đã đồng bộ SKU 2000214261776: Số lượng mới 0
+[2026-02-11 11:00:07] [INFO] Đã đồng bộ SKU 2000214261769: Số lượng mới 4
+[2026-02-11 11:00:09] [INFO] Đã đồng bộ SKU 2000214261745: Số lượng mới 2
+[2026-02-11 11:00:10] [INFO] Đã đồng bộ SKU 2000214261738: Số lượng mới 4
+[2026-02-11 11:00:11] [INFO] Đã đồng bộ SKU 2000214261721: Số lượng mới 0
+[2026-02-11 11:00:12] [INFO] Đã đồng bộ SKU 2000214261714: Số lượng mới 4
+[2026-02-11 11:00:14] [INFO] Đã đồng bộ SKU 2000214261691: Số lượng mới 5
+[2026-02-11 11:00:15] [INFO] Đã đồng bộ SKU 2000214261684: Số lượng mới 9
+[2026-02-11 11:00:17] [INFO] Đã đồng bộ SKU 2000214261677: Số lượng mới 0
+[2026-02-11 11:00:18] [INFO] Đã đồng bộ SKU 2000214261660: Số lượng mới 7
+[2026-02-11 11:00:22] [INFO] Đã đồng bộ SKU 2000214261585: Số lượng mới 0
+[2026-02-11 11:00:23] [INFO] Đã đồng bộ SKU 2000214261578: Số lượng mới 0
+[2026-02-11 11:00:29] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214278293 trên Shopify.
+[2026-02-11 11:00:32] [INFO] Đã đồng bộ SKU 2000214261387: Số lượng mới 4
+[2026-02-11 11:00:34] [INFO] Đã đồng bộ SKU 2000214261363: Số lượng mới 9
+[2026-02-11 11:00:35] [INFO] Đã đồng bộ SKU 2000214261356: Số lượng mới 0
+[2026-02-11 11:00:36] [INFO] Đã đồng bộ SKU 2000214261349: Số lượng mới 3
+[2026-02-11 11:00:38] [INFO] Đã đồng bộ SKU 2000214261332: Số lượng mới 4
+[2026-02-11 11:00:39] [INFO] Đã đồng bộ SKU 2000214261325: Số lượng mới 9
+[2026-02-11 11:00:40] [INFO] Đã đồng bộ SKU 2000214261318: Số lượng mới 3
+[2026-02-11 11:00:41] [INFO] Đã đồng bộ SKU 2000214261301: Số lượng mới 3
+[2026-02-11 11:00:43] [INFO] Đã đồng bộ SKU 2000214261295: Số lượng mới 0
+[2026-02-11 11:00:45] [INFO] Đã đồng bộ SKU 2000214261240: Số lượng mới 0
+[2026-02-11 11:00:46] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214278286 trên Shopify.
+[2026-02-11 11:00:46] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214278262 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274288 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274981 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274783 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đã đồng bộ SKU 2000214261233: Số lượng mới 0
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273984 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274882 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274387 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274080 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214277241 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274974 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274776 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273977 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274875 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274370 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214271935 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274271 trên Shopify.
+[2026-02-11 11:00:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274073 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273960 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274967 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274769 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274868 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274363 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267709 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274264 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274066 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273953 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274950 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274752 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đã đồng bộ SKU 2000214261219: Số lượng mới 0
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274356 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274851 trên Shopify.
+[2026-02-11 11:00:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274257 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274059 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273946 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274943 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274844 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274349 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đã đồng bộ SKU 2000214259285: Số lượng mới 6
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274745 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274240 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274042 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273939 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274936 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274837 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274738 trên Shopify.
+[2026-02-11 11:00:49] [INFO] Đã đồng bộ SKU 2000214261202: Số lượng mới 0
+[2026-02-11 11:00:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274332 trên Shopify.
+[2026-02-11 11:00:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274233 trên Shopify.
+[2026-02-11 11:00:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274035 trên Shopify.
+[2026-02-11 11:00:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273922 trên Shopify.
+[2026-02-11 11:00:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274929 trên Shopify.
+[2026-02-11 11:00:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274820 trên Shopify.
+[2026-02-11 11:00:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274721 trên Shopify.
+[2026-02-11 11:00:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274325 trên Shopify.
+[2026-02-11 11:00:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274226 trên Shopify.
+[2026-02-11 11:00:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274028 trên Shopify.
+[2026-02-11 11:00:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273915 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274912 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274714 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đã đồng bộ SKU 2000214261196: Số lượng mới 0
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274813 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274318 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274219 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274011 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273908 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274707 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274905 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274202 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274806 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274301 trên Shopify.
+[2026-02-11 11:00:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273892 trên Shopify.
+[2026-02-11 11:00:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274691 trên Shopify.
+[2026-02-11 11:00:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274004 trên Shopify.
+[2026-02-11 11:00:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274899 trên Shopify.
+[2026-02-11 11:00:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274295 trên Shopify.
+[2026-02-11 11:00:52] [INFO] Đã đồng bộ SKU 2000214261189: Số lượng mới 0
+[2026-02-11 11:00:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274196 trên Shopify.
+[2026-02-11 11:00:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274790 trên Shopify.
+[2026-02-11 11:00:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273885 trên Shopify.
+[2026-02-11 11:00:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274684 trên Shopify.
+[2026-02-11 11:00:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273991 trên Shopify.
+[2026-02-11 11:00:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274189 trên Shopify.
+[2026-02-11 11:00:53] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273878 trên Shopify.
+[2026-02-11 11:00:53] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274677 trên Shopify.
+[2026-02-11 11:00:53] [INFO] Đã đồng bộ SKU 2000214261172: Số lượng mới 0
+[2026-02-11 11:00:53] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274172 trên Shopify.
+[2026-02-11 11:00:53] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273861 trên Shopify.
+[2026-02-11 11:00:53] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274660 trên Shopify.
+[2026-02-11 11:00:54] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274165 trên Shopify.
+[2026-02-11 11:00:54] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273854 trên Shopify.
+[2026-02-11 11:00:54] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274653 trên Shopify.
+[2026-02-11 11:00:54] [INFO] Đã đồng bộ SKU 2000214258561: Số lượng mới 5
+[2026-02-11 11:00:54] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274158 trên Shopify.
+[2026-02-11 11:00:54] [INFO] Đã đồng bộ SKU 2000214261165: Số lượng mới 0
+[2026-02-11 11:00:54] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273021 trên Shopify.
+[2026-02-11 11:00:54] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274448 trên Shopify.
+[2026-02-11 11:00:55] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274141 trên Shopify.
+[2026-02-11 11:00:55] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273014 trên Shopify.
+[2026-02-11 11:00:55] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274431 trên Shopify.
+[2026-02-11 11:00:55] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274134 trên Shopify.
+[2026-02-11 11:00:55] [INFO] Đã đồng bộ SKU 2000214261158: Số lượng mới 0
+[2026-02-11 11:00:55] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273007 trên Shopify.
+[2026-02-11 11:00:56] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274424 trên Shopify.
+[2026-02-11 11:00:56] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272994 trên Shopify.
+[2026-02-11 11:00:56] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274127 trên Shopify.
+[2026-02-11 11:00:56] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274417 trên Shopify.
+[2026-02-11 11:00:57] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274110 trên Shopify.
+[2026-02-11 11:00:57] [INFO] Đã đồng bộ SKU 2000214261141: Số lượng mới 0
+[2026-02-11 11:00:57] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214262445 trên Shopify.
+[2026-02-11 11:00:57] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274400 trên Shopify.
+[2026-02-11 11:00:57] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274103 trên Shopify.
+[2026-02-11 11:00:57] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274394 trên Shopify.
+[2026-02-11 11:00:58] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274097 trên Shopify.
+[2026-02-11 11:00:58] [INFO] Đã đồng bộ SKU 2000214260304: Số lượng mới 129
+[2026-02-11 11:00:58] [INFO] Đã đồng bộ SKU 2000214261134: Số lượng mới 0
+[2026-02-11 11:00:59] [INFO] Đã đồng bộ SKU 2000214261127: Số lượng mới 0
+[2026-02-11 11:01:01] [INFO] Đã đồng bộ SKU 2000214261110: Số lượng mới 0
+[2026-02-11 11:01:02] [INFO] Đã đồng bộ SKU 2000214261103: Số lượng mới 0
+[2026-02-11 11:01:03] [INFO] Đã đồng bộ SKU 2000214261097: Số lượng mới 0
+[2026-02-11 11:01:04] [INFO] Đã đồng bộ SKU 2000214261080: Số lượng mới 0
+[2026-02-11 11:01:05] [INFO] Đã đồng bộ SKU 2000214261073: Số lượng mới 0
+[2026-02-11 11:01:12] [INFO] Đã đồng bộ SKU 2000214260922: Số lượng mới 4
+[2026-02-11 11:01:14] [INFO] Đã đồng bộ SKU 2000214260915: Số lượng mới 3
+[2026-02-11 11:01:15] [INFO] Đã đồng bộ SKU 2000214260908: Số lượng mới 25
+[2026-02-11 11:01:17] [INFO] Đã đồng bộ SKU 2000214260892: Số lượng mới 1
+[2026-02-11 11:01:20] [INFO] Đã đồng bộ SKU 2000214260809: Số lượng mới 0
+[2026-02-11 11:01:21] [INFO] Đã đồng bộ SKU 2000214260793: Số lượng mới 0
+[2026-02-11 11:01:22] [INFO] Đã đồng bộ SKU 2000214260786: Số lượng mới 0
+[2026-02-11 11:01:24] [INFO] Đã đồng bộ SKU 2000214260779: Số lượng mới 0
+[2026-02-11 11:01:25] [INFO] Đã đồng bộ SKU 2000214260762: Số lượng mới 2
+[2026-02-11 11:01:26] [INFO] Đã đồng bộ SKU 2000214260755: Số lượng mới 2
+[2026-02-11 11:01:28] [INFO] Đã đồng bộ SKU 2000214260731: Số lượng mới 2
+[2026-02-11 11:01:30] [INFO] Đã đồng bộ SKU 2000214260724: Số lượng mới 2
+[2026-02-11 11:01:36] [INFO] Đã đồng bộ SKU 2000214260595: Số lượng mới 0
+[2026-02-11 11:01:38] [INFO] Đã đồng bộ SKU 2000214260588: Số lượng mới 0
+[2026-02-11 11:01:39] [INFO] Đã đồng bộ SKU 2000214260571: Số lượng mới 0
+[2026-02-11 11:01:40] [INFO] Đã đồng bộ SKU 2000214260564: Số lượng mới 0
+[2026-02-11 11:01:42] [INFO] Đã đồng bộ SKU 2000214260557: Số lượng mới 0
+[2026-02-11 11:01:43] [INFO] Đã đồng bộ SKU 2000214260540: Số lượng mới 0
+[2026-02-11 11:01:44] [INFO] Đã đồng bộ SKU 2000214260533: Số lượng mới 0
+[2026-02-11 11:01:46] [INFO] Đã đồng bộ SKU 2000214260489: Số lượng mới 0
+[2026-02-11 11:01:47] [INFO] Đã đồng bộ SKU 2000214260472: Số lượng mới 0
+[2026-02-11 11:01:48] [INFO] Đã đồng bộ SKU 2000214260465: Số lượng mới 0
+[2026-02-11 11:01:50] [INFO] Đã đồng bộ SKU 2000214260458: Số lượng mới 0
+[2026-02-11 11:01:51] [INFO] Đã đồng bộ SKU 2000214260441: Số lượng mới 0
+[2026-02-11 11:01:52] [INFO] Đã đồng bộ SKU 2000214260434: Số lượng mới 0
+[2026-02-11 11:01:54] [INFO] Đã đồng bộ SKU 2000214260427: Số lượng mới 0
+[2026-02-11 11:01:55] [INFO] Đã đồng bộ SKU 2000214260410: Số lượng mới 0
+[2026-02-11 11:01:56] [INFO] Đã đồng bộ SKU 2000214260403: Số lượng mới 0
+[2026-02-11 11:01:57] [INFO] Đã đồng bộ SKU 2000214260397: Số lượng mới 0
+[2026-02-11 11:01:59] [INFO] Đã đồng bộ SKU 2000214260380: Số lượng mới 0
+[2026-02-11 11:02:00] [INFO] Đã đồng bộ SKU 2000214260373: Số lượng mới 0
+[2026-02-11 11:02:01] [INFO] Đã đồng bộ SKU 2000214260366: Số lượng mới 0
+[2026-02-11 11:02:03] [INFO] Đã đồng bộ SKU 2000214260359: Số lượng mới 0
+[2026-02-11 11:02:04] [INFO] Đã đồng bộ SKU 2000214260342: Số lượng mới 0
+[2026-02-11 11:02:05] [INFO] Đã đồng bộ SKU 2000214260335: Số lượng mới 0
+[2026-02-11 11:02:07] [INFO] Đã đồng bộ SKU 2000214260328: Số lượng mới 23
+[2026-02-11 11:02:08] [INFO] Đã đồng bộ SKU 2000214260311: Số lượng mới 32
+[2026-02-11 11:02:09] [INFO] Đã đồng bộ SKU 2000214260304: Số lượng mới 130
+[2026-02-11 11:02:10] [INFO] Đã đồng bộ SKU 2000214260298: Số lượng mới 27
+[2026-02-11 11:02:14] [INFO] Đã đồng bộ SKU 2000214260229: Số lượng mới 2
+[2026-02-11 11:02:15] [INFO] Đã đồng bộ SKU 2000214260212: Số lượng mới 0
+[2026-02-11 11:02:17] [INFO] Đã đồng bộ SKU 2000214260199: Số lượng mới 2
+[2026-02-11 11:02:18] [INFO] Đã đồng bộ SKU 2000214260175: Số lượng mới 0
+[2026-02-11 11:02:20] [INFO] Đã đồng bộ SKU 2000214260151: Số lượng mới 0
+[2026-02-11 11:02:21] [INFO] Đã đồng bộ SKU 2000214260144: Số lượng mới 0
+[2026-02-11 11:02:22] [INFO] Đã đồng bộ SKU 2000214260137: Số lượng mới 0
+[2026-02-11 11:02:24] [INFO] Đã đồng bộ SKU 2000214260120: Số lượng mới 0
+[2026-02-11 11:02:26] [INFO] Đã đồng bộ SKU 2000214260090: Số lượng mới 0
+[2026-02-11 11:02:27] [INFO] Đã đồng bộ SKU 2000214260083: Số lượng mới 0
+[2026-02-11 11:02:28] [INFO] Đã đồng bộ SKU 2000214260076: Số lượng mới 0
+[2026-02-11 11:02:29] [INFO] Đã đồng bộ SKU 2000214260069: Số lượng mới 0
+[2026-02-11 11:02:31] [INFO] Đã đồng bộ SKU 2000214260052: Số lượng mới 1
+[2026-02-11 11:02:32] [INFO] Đã đồng bộ SKU 2000214260045: Số lượng mới 0
+[2026-02-11 11:02:35] [INFO] Đã đồng bộ SKU 2000214259957: Số lượng mới 2
+[2026-02-11 11:02:36] [INFO] Đã đồng bộ SKU 2000214259940: Số lượng mới 0
+[2026-02-11 11:02:38] [INFO] Đã đồng bộ SKU 2000214259933: Số lượng mới 5
+[2026-02-11 11:02:39] [INFO] Đã đồng bộ SKU 2000214259926: Số lượng mới 0
+[2026-02-11 11:02:40] [INFO] Đã đồng bộ SKU 2000214259919: Số lượng mới 4
+[2026-02-11 11:02:41] [INFO] Đã đồng bộ SKU 2000214259902: Số lượng mới 6
+[2026-02-11 11:02:43] [INFO] Đã đồng bộ SKU 2000214259896: Số lượng mới 0
+[2026-02-11 11:02:44] [INFO] Đã đồng bộ SKU 2000214259889: Số lượng mới 3
+[2026-02-11 11:02:45] [INFO] Đã đồng bộ SKU 2000214259872: Số lượng mới 0
+[2026-02-11 11:02:47] [INFO] Đã đồng bộ SKU 2000214259841: Số lượng mới 0
+[2026-02-11 11:02:48] [INFO] Đã đồng bộ SKU 2000214259834: Số lượng mới 0
+[2026-02-11 11:02:51] [INFO] Đã đồng bộ SKU 2000214259766: Số lượng mới 0
+[2026-02-11 11:02:52] [INFO] Đã đồng bộ SKU 2000214259759: Số lượng mới 5
+[2026-02-11 11:02:53] [INFO] Đã đồng bộ SKU 2000214259742: Số lượng mới 4
+[2026-02-11 11:02:54] [INFO] Đã đồng bộ SKU 2000214259735: Số lượng mới -1
+[2026-02-11 11:02:56] [INFO] Đã đồng bộ SKU 2000214259728: Số lượng mới 6
+[2026-02-11 11:02:57] [INFO] Đã đồng bộ SKU 2000214259711: Số lượng mới 11
+[2026-02-11 11:02:58] [INFO] Đã đồng bộ SKU 2000214259704: Số lượng mới 0
+[2026-02-11 11:02:59] [INFO] Đã đồng bộ SKU 2000214259698: Số lượng mới 14
+[2026-02-11 11:03:00] [INFO] Đã đồng bộ SKU 2000214259681: Số lượng mới 2
+[2026-02-11 11:03:02] [INFO] Đã đồng bộ SKU 2000214259674: Số lượng mới 0
+[2026-02-11 11:03:03] [INFO] Đã đồng bộ SKU 2000214259667: Số lượng mới 5
+[2026-02-11 11:03:04] [INFO] Đã đồng bộ SKU 2000214259650: Số lượng mới 7
+[2026-02-11 11:03:06] [INFO] Đã đồng bộ SKU 2000214259599: Số lượng mới 19
+[2026-02-11 11:03:07] [INFO] Đã đồng bộ SKU 2000214259575: Số lượng mới 0
+[2026-02-11 11:03:09] [INFO] Đã đồng bộ SKU 2000214259568: Số lượng mới 0
+[2026-02-11 11:03:10] [INFO] Đã đồng bộ SKU 2000214259551: Số lượng mới 0
+[2026-02-11 11:03:12] [INFO] Đã đồng bộ SKU 2000214259537: Số lượng mới 0
+[2026-02-11 11:03:13] [INFO] Đã đồng bộ SKU 2000214259520: Số lượng mới 0
+[2026-02-11 11:03:14] [INFO] Đã đồng bộ SKU 2000214259513: Số lượng mới 0
+[2026-02-11 11:03:15] [INFO] Đã đồng bộ SKU 2000214259506: Số lượng mới 1
+[2026-02-11 11:03:16] [INFO] Đã đồng bộ SKU 2000214259490: Số lượng mới 0
+[2026-02-11 11:03:18] [INFO] Đã đồng bộ SKU 2000214259476: Số lượng mới 0
+[2026-02-11 11:03:21] [INFO] Đã đồng bộ SKU 2000214259438: Số lượng mới 0
+[2026-02-11 11:03:22] [INFO] Đã đồng bộ SKU 2000214259421: Số lượng mới 0
+[2026-02-11 11:03:23] [INFO] Đã đồng bộ SKU 2000214259414: Số lượng mới 0
+[2026-02-11 11:03:24] [INFO] Đã đồng bộ SKU 2000214259407: Số lượng mới 0
+[2026-02-11 11:03:26] [INFO] Đã đồng bộ SKU 2000214259391: Số lượng mới -1
+[2026-02-11 11:03:27] [INFO] Đã đồng bộ SKU 2000214259384: Số lượng mới 0
+[2026-02-11 11:03:28] [INFO] Đã đồng bộ SKU 2000214259377: Số lượng mới 5
+[2026-02-11 11:03:29] [INFO] Đã đồng bộ SKU 2000214259360: Số lượng mới 1
+[2026-02-11 11:03:31] [INFO] Đã đồng bộ SKU 2000214259353: Số lượng mới 0
+[2026-02-11 11:03:32] [INFO] Đã đồng bộ SKU 2000214259346: Số lượng mới 0
+[2026-02-11 11:03:33] [INFO] Đã đồng bộ SKU 2000214259339: Số lượng mới 0
+[2026-02-11 11:03:34] [INFO] Đã đồng bộ SKU 2000214259322: Số lượng mới 0
+[2026-02-11 11:03:36] [INFO] Đã đồng bộ SKU 2000214259315: Số lượng mới 6
+[2026-02-11 11:03:37] [INFO] Đã đồng bộ SKU 2000214259308: Số lượng mới 0
+[2026-02-11 11:03:38] [INFO] Đã đồng bộ SKU 2000214259292: Số lượng mới 11
+[2026-02-11 11:03:39] [INFO] Đã đồng bộ SKU 2000214259285: Số lượng mới 7
+[2026-02-11 11:03:41] [INFO] Đã đồng bộ SKU 2000214259278: Số lượng mới 1
+[2026-02-11 11:03:42] [INFO] Đã đồng bộ SKU 2000214259261: Số lượng mới 4
+[2026-02-11 11:03:43] [INFO] Đã đồng bộ SKU 2000214259254: Số lượng mới 12
+[2026-02-11 11:03:45] [INFO] Đã đồng bộ SKU 2000214259247: Số lượng mới 8
+[2026-02-11 11:03:46] [INFO] Đã đồng bộ SKU 2000214259230: Số lượng mới 7
+[2026-02-11 11:03:47] [INFO] Đã đồng bộ SKU 2000214259223: Số lượng mới 3
+[2026-02-11 11:03:49] [INFO] Đã đồng bộ SKU 2000214259216: Số lượng mới 2
+[2026-02-11 11:03:50] [INFO] Đã đồng bộ SKU 2000214259209: Số lượng mới 5
+[2026-02-11 11:03:51] [INFO] Đã đồng bộ SKU 2000214259193: Số lượng mới 0
+[2026-02-11 11:03:52] [INFO] Đã đồng bộ SKU 2000214259186: Số lượng mới -1
+[2026-02-11 11:03:54] [INFO] Đã đồng bộ SKU 2000214259179: Số lượng mới 0
+[2026-02-11 11:03:55] [INFO] Đã đồng bộ SKU 2000214259162: Số lượng mới 17
+[2026-02-11 11:03:57] [INFO] Đã đồng bộ SKU 2000214259148: Số lượng mới 0
+[2026-02-11 11:03:58] [INFO] Đã đồng bộ SKU 2000214259131: Số lượng mới -1
+[2026-02-11 11:03:59] [INFO] Đã đồng bộ SKU 2000214259124: Số lượng mới 4
+[2026-02-11 11:04:00] [INFO] Đã đồng bộ SKU 2000214259018: Số lượng mới 0
+[2026-02-11 11:04:02] [INFO] Đã đồng bộ SKU 2000214258998: Số lượng mới 0
+[2026-02-11 11:04:03] [INFO] Đã đồng bộ SKU 2000214258981: Số lượng mới 6
+[2026-02-11 11:04:05] [INFO] Đã đồng bộ SKU 2000214258868: Số lượng mới 14
+[2026-02-11 11:04:06] [INFO] Đã đồng bộ SKU 2000214258851: Số lượng mới 18
+[2026-02-11 11:04:08] [INFO] Đã đồng bộ SKU 2000214258844: Số lượng mới -1
+[2026-02-11 11:04:09] [INFO] Đã đồng bộ SKU 2000214258837: Số lượng mới 3
+[2026-02-11 11:04:10] [INFO] Đã đồng bộ SKU 2000214258820: Số lượng mới 0
+[2026-02-11 11:04:12] [INFO] Đã đồng bộ SKU 2000214258813: Số lượng mới 0
+[2026-02-11 11:04:13] [INFO] Đã đồng bộ SKU 2000214258806: Số lượng mới 4
+[2026-02-11 11:04:14] [INFO] Đã đồng bộ SKU 2000214258790: Số lượng mới 0
+[2026-02-11 11:04:15] [INFO] Đã đồng bộ SKU 2000214258783: Số lượng mới 2
+[2026-02-11 11:04:17] [INFO] Đã đồng bộ SKU 2000214258776: Số lượng mới 1
+[2026-02-11 11:04:18] [INFO] Đã đồng bộ SKU 2000214258769: Số lượng mới 0
+[2026-02-11 11:04:20] [INFO] Đã đồng bộ SKU 2000214258745: Số lượng mới 8
+[2026-02-11 11:04:21] [INFO] Đã đồng bộ SKU 2000214258738: Số lượng mới 11
+[2026-02-11 11:04:22] [INFO] Đã đồng bộ SKU 2000214258721: Số lượng mới 1
+[2026-02-11 11:04:24] [INFO] Đã đồng bộ SKU 2000214258714: Số lượng mới 30
+[2026-02-11 11:04:25] [INFO] Đã đồng bộ SKU 2000214258707: Số lượng mới 8
+[2026-02-11 11:04:26] [INFO] Đã đồng bộ SKU 2000214258684: Số lượng mới 1
+[2026-02-11 11:04:28] [INFO] Đã đồng bộ SKU 2000214258653: Số lượng mới 12
+[2026-02-11 11:04:30] [INFO] Đã đồng bộ SKU 2000214258561: Số lượng mới 5
+[2026-02-11 11:04:31] [INFO] Đã đồng bộ SKU 2000214258547: Số lượng mới 10
+[2026-02-11 11:04:32] [INFO] Đã đồng bộ SKU 2000214258523: Số lượng mới 0
+[2026-02-11 11:04:33] [INFO] Đã đồng bộ SKU 2000214258493: Số lượng mới 5
+[2026-02-11 11:04:35] [INFO] Đã đồng bộ SKU 2000214258424: Số lượng mới 8
+[2026-02-11 11:04:36] [INFO] Đã đồng bộ SKU 2000214258400: Số lượng mới 2
+[2026-02-11 11:04:37] [INFO] Đã đồng bộ SKU 2000214258387: Số lượng mới 8
+[2026-02-11 11:04:38] [INFO] Đã đồng bộ SKU 2000214258363: Số lượng mới 6
+[2026-02-11 11:04:40] [INFO] Đã đồng bộ SKU 2000214258462: Số lượng mới 12
+[2026-02-11 11:04:41] [INFO] Đã đồng bộ SKU 2000214258448: Số lượng mới 1
+[2026-02-11 11:04:42] [INFO] Đã đồng bộ SKU 2000214258301: Số lượng mới 0
+[2026-02-11 11:04:43] [INFO] Đã đồng bộ SKU 2000214258295: Số lượng mới 0
+[2026-02-11 11:04:44] [INFO] Đã đồng bộ SKU 2000214258288: Số lượng mới 0
+[2026-02-11 11:04:46] [INFO] Đã đồng bộ SKU 2000214258271: Số lượng mới 0
+[2026-02-11 11:04:47] [INFO] Đã đồng bộ SKU 2000214258264: Số lượng mới 0
+[2026-02-11 11:04:48] [INFO] Đã đồng bộ SKU 2000214258257: Số lượng mới 0
+[2026-02-11 11:04:50] [INFO] Đã đồng bộ SKU 2000214258240: Số lượng mới 0
+[2026-02-11 11:04:57] [INFO] Đã đồng bộ SKU 2000214258028: Số lượng mới 1
+[2026-02-11 11:04:58] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214277982 trên Shopify.
+[2026-02-11 11:04:59] [INFO] Đã đồng bộ SKU 2000214257960: Số lượng mới 16
+[2026-02-11 11:05:01] [INFO] Đã đồng bộ SKU 2000214257892: Số lượng mới 8
+[2026-02-11 11:05:02] [INFO] Đã đồng bộ SKU 2000214257861: Số lượng mới 19
+[2026-02-11 11:05:04] [INFO] Đã đồng bộ SKU 2000214257847: Số lượng mới 15
+[2026-02-11 11:05:05] [INFO] Đã đồng bộ SKU 2000214257830: Số lượng mới 0
+[2026-02-11 11:05:06] [INFO] Đã đồng bộ SKU 2000214257816: Số lượng mới 0
+[2026-02-11 11:05:08] [INFO] Đã đồng bộ SKU 2000214257809: Số lượng mới 0
+[2026-02-11 11:05:09] [INFO] Đã đồng bộ SKU 2000214257793: Số lượng mới 0
+[2026-02-11 11:05:10] [INFO] Đã đồng bộ SKU 2000214257786: Số lượng mới 4
+[2026-02-11 11:05:12] [INFO] Đã đồng bộ SKU 2000214257779: Số lượng mới 0
+[2026-02-11 11:05:24] [INFO] Đã đồng bộ SKU 2000214257441: Số lượng mới 5
+[2026-02-11 11:05:25] [INFO] Đã đồng bộ SKU 2000214257434: Số lượng mới 0
+[2026-02-11 11:05:26] [INFO] Đã đồng bộ SKU 2000214257427: Số lượng mới 0
+[2026-02-11 11:05:27] [INFO] Đã đồng bộ SKU 2000214257410: Số lượng mới 0
+[2026-02-11 11:05:29] [INFO] Đã đồng bộ SKU 2000214257366: Số lượng mới 20
+[2026-02-11 11:05:30] [INFO] Đã đồng bộ SKU 2000214257359: Số lượng mới 15
+[2026-02-11 11:05:32] [INFO] Đã đồng bộ SKU 2000214257335: Số lượng mới 0
+[2026-02-11 11:05:33] [INFO] Đã đồng bộ SKU 2000214257328: Số lượng mới 33
+[2026-02-11 11:05:34] [INFO] Đã đồng bộ SKU 2000214257311: Số lượng mới 29
+[2026-02-11 11:05:36] [INFO] Đã đồng bộ SKU 2000214257304: Số lượng mới 49
+[2026-02-11 11:05:37] [INFO] Đã đồng bộ SKU 2000214257281: Số lượng mới 37
+[2026-02-11 11:05:39] [INFO] Đã đồng bộ SKU 2000214257274: Số lượng mới 38
+[2026-02-11 11:05:41] [INFO] Đã đồng bộ SKU 2000214257243: Số lượng mới 14
+[2026-02-11 11:05:42] [INFO] Đã đồng bộ SKU 2000214257212: Số lượng mới 7
+[2026-02-11 11:05:44] [INFO] Đã đồng bộ SKU 2000214257182: Số lượng mới 15
+[2026-02-11 11:05:46] [INFO] Đã đồng bộ SKU 2000214257014: Số lượng mới 52
+[2026-02-11 11:05:47] [INFO] Đã đồng bộ SKU 2000214257007: Số lượng mới 26
+[2026-02-11 11:05:48] [INFO] Đã đồng bộ SKU 2000214256994: Số lượng mới 77
+[2026-02-11 11:05:49] [INFO] Đã đồng bộ SKU 2000214256987: Số lượng mới 57
+[2026-02-11 11:05:51] [INFO] Đã đồng bộ SKU 2000214256970: Số lượng mới 14
+[2026-02-11 11:05:52] [INFO] Đã đồng bộ SKU 2000214256963: Số lượng mới 69
+[2026-02-11 11:05:55] [INFO] Đã đồng bộ SKU 2000214256918: Số lượng mới 0
+[2026-02-11 11:05:56] [INFO] Đã đồng bộ SKU 2000214256901: Số lượng mới 25
+[2026-02-11 11:05:58] [INFO] Đã đồng bộ SKU 2000214256888: Số lượng mới 0
+[2026-02-11 11:05:59] [INFO] Đã đồng bộ SKU 2000214256871: Số lượng mới 1
+[2026-02-11 11:06:00] [INFO] Đã đồng bộ SKU 2000214256864: Số lượng mới 1
+[2026-02-11 11:06:01] [INFO] Đã đồng bộ SKU 2000214256857: Số lượng mới 1
+[2026-02-11 11:06:03] [INFO] Đã đồng bộ SKU 2000214256833: Số lượng mới -2
+[2026-02-11 11:06:04] [INFO] Đã đồng bộ SKU 2000214256826: Số lượng mới 0
+[2026-02-11 11:06:06] [INFO] Đã đồng bộ SKU 2000214256819: Số lượng mới 0
+[2026-02-11 11:06:07] [INFO] Đã đồng bộ SKU 2000214256802: Số lượng mới 0
+[2026-02-11 11:06:09] [INFO] Đã đồng bộ SKU 2000214256758: Số lượng mới 7
+[2026-02-11 11:06:11] [INFO] Đã đồng bộ SKU 2000214256741: Số lượng mới 4
+[2026-02-11 11:06:13] [INFO] Đã đồng bộ SKU 2000214256734: Số lượng mới 9
+[2026-02-11 11:06:14] [INFO] Đã đồng bộ SKU 2000214256727: Số lượng mới 29
+[2026-02-11 11:06:15] [INFO] Đã đồng bộ SKU 2000214256710: Số lượng mới 5
+[2026-02-11 11:06:17] [INFO] Đã đồng bộ SKU 2000214256703: Số lượng mới 5
+[2026-02-11 11:06:18] [INFO] Đã đồng bộ SKU 2000214256697: Số lượng mới 49
+[2026-02-11 11:06:19] [INFO] Đã đồng bộ SKU 2000214256680: Số lượng mới 43
+[2026-02-11 11:06:20] [INFO] Đã đồng bộ SKU 2000214256673: Số lượng mới 41
+[2026-02-11 11:06:28] [INFO] Đã đồng bộ SKU 2000214256352: Số lượng mới 0
+[2026-02-11 11:06:30] [INFO] Đã đồng bộ SKU 2000214256345: Số lượng mới -2
+[2026-02-11 11:06:31] [INFO] Đã đồng bộ SKU 2000214256338: Số lượng mới 0
+[2026-02-11 11:06:32] [INFO] Đã đồng bộ SKU 2000214256321: Số lượng mới 0
+[2026-02-11 11:06:41] [INFO] Đã đồng bộ SKU 2000214255935: Số lượng mới 0
+[2026-02-11 11:06:51] [INFO] Đã đồng bộ SKU 2000214255478: Số lượng mới 0
+[2026-02-11 11:06:52] [INFO] Đã đồng bộ SKU 2000214255461: Số lượng mới 0
+[2026-02-11 11:06:55] [INFO] Đã đồng bộ SKU 2000214255416: Số lượng mới 0
+[2026-02-11 11:06:56] [INFO] Đã đồng bộ SKU 2000214255409: Số lượng mới 0
+[2026-02-11 11:06:58] [INFO] Đã đồng bộ SKU 2000214255393: Số lượng mới 0
+[2026-02-11 11:07:05] [INFO] Đã đồng bộ SKU 2000214254679: Số lượng mới 0
+[2026-02-11 11:07:06] [INFO] Đã đồng bộ SKU 2000214254662: Số lượng mới 0
+[2026-02-11 11:07:07] [INFO] Đã đồng bộ SKU 2000214254655: Số lượng mới 0
+[2026-02-11 11:07:09] [INFO] Đã đồng bộ SKU 2000214254631: Số lượng mới -1
+[2026-02-11 11:07:10] [INFO] Đã đồng bộ SKU 2000214254129: Số lượng mới 0
+[2026-02-11 11:07:12] [INFO] Đã đồng bộ SKU 2000214254112: Số lượng mới 0
+[2026-02-11 11:07:13] [INFO] Đã đồng bộ SKU 2000214254105: Số lượng mới 0
+[2026-02-11 11:07:14] [INFO] Đã đồng bộ SKU 2000214254099: Số lượng mới 0
+[2026-02-11 11:07:15] [INFO] Đã đồng bộ SKU 2000214254044: Số lượng mới 0
+[2026-02-11 11:07:17] [INFO] Đã đồng bộ SKU 2000214254037: Số lượng mới 0
+[2026-02-11 11:07:18] [INFO] Đã đồng bộ SKU 2000214254020: Số lượng mới 0
+[2026-02-11 11:07:19] [INFO] Đã đồng bộ SKU 2000214254013: Số lượng mới 0
+[2026-02-11 11:07:21] [INFO] Đã đồng bộ SKU 2000214254006: Số lượng mới 0
+[2026-02-11 11:07:22] [INFO] Đã đồng bộ SKU 2000214253993: Số lượng mới 0
+[2026-02-11 11:07:23] [INFO] Đã đồng bộ SKU 2000214253986: Số lượng mới 1
+[2026-02-11 11:07:24] [INFO] Đã đồng bộ SKU 2000214253979: Số lượng mới 0
+[2026-02-11 11:07:26] [INFO] Đã đồng bộ SKU 2000214253962: Số lượng mới 1
+[2026-02-11 11:07:27] [INFO] Đã đồng bộ SKU 2000214253955: Số lượng mới 0
+[2026-02-11 11:07:28] [INFO] Đã đồng bộ SKU 2000214253948: Số lượng mới 2
+[2026-02-11 11:07:29] [INFO] Đã đồng bộ SKU 2000214253931: Số lượng mới 0
+[2026-02-11 11:07:30] [INFO] Đã đồng bộ SKU 2000214253924: Số lượng mới 0
+[2026-02-11 11:07:32] [INFO] Đã đồng bộ SKU 2000214253917: Số lượng mới 1
+[2026-02-11 11:07:33] [INFO] Đã đồng bộ SKU 2000214253900: Số lượng mới 2
+[2026-02-11 11:07:34] [INFO] Đã đồng bộ SKU 2000214253894: Số lượng mới 0
+[2026-02-11 11:07:35] [INFO] Đã đồng bộ SKU 2000214253887: Số lượng mới 1
+[2026-02-11 11:07:37] [INFO] Đã đồng bộ SKU 2000214253870: Số lượng mới 1
+[2026-02-11 11:07:38] [INFO] Đã đồng bộ SKU 2000214253863: Số lượng mới 2
+[2026-02-11 11:07:39] [INFO] Đã đồng bộ SKU 2000214253856: Số lượng mới 0
+[2026-02-11 11:07:44] [INFO] Đã đồng bộ SKU 2000214253771: Số lượng mới 4
+[2026-02-11 11:07:48] [INFO] Đã đồng bộ SKU 2000214253337: Số lượng mới 0
+[2026-02-11 11:07:49] [INFO] Đã đồng bộ SKU 2000214253320: Số lượng mới 3
+[2026-02-11 11:07:54] [INFO] Đã đồng bộ SKU 2000214253191: Số lượng mới 4
+[2026-02-11 11:07:55] [INFO] Đã đồng bộ SKU 2000214253184: Số lượng mới 43
+[2026-02-11 11:07:56] [INFO] Đã đồng bộ SKU 2000214253177: Số lượng mới 16
+[2026-02-11 11:07:58] [INFO] Đã đồng bộ SKU 2000214253146: Số lượng mới 0
+[2026-02-11 11:07:59] [INFO] Đã đồng bộ SKU 2000214253139: Số lượng mới 0
+[2026-02-11 11:08:01] [INFO] Đã đồng bộ SKU 2000214253122: Số lượng mới 0
+[2026-02-11 11:08:02] [INFO] Đã đồng bộ SKU 2000214253115: Số lượng mới 0
+[2026-02-11 11:08:03] [INFO] Đã đồng bộ SKU 2000214253108: Số lượng mới 0
+[2026-02-11 11:08:04] [INFO] Đã đồng bộ SKU 2000214253092: Số lượng mới 0
+[2026-02-11 11:08:06] [INFO] Đã đồng bộ SKU 2000214253078: Số lượng mới 0
+[2026-02-11 11:08:07] [INFO] Đã đồng bộ SKU 2000214253061: Số lượng mới 0
+[2026-02-11 11:08:08] [INFO] Đã đồng bộ SKU 2000214253054: Số lượng mới 0
+[2026-02-11 11:08:15] [INFO] Đã đồng bộ SKU 2000214252897: Số lượng mới 0
+[2026-02-11 11:08:16] [INFO] Đã đồng bộ SKU 2000214252880: Số lượng mới 0
+[2026-02-11 11:08:18] [INFO] Đã đồng bộ SKU 2000214252873: Số lượng mới 0
+[2026-02-11 11:08:19] [INFO] Đã đồng bộ SKU 2000214252866: Số lượng mới 0
+[2026-02-11 11:08:20] [INFO] Đã đồng bộ SKU 2000214252859: Số lượng mới 0
+[2026-02-11 11:08:21] [INFO] Đã đồng bộ SKU 2000214252842: Số lượng mới 0
+[2026-02-11 11:08:22] [INFO] Đã đồng bộ SKU 2000214252835: Số lượng mới 0
+[2026-02-11 11:08:24] [INFO] Đã đồng bộ SKU 2000214252828: Số lượng mới 0
+[2026-02-11 11:08:30] [INFO] Đã đồng bộ SKU 2000214252699: Số lượng mới 0
+[2026-02-11 11:08:31] [INFO] Đã đồng bộ SKU 2000214252675: Số lượng mới 0
+[2026-02-11 11:08:32] [INFO] Đã đồng bộ SKU 2000214252668: Số lượng mới 0
+[2026-02-11 11:08:33] [INFO] Đã đồng bộ SKU 2000214252644: Số lượng mới 0
+[2026-02-11 11:08:34] [INFO] Đã đồng bộ SKU 2000214252637: Số lượng mới 0
+[2026-02-11 11:08:36] [INFO] Đã đồng bộ SKU 2000214252613: Số lượng mới 0
+[2026-02-11 11:08:37] [INFO] Đã đồng bộ SKU 2000214252521: Số lượng mới 0
+[2026-02-11 11:08:38] [INFO] Đã đồng bộ SKU 2000214252507: Số lượng mới 0
+[2026-02-11 11:08:40] [INFO] Đã đồng bộ SKU 2000214252477: Số lượng mới 11
+[2026-02-11 11:08:43] [INFO] Đã đồng bộ SKU 2000214252330: Số lượng mới 0
+[2026-02-11 11:08:44] [INFO] Đã đồng bộ SKU 2000214252323: Số lượng mới 0
+[2026-02-11 11:08:45] [INFO] Đã đồng bộ SKU 2000214252309: Số lượng mới 0
+[2026-02-11 11:08:47] [INFO] Đã đồng bộ SKU 2000214252293: Số lượng mới 0
+[2026-02-11 11:08:48] [INFO] Đã đồng bộ SKU 2000214252286: Số lượng mới 0
+[2026-02-11 11:08:49] [INFO] Đã đồng bộ SKU 2000214252279: Số lượng mới 0
+[2026-02-11 11:08:50] [INFO] Đã đồng bộ SKU 2000214252262: Số lượng mới 0
+[2026-02-11 11:08:52] [INFO] Đã đồng bộ SKU 2000214252248: Số lượng mới 0
+[2026-02-11 11:08:53] [INFO] Đã đồng bộ SKU 2000214252231: Số lượng mới 0
+[2026-02-11 11:08:54] [INFO] Đã đồng bộ SKU 2000214252224: Số lượng mới 0
+[2026-02-11 11:08:55] [INFO] Đã đồng bộ SKU 2000214252217: Số lượng mới 0
+[2026-02-11 11:08:57] [INFO] Đã đồng bộ SKU 2000214252194: Số lượng mới 0
+[2026-02-11 11:08:58] [INFO] Đã đồng bộ SKU 2000214252187: Số lượng mới 0
+[2026-02-11 11:08:59] [INFO] Đã đồng bộ SKU 2000214252170: Số lượng mới 7
+[2026-02-11 11:09:00] [INFO] Đã đồng bộ SKU 2000214252163: Số lượng mới 2
+[2026-02-11 11:09:05] [INFO] Đã đồng bộ SKU 2000214251869: Số lượng mới 0
+[2026-02-11 11:09:06] [INFO] Đã đồng bộ SKU 2000214251852: Số lượng mới 0
+[2026-02-11 11:09:07] [INFO] Đã đồng bộ SKU 2000214251838: Số lượng mới 0
+[2026-02-11 11:09:08] [INFO] Đã đồng bộ SKU 2000214251821: Số lượng mới 0
+[2026-02-11 11:09:10] [INFO] Đã đồng bộ SKU 2000214251807: Số lượng mới 0
+[2026-02-11 11:09:11] [INFO] Đã đồng bộ SKU 2000214251791: Số lượng mới 0
+[2026-02-11 11:09:12] [INFO] Đã đồng bộ SKU 2000214251777: Số lượng mới 0
+[2026-02-11 11:09:13] [INFO] Đã đồng bộ SKU 2000214251760: Số lượng mới 0
+[2026-02-11 11:09:17] [INFO] Đã đồng bộ SKU 2000214251654: Số lượng mới 0
+[2026-02-11 11:09:18] [INFO] Đã đồng bộ SKU 2000214251562: Số lượng mới 0
+[2026-02-11 11:09:19] [INFO] Đã đồng bộ SKU 2000214251548: Số lượng mới 0
+[2026-02-11 11:09:21] [INFO] Đã đồng bộ SKU 2000214251531: Số lượng mới 0
+[2026-02-11 11:09:22] [INFO] Đã đồng bộ SKU 2000214251524: Số lượng mới 0
+[2026-02-11 11:09:23] [INFO] Đã đồng bộ SKU 2000214251517: Số lượng mới 0
+[2026-02-11 11:09:24] [INFO] Đã đồng bộ SKU 2000214251500: Số lượng mới 0
+[2026-02-11 11:09:26] [INFO] Đã đồng bộ SKU 2000214251494: Số lượng mới 0
+[2026-02-11 11:09:28] [INFO] Đã đồng bộ SKU 2000214251449: Số lượng mới 0
+[2026-02-11 11:09:30] [INFO] Đã đồng bộ SKU 2000214251432: Số lượng mới 0
+[2026-02-11 11:09:31] [INFO] Đã đồng bộ SKU 2000214251425: Số lượng mới 0
+[2026-02-11 11:09:32] [INFO] Đã đồng bộ SKU 2000214251418: Số lượng mới 0
+[2026-02-11 11:09:34] [INFO] Đã đồng bộ SKU 2000214251357: Số lượng mới -1
+[2026-02-11 11:09:36] [INFO] Đã đồng bộ SKU 2000214251340: Số lượng mới 0
+[2026-02-11 11:09:37] [INFO] Đã đồng bộ SKU 2000214251333: Số lượng mới 5
+[2026-02-11 11:09:39] [INFO] Đã đồng bộ SKU 2000214251319: Số lượng mới 0
+[2026-02-11 11:09:40] [INFO] Đã đồng bộ SKU 2000214251647: Số lượng mới 0
+[2026-02-11 11:09:41] [INFO] Đã đồng bộ SKU 2000214251265: Số lượng mới 0
+[2026-02-11 11:09:43] [INFO] Đã đồng bộ SKU 2000214251258: Số lượng mới 0
+[2026-02-11 11:09:44] [INFO] Đã đồng bộ SKU 2000214251241: Số lượng mới 0
+[2026-02-11 11:09:46] [INFO] Đã đồng bộ SKU 2000214251227: Số lượng mới 5
+[2026-02-11 11:09:48] [INFO] Đã đồng bộ SKU 2000214251210: Số lượng mới 5
+[2026-02-11 11:09:49] [INFO] Đã đồng bộ SKU 2000214251623: Số lượng mới 4
+[2026-02-11 11:09:50] [INFO] Đã đồng bộ SKU 2000214251197: Số lượng mới 6
+[2026-02-11 11:09:52] [INFO] Đã đồng bộ SKU 2000214251180: Số lượng mới 4
+[2026-02-11 11:09:53] [INFO] Đã đồng bộ SKU 2000214251173: Số lượng mới 4
+[2026-02-11 11:09:55] [INFO] Đã đồng bộ SKU 2000214251166: Số lượng mới 10
+[2026-02-11 11:09:56] [INFO] Đã đồng bộ SKU 2000214251159: Số lượng mới 5
+[2026-02-11 11:10:02] [INFO] Đã đồng bộ SKU 2000214251142: Số lượng mới 12
+[2026-02-11 11:10:03] [INFO] Đã đồng bộ SKU 2000214251074: Số lượng mới 0
+[2026-02-11 11:10:04] [INFO] Đã đồng bộ SKU 2000214251067: Số lượng mới 0
+[2026-02-11 11:10:05] [INFO] Đã đồng bộ SKU 2000214251050: Số lượng mới 0
+[2026-02-11 11:10:11] [INFO] Đã đồng bộ SKU 2000214250923: Số lượng mới 1
+[2026-02-11 11:10:12] [INFO] Đã đồng bộ SKU 2000214250916: Số lượng mới 5
+[2026-02-11 11:10:14] [INFO] Đã đồng bộ SKU 2000214250909: Số lượng mới 0
+[2026-02-11 11:10:16] [INFO] Đã đồng bộ SKU 2000214247374: Số lượng mới 0
+[2026-02-11 11:10:17] [INFO] Đã đồng bộ SKU 2000214247381: Số lượng mới 0
+[2026-02-11 11:10:18] [INFO] Đã đồng bộ SKU 2000214247398: Số lượng mới 9
+[2026-02-11 11:10:19] [INFO] Đã đồng bộ SKU 2000214247404: Số lượng mới 5
+[2026-02-11 11:10:20] [INFO] Đã đồng bộ SKU 2000214247411: Số lượng mới 9
+[2026-02-11 11:10:22] [INFO] Đã đồng bộ SKU 2000214247428: Số lượng mới 5
+[2026-02-11 11:10:23] [INFO] Đã đồng bộ SKU 2000214247435: Số lượng mới 6
+[2026-02-11 11:10:24] [INFO] Đã đồng bộ SKU 2000214247442: Số lượng mới 10
+[2026-02-11 11:10:25] [INFO] Đã đồng bộ SKU 2000214247459: Số lượng mới 6
+[2026-02-11 11:10:27] [INFO] Đã đồng bộ SKU 2000214247503: Số lượng mới 0
+[2026-02-11 11:10:28] [INFO] Đã đồng bộ SKU 2000214247510: Số lượng mới 0
+[2026-02-11 11:10:30] [INFO] Đã đồng bộ SKU 2000214247534: Số lượng mới 0
+[2026-02-11 11:10:31] [INFO] Đã đồng bộ SKU 2000214247589: Số lượng mới 0
+[2026-02-11 11:10:33] [INFO] Đã đồng bộ SKU 2000214247596: Số lượng mới 0
+[2026-02-11 11:10:34] [INFO] Đã đồng bộ SKU 2000214247602: Số lượng mới 0
+[2026-02-11 11:10:35] [INFO] Đã đồng bộ SKU 2000214247619: Số lượng mới 0
+[2026-02-11 11:10:36] [INFO] Đã đồng bộ SKU 2000214247626: Số lượng mới 0
+[2026-02-11 11:10:38] [INFO] Đã đồng bộ SKU 2000214247633: Số lượng mới 0
+[2026-02-11 11:10:44] [INFO] Đã đồng bộ SKU 2000214247916: Số lượng mới 5
+[2026-02-11 11:10:45] [INFO] Đã đồng bộ SKU 2000214247923: Số lượng mới 10
+[2026-02-11 11:10:46] [INFO] Đã đồng bộ SKU 2000214247930: Số lượng mới 14
+[2026-02-11 11:10:47] [INFO] Đã đồng bộ SKU 2000214247947: Số lượng mới 10
+[2026-02-11 11:10:48] [INFO] Đã đồng bộ SKU 2000214247954: Số lượng mới 0
+[2026-02-11 11:10:53] [INFO] Đã đồng bộ SKU 2000214248074: Số lượng mới 0
+[2026-02-11 11:10:54] [INFO] Đã đồng bộ SKU 2000214248081: Số lượng mới 0
+[2026-02-11 11:11:03] [INFO] Đã đồng bộ SKU 2000214248661: Số lượng mới 0
+[2026-02-11 11:11:19] [INFO] Đã đồng bộ SKU 2000214249057: Số lượng mới 0
+[2026-02-11 11:11:23] [INFO] Đã đồng bộ SKU 2000214249125: Số lượng mới 0
+[2026-02-11 11:11:27] [INFO] Đã đồng bộ SKU 2000214249286: Số lượng mới 0
+[2026-02-11 11:11:28] [INFO] Đã đồng bộ SKU 2000214249293: Số lượng mới 0
+[2026-02-11 11:11:29] [INFO] Đã đồng bộ SKU 2000214249309: Số lượng mới 0
+[2026-02-11 11:11:31] [INFO] Đã đồng bộ SKU 2000214249316: Số lượng mới 0
+[2026-02-11 11:11:32] [INFO] Đã đồng bộ SKU 2000214249323: Số lượng mới 0
+[2026-02-11 11:11:33] [INFO] Đã đồng bộ SKU 2000214249330: Số lượng mới 0
+[2026-02-11 11:11:34] [INFO] Đã đồng bộ SKU 2000214249347: Số lượng mới 0
+[2026-02-11 11:11:35] [INFO] Đã đồng bộ SKU 2000214249354: Số lượng mới 2
+[2026-02-11 11:11:37] [INFO] Đã đồng bộ SKU 2000214249378: Số lượng mới 0
+[2026-02-11 11:11:41] [INFO] Đã đồng bộ SKU 2000214249453: Số lượng mới 0
+[2026-02-11 11:11:42] [INFO] Đã đồng bộ SKU 2000214249460: Số lượng mới 0
+[2026-02-11 11:11:46] [INFO] Đã đồng bộ SKU 2000214249538: Số lượng mới -3
+[2026-02-11 11:11:47] [INFO] Đã đồng bộ SKU 2000214249545: Số lượng mới 15
+[2026-02-11 11:11:50] [INFO] Đã đồng bộ SKU 2000214249583: Số lượng mới 0
+[2026-02-11 11:11:53] [INFO] Đã đồng bộ SKU 2000214249637: Số lượng mới 0
+[2026-02-11 11:11:54] [INFO] Đã đồng bộ SKU 2000214249644: Số lượng mới 0
+[2026-02-11 11:11:55] [INFO] Đã đồng bộ SKU 2000214249651: Số lượng mới 0
+[2026-02-11 11:11:56] [INFO] Đã đồng bộ SKU 2000214249668: Số lượng mới 0
+[2026-02-11 11:11:58] [INFO] Đã đồng bộ SKU 2000214249675: Số lượng mới 0
+[2026-02-11 11:11:59] [INFO] Đã đồng bộ SKU 2000214249682: Số lượng mới 0
+[2026-02-11 11:12:02] [INFO] Đã đồng bộ SKU 2000214249750: Số lượng mới 2
+[2026-02-11 11:12:04] [INFO] Đã đồng bộ SKU 2000214249774: Số lượng mới 0
+[2026-02-11 11:12:06] [INFO] Đã đồng bộ SKU 2000214249781: Số lượng mới 0
+[2026-02-11 11:12:09] [INFO] Đã đồng bộ SKU 2000214249842: Số lượng mới 0
+[2026-02-11 11:12:11] [INFO] Đã đồng bộ SKU 2000214249873: Số lượng mới 0
+[2026-02-11 11:12:14] [INFO] Đã đồng bộ SKU 2000214249934: Số lượng mới -2
+[2026-02-11 11:12:15] [INFO] Đã đồng bộ SKU 2000214249958: Số lượng mới 0
+[2026-02-11 11:12:17] [INFO] Đã đồng bộ SKU 2000214249965: Số lượng mới 0
+[2026-02-11 11:12:18] [INFO] Đã đồng bộ SKU 2000214249972: Số lượng mới 7
+[2026-02-11 11:12:19] [INFO] Đã đồng bộ SKU 2000214249989: Số lượng mới 0
+[2026-02-11 11:12:20] [INFO] Đã đồng bộ SKU 2000214249996: Số lượng mới 0
+[2026-02-11 11:12:22] [INFO] Đã đồng bộ SKU 2000214250008: Số lượng mới 0
+[2026-02-11 11:12:23] [INFO] Đã đồng bộ SKU 2000214250022: Số lượng mới 1
+[2026-02-11 11:12:25] [INFO] Đã đồng bộ SKU 2000214250053: Số lượng mới 0
+[2026-02-11 11:12:26] [INFO] Đã đồng bộ SKU 2000214250060: Số lượng mới 0
+[2026-02-11 11:12:28] [INFO] Đã đồng bộ SKU 2000214250084: Số lượng mới 0
+[2026-02-11 11:12:30] [INFO] Đã đồng bộ SKU 2000214250114: Số lượng mới 0
+[2026-02-11 11:12:31] [INFO] Đã đồng bộ SKU 2000214250121: Số lượng mới 0
+[2026-02-11 11:12:32] [INFO] Đã đồng bộ SKU 2000214250138: Số lượng mới 0
+[2026-02-11 11:12:34] [INFO] Đã đồng bộ SKU 2000214250145: Số lượng mới 0
+[2026-02-11 11:12:37] [INFO] Đã đồng bộ SKU 2000214250213: Số lượng mới 5
+[2026-02-11 11:12:42] [INFO] Đã đồng bộ SKU 2000214250312: Số lượng mới 0
+[2026-02-11 11:12:44] [INFO] Đã đồng bộ SKU 2000214250510: Số lượng mới 0
+[2026-02-11 11:12:45] [INFO] Đã đồng bộ SKU 2000214250527: Số lượng mới 0
+[2026-02-11 11:12:47] [INFO] Đã đồng bộ SKU 2000214250657: Số lượng mới 28
+[2026-02-11 11:12:48] [INFO] Đã đồng bộ SKU 2000214250664: Số lượng mới 22
+[2026-02-11 11:12:51] [INFO] Đã đồng bộ SKU 2000214250770: Số lượng mới 0
+[2026-02-11 11:15:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214260168 trên Shopify.
+[2026-02-11 11:34:45] [INFO] Logo created: 6080067592870628861.jpg
+[2026-02-11 11:36:51] [INFO] Logo updated: Logo_Original-1.png
+[2026-02-11 11:38:54] [INFO] Logo updated: 6080067592870628861.jpg
