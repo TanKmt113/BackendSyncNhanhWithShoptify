@@ -45,6 +45,16 @@ export class NotificationController {
     }
   }
 
+  // Xóa tất cả thông báo đã đọc
+  static async deleteReadNotifications(req: Request, res: Response) {
+    try {
+      await Notification.destroy({ where: { is_read: true } });
+      res.json({ success: true, message: "Đã xóa tất cả thông báo đã đọc" });
+    } catch (error: any) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+
   // Hàm helper nội bộ để tạo thông báo từ các Service khác
   static async createSystemNotification(type: "INFO" | "SUCCESS" | "WARNING" | "ERROR", message: string) {
       try {
