@@ -22,6 +22,7 @@ Order.init(
     shopify_order_id: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     nhanh_order_id: {
       type: DataTypes.STRING,

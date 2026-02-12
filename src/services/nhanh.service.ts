@@ -242,19 +242,19 @@ export async function createOrderFromShopify(orderData: any) {
   }
 }
 
-/**
- * Đồng bộ tồn kho từ Nhanh.vn sang Shopify.
- */
-export async function syncInventoryFromNhanhToShopify() {
-  const config = await getConfig();
-  try {
-    logger.info("Bắt đầu quy trình đồng bộ tồn kho từ Nhanh.vn sang Shopify...");
-    const client = createNhanhClient(config);
-    // Logic đồng bộ sẽ được thực hiện ở đây
-  } catch (error) {
-    logger.error("Lỗi trong quy trình đồng bộ tồn kho:", error);
-  }
-}
+// /**
+//  * Đồng bộ tồn kho từ Nhanh.vn sang Shopify.
+//  */
+// export async function syncInventoryFromNhanhToShopify() {
+//   const config = await getConfig();
+//   try {
+//     logger.info("Bắt đầu quy trình đồng bộ tồn kho từ Nhanh.vn sang Shopify...");
+//     const client = createNhanhClient(config);
+//     // Logic đồng bộ sẽ được thực hiện ở đây
+//   } catch (error) {
+//     logger.error("Lỗi trong quy trình đồng bộ tồn kho:", error);
+//   }
+// }
 
 // --- Các hàm tiện ích (Helper functions) ---
 
