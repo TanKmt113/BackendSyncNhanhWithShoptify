@@ -14,7 +14,39 @@ export async function syncInventoryFromNhanhWebhook(data: any[]) {
         const sku = await getItemWithID(id);
 
         const success = await ShopifyService.updateInventoryByBarcode(sku, available);
-        if (success) count++;
+        if (success) {
+            count++;
+
+            // Update local inventory table
+            try {
+                let product = await Product.findOne({ where: { sku_nhanh: sku } });
+                
+                if (!product) {
+                    product = await Product.findOne({ where: { sku_shopify: sku } });
+                }
+
+                if (product) {
+                    let inventory = await Inventory.findOne({ where: { product_id: product.id } });
+                    
+                    if (!inventory) {
+                        await Inventory.create({
+                            product_id: product.id,
+                            nhanh_stock: available,
+                            shopify_stock: available,
+                            status: "MATCH"
+                        });
+                    } else {
+                        await inventory.update({
+                            nhanh_stock: available,
+                            shopify_stock: available,
+                            status: "MATCH"
+                        });
+                    }
+                }
+            } catch (error: any) {
+                console.error(`Error updating inventory for product ${id}:`, error);
+            }
+        }
     }
 
     if (count > 0) {

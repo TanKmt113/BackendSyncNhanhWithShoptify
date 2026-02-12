@@ -7,6 +7,9 @@ class Order extends Model {
   public nhanh_order_id!: string | null;
   public status!: "SUCCESS" | "FAILED";
   public error_message!: string | null;
+  public order_data!: any | null;
+  public shipping_address!: any | null;
+  public line_items!: any | null;
 }
 
 Order.init(
@@ -31,6 +34,21 @@ Order.init(
     error_message: {
       type: DataTypes.TEXT,
       allowNull: true,
+    },
+    order_data: {
+      type: DataTypes.JSON,
+      allowNull: true,
+      comment: "Full order data from Shopify webhook",
+    },
+    shipping_address: {
+      type: DataTypes.JSON,
+      allowNull: true,
+      comment: "Shipping address from Shopify order",
+    },
+    line_items: {
+      type: DataTypes.JSON,
+      allowNull: true,
+      comment: "Product line items from Shopify order",
     },
   },
   {

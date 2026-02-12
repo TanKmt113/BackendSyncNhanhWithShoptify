@@ -9435,3 +9435,1358 @@
 [2026-02-11 11:34:45] [INFO] Logo created: 6080067592870628861.jpg
 [2026-02-11 11:36:51] [INFO] Logo updated: Logo_Original-1.png
 [2026-02-11 11:38:54] [INFO] Logo updated: 6080067592870628861.jpg
+[2026-02-12 14:44:23] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: undefined
+[2026-02-12 14:44:23] [ERROR] Lỗi ngoại lệ khi tạo đơn hàng từ Shopify undefined:
+{}
+[2026-02-12 14:46:05] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: undefined
+[2026-02-12 14:46:05] [ERROR] Lỗi ngoại lệ khi tạo đơn hàng từ Shopify undefined:
+{}
+[2026-02-12 14:47:35] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: undefined
+[2026-02-12 14:47:35] [ERROR] Lỗi ngoại lệ khi tạo đơn hàng từ Shopify undefined:
+{}
+[2026-02-12 14:48:34] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: undefined
+[2026-02-12 14:48:34] [ERROR] Lỗi ngoại lệ khi tạo đơn hàng từ Shopify undefined:
+{}
+[2026-02-12 14:51:14] [INFO] Successfully fetched order 7219945734453 from Shopify
+[2026-02-12 14:51:14] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: 7219945734453
+[2026-02-12 14:51:14] [ERROR] Lỗi khi tạo đơn hàng trên Nhanh.vn cho đơn Shopify 7219945734453:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_FORM_FIELDS",
+  "messages": {
+    "customerName": "Bạn chưa nhập tên khách hàng",
+    "customerMobile": "Bạn chưa nhập số điện thoại khách hàng"
+  },
+  "data": []
+}
+[2026-02-12 14:59:15] [INFO] Successfully fetched order 7219945734453 from Shopify
+[2026-02-12 14:59:15] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: 7219945734453
+[2026-02-12 14:59:15] [ERROR] Lỗi khi tạo đơn hàng trên Nhanh.vn cho đơn Shopify 7219945734453:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_FORM_FIELDS",
+  "messages": {
+    "customerName": "Bạn chưa nhập tên khách hàng",
+    "customerMobile": "Bạn chưa nhập số điện thoại khách hàng"
+  },
+  "data": []
+}
+[2026-02-12 15:08:20] [INFO] Successfully fetched order 7219945734453 from Shopify
+{
+  "hasShippingAddress": true,
+  "hasBillingAddress": true,
+  "hasCustomer": true,
+  "lineItemsCount": 1
+}
+[2026-02-12 15:08:20] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: 7219945734453
+[2026-02-12 15:08:21] [ERROR] Lỗi khi tạo đơn hàng trên Nhanh.vn cho đơn Shopify 7219945734453:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_FORM_FIELDS",
+  "messages": {
+    "customerName": "Bạn chưa nhập tên khách hàng",
+    "customerMobile": "Bạn chưa nhập số điện thoại khách hàng"
+  },
+  "data": []
+}
+[2026-02-12 15:09:58] [ERROR] GraphQL errors: [
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 7,
+        "column": 11
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "email"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 8,
+        "column": 11
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "phone"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 39,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "firstName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 40,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "lastName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 41,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "name"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 43,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "address1"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 44,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "address2"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 50,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "zip"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 51,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "phone"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 54,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "firstName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 55,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "lastName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 56,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "name"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 58,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "address1"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 59,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "address2"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 65,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "zip"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 66,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "phone"
+    ]
+  },
+  {
+    "message": "Access denied for customer field. Required access: `read_customers` access scope.",
+    "locations": [
+      {
+        "line": 68,
+        "column": 11
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://shopify.dev/api/usage/access-scopes",
+      "requiredAccess": "`read_customers` access scope."
+    },
+    "path": [
+      "order",
+      "customer"
+    ]
+  }
+]
+[2026-02-12 15:11:57] [INFO] Successfully fetched order 7219945734453 from Shopify
+{
+  "hasShippingAddress": true,
+  "hasBillingAddress": false,
+  "hasCustomer": true,
+  "lineItemsCount": 1
+}
+[2026-02-12 15:11:57] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: 7219945734453
+[2026-02-12 15:11:58] [ERROR] Lỗi khi tạo đơn hàng trên Nhanh.vn cho đơn Shopify 7219945734453:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_FORM_FIELDS",
+  "messages": {
+    "customerName": "Bạn chưa nhập tên khách hàng",
+    "customerMobile": "Bạn chưa nhập số điện thoại khách hàng"
+  },
+  "data": []
+}
+[2026-02-12 15:21:06] [ERROR] GraphQL errors: [
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 7,
+        "column": 11
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "email"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 8,
+        "column": 11
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "phone"
+    ]
+  },
+  {
+    "message": "Access denied for customer field. Required access: `read_customers` access scope.",
+    "locations": [
+      {
+        "line": 32,
+        "column": 11
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://shopify.dev/api/usage/access-scopes",
+      "requiredAccess": "`read_customers` access scope."
+    },
+    "path": [
+      "order",
+      "customer"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 52,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "firstName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 53,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "lastName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 54,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "address1"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 55,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "address2"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 59,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "zip"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 60,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "phone"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 63,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "firstName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 64,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "lastName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 65,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "address1"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 66,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "address2"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 70,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "zip"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 71,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "phone"
+    ]
+  }
+]
+[2026-02-12 15:22:31] [ERROR] GraphQL errors: [
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 7,
+        "column": 11
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "email"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 8,
+        "column": 11
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "phone"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 34,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "customer",
+      "firstName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 35,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "customer",
+      "lastName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 38,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "customer",
+      "displayName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 52,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "firstName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 53,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "lastName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 54,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "address1"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 55,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "address2"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 59,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "zip"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 60,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "phone"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 63,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "firstName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 64,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "lastName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 65,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "address1"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 66,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "address2"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 70,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "zip"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 71,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "phone"
+    ]
+  }
+]
+[2026-02-12 15:23:20] [ERROR] GraphQL errors: [
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 7,
+        "column": 11
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "email"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 8,
+        "column": 11
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "phone"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 34,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "customer",
+      "firstName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 35,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "customer",
+      "lastName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 38,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "customer",
+      "displayName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 52,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "firstName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 53,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "lastName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 54,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "address1"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 55,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "address2"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 59,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "zip"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 60,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "shippingAddress",
+      "phone"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 63,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "firstName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 64,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "lastName"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 65,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "address1"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 66,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "address2"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 70,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "zip"
+    ]
+  },
+  {
+    "message": "This app is not approved to access the Customer object. Access to personally identifiable information (PII) like customer names, addresses, emails, phone numbers is only available on Shopify, Advanced, and Plus plans. Learn more: https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+    "locations": [
+      {
+        "line": 71,
+        "column": 13
+      }
+    ],
+    "extensions": {
+      "code": "ACCESS_DENIED",
+      "documentation": "https://admin.shopify.com/store/setagovn/settings/apps/development/305517199361/configuration",
+      "requiredAccess": "This app is not approved to access the Customer object."
+    },
+    "path": [
+      "order",
+      "billingAddress",
+      "phone"
+    ]
+  }
+]
+[2026-02-12 15:23:58] [INFO] Successfully fetched order 7219945734453 from Shopify
+{
+  "hasShippingAddress": true,
+  "hasBillingAddress": false,
+  "hasCustomer": true,
+  "lineItemsCount": 1
+}
+[2026-02-12 15:23:58] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: 7219945734453
+[2026-02-12 15:23:59] [ERROR] Lỗi khi tạo đơn hàng trên Nhanh.vn cho đơn Shopify 7219945734453:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_FORM_FIELDS",
+  "messages": {
+    "customerName": "Bạn chưa nhập tên khách hàng",
+    "customerMobile": "Bạn chưa nhập số điện thoại khách hàng"
+  },
+  "data": []
+}
+[2026-02-12 15:27:56] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: 7219945734453
+[2026-02-12 15:27:56] [ERROR] Lỗi khi tạo đơn hàng trên Nhanh.vn cho đơn Shopify 7219945734453:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_FORM_FIELDS",
+  "messages": {
+    "customerName": "Bạn chưa nhập tên khách hàng",
+    "customerMobile": "Bạn chưa nhập số điện thoại khách hàng"
+  },
+  "data": []
+}
+[2026-02-12 15:35:52] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: 7219945734453
+[2026-02-12 15:35:53] [INFO] Tạo đơn hàng thành công trên Nhanh.vn cho đơn Shopify 7219945734453. ID Nhanh: undefined

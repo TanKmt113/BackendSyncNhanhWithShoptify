@@ -222,7 +222,6 @@ export async function createOrderFromShopify(orderData: any) {
 
     const client = createNhanhClient(config);
     console.log('payload', payload);
-
     const res = await client.post(
       `/order/add?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`,
       payload
@@ -236,6 +235,8 @@ export async function createOrderFromShopify(orderData: any) {
 
     return res.data;
   } catch (error) {
+    console.log('error', error);
+
     logger.error(`Lỗi ngoại lệ khi tạo đơn hàng từ Shopify ${orderData.id}:`, error);
     return null;
   }

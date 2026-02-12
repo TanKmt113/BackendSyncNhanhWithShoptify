@@ -537,3 +537,33 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
   }
 }
 
+/**
+ * Lấy thông tin đơn hàng từ Shopify theo ID
+ * @param shopifyOrderId ID của đơn hàng trên Shopify
+ * @returns Order data hoặc null nếu không tìm thấy
+ */
+export async function getOrderById(shopifyOrderId: string | number) {
+  const config = await getConfig();
+  try {
+    const client = createShoptify(config);
+    // Lấy đầy đủ thông tin order bao gồm shipping_address, billing_address, line_items, customer, etc.
+    // Không truyền fields parameter để lấy tất cả thông tin như webhook
+    const response = await client.get(`/orders/${shopifyOrderId}.json`, {});
+
+    if (response.data && response.data.order) {
+      const order = response.data.order;
+      return order;
+    }
+
+    logger.warn(`Order ${shopifyOrderId} not found on Shopify`);
+    return null;
+  } catch (error: any) {
+    if (axios.isAxiosError(error)) {
+      logger.error(`Error fetching order ${shopifyOrderId} from Shopify:`, error.response?.data || error.message);
+    } else {
+      logger.error(`Error fetching order ${shopifyOrderId} from Shopify:`, error);
+    }
+    return null;
+  }
+}
+

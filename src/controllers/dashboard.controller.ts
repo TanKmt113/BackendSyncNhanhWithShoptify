@@ -3,6 +3,7 @@ import { Product, Inventory, Order, SyncLog } from "../models";
 import * as NhanhService from "../services/nhanh.service";
 import * as ShopifyService from "../services/shopify.service";
 import * as SyncService from "../services/sync.service";
+import * as OrderService from "../services/order.service";
 import { getIO } from "../utils/socket";
 import { NotificationController } from "./notification.controller";
 
@@ -173,6 +174,27 @@ export class DashboardController {
       res.json(productsWithStatus);
     } catch (error: any) {
       console.error('Error fetching Nhanh products:', error);
+      res.status(500).json({ error: error.message });
+    }
+  }
+
+  static async retryOrder(req: Request, res: Response) {
+    const { id } = req.params;
+    try {
+      const result = await OrderService.retryFailedOrder(Number(id));
+      
+      if (result.success) {
+        res.json({ 
+          message: "Order retried successfully", 
+          nhanhOrderId: result.nhanhOrderId 
+        });
+      } else {
+        res.status(400).json({ 
+          error: result.error || "Failed to retry order" 
+        });
+      }
+    } catch (error: any) {
+      console.error('Error retrying order:', error);
       res.status(500).json({ error: error.message });
     }
   }

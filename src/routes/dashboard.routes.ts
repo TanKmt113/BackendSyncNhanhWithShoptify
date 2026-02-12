@@ -6,6 +6,7 @@ const router = Router();
 router.get("/inventory", DashboardController.getInventory);
 router.get("/test-socket", DashboardController.testSocket);
 router.get("/orders", DashboardController.getOrders);
+router.post("/orders/:id/retry", DashboardController.retryOrder);
 router.get("/stats", DashboardController.getStats);
 router.get("/nhanh-products", DashboardController.getNhanhProducts);
 
