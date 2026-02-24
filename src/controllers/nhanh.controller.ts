@@ -13,12 +13,16 @@ export async function installApp(req: Request, res: Response, next: NextFunction
 export async function authCallback(req: Request, res: Response, next: NextFunction) {
     try {
         const { accessCode } = req.query;
-        const token = await NhanhService.getCodeToken(accessCode as string);
-        return res.send("App installed successfully " + token);
+        const result = await NhanhService.getCodeToken(accessCode as string);
+        if (result) {
+            // Redirect to frontend get-token page with accessCode
+            return res.redirect(`${process.env.CLIENT_URL}/nhanh/get-token?accessCode=${accessCode}`);
+        } else {
+            return res.send("Lỗi khi lấy Access Token từ Nhanh.vn");
+        }
     } catch (err) {
         next(err);
     }
 }
-
 
 

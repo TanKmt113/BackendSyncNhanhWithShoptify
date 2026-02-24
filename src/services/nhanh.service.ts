@@ -1,6 +1,6 @@
 import createNhanhClient from "../integrations/nhanhClient";
 import { logger } from "../utils/logger";
-import { getConfig } from "./config.service";
+import { getConfig, updateConfig } from "./config.service";
 
 /**
  * Lấy URL cài đặt ứng dụng Nhanh.vn (OAuth).
@@ -8,9 +8,9 @@ import { getConfig } from "./config.service";
  */
 export async function getInstallUrl(): Promise<string> {
   const config = await getConfig();
-  const returnLink = config.nhanh_return_link; // Giữ env vì chưa đưa vào DB setting này, hoặc có thể thêm sau
+  const returnLink = config.nhanh_return_link;
   const appId = config.nhanh_app_id;
-  const version = '2.0';
+  const version = '3.0';
   return `https://nhanh.vn/oauth?version=${version}&appId=${appId}&returnLink=${returnLink}`;
 }
 
@@ -18,7 +18,7 @@ export async function getInstallUrl(): Promise<string> {
  * Đổi mã Access Code lấy Access Token từ Nhanh.vn.
  * @param accessCode Mã code nhận được sau khi người dùng đồng ý kết nối.
  * @param req Đối tượng request của Express để lưu session.
- * @returns Access Token nếu thành công, ngược lại trả về null.
+ * @returns Response data nếu thành công (bao gồm accessToken, businessId, etc.), ngược lại trả về null.
  */
 export async function getCodeToken(accessCode: string) {
   const config = await getConfig();
@@ -26,11 +26,27 @@ export async function getCodeToken(accessCode: string) {
     "accessCode": accessCode,
     "secretKey": config.nhanh_secret_key
   };
+
   try {
     const client = createNhanhClient(config);
     const response = await client.post(`/app/getaccesstoken?appId=${config.nhanh_app_id}`, data);
-    const token = response.data?.data?.accessToken || null;
-    return token;
+    
+    if (response.data?.code === 1 && response.data?.data) {
+      const { accessToken, businessId } = response.data.data;
+      
+      // Lưu accessToken và businessId vào database
+      await updateConfig({
+        nhanh_app_token: accessToken,
+        nhanh_business_id: businessId.toString()
+      });
+      
+      logger.info(`Đã lưu Access Token và Business ID (${businessId}) vào database thành công.`);
+      
+      return response.data.data;
+    }
+    
+    logger.error("Response từ Nhanh.vn không hợp lệ:", response.data);
+    return null;
   } catch (error) {
     logger.error("Lỗi khi lấy Access Token Nhanh.vn:", error);
     return null;
@@ -46,18 +62,14 @@ export async function getProducts(payload: any = {}) {
   const config = await getConfig();
   try {
     const client = createNhanhClient(config);
-    // Default payload if empty, but we expect caller to provide structure
     const data = {
       ...payload
     };
     const url = `/product/list?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`;
-    console.log('url', url);
     const response = await client.post(url, data);
     logger.info(`Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: ${JSON.stringify(payload)}).`);
     return response.data;
   } catch (error) {
-    console.log('error', error);
-
     logger.error("Lỗi khi lấy danh sách sản phẩm từ Nhanh.vn:", error);
     return null;
   }

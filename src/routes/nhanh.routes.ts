@@ -5,5 +5,4 @@ const router = Router();
 router.get("/install", NhanhController.installApp);
 router.get("/callback", NhanhController.authCallback);
 
-
 export default router;

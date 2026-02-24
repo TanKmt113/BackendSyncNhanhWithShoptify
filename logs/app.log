@@ -10790,3 +10790,3074 @@
 }
 [2026-02-12 15:35:52] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: 7219945734453
 [2026-02-12 15:35:53] [INFO] Tạo đơn hàng thành công trên Nhanh.vn cho đơn Shopify 7219945734453. ID Nhanh: undefined
+[2026-02-24 13:58:42] [ERROR] Lỗi khi lấy Access Token Nhanh.vn:
+{
+  "code": "ERR_INVALID_URL",
+  "input": "/app/getaccesstoken?appId=undefined"
+}
+[2026-02-24 13:58:45] [ERROR] Lỗi khi lấy Access Token Nhanh.vn:
+{
+  "code": "ERR_INVALID_URL",
+  "input": "/app/getaccesstoken?appId=undefined"
+}
+[2026-02-24 13:59:25] [ERROR] Lỗi khi lấy Access Token Nhanh.vn:
+{
+  "code": "ERR_INVALID_URL",
+  "input": "/app/getaccesstoken?appId=undefined"
+}
+[2026-02-24 14:02:11] [ERROR] Lỗi khi lấy Access Token Nhanh.vn:
+{
+  "code": "ERR_INVALID_URL",
+  "input": "/app/getaccesstoken?appId=undefined"
+}
+[2026-02-24 14:08:38] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754590':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:08:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:08:39] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754582':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:08:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:11:18] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753532':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:11:18] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:11:18] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753531':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:11:19] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:11:19] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752276':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:11:19] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:14:08] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753596':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:14:09] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:16:53] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752663':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:16:53] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:16:54] [ERROR] Lỗi khi tìm sản phẩm theo ID '40030341':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:16:54] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:18:00] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753528':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:18:00] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:18:00] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753527':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:18:01] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:18:01] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752278':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:18:01] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:20:17] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753260':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:20:17] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:20:17] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752535':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:20:18] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:24] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752712':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:24] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:24] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754061':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:24] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:24] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752754':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:25] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:25] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754553':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:25] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:25] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752511':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:25] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754554':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753526':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753525':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752358':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753029':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752509':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:36] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752700':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:36] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754254':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:36] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753386':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752536':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753448':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753020':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:38] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752510':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:38] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752539':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:39] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754156':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:39] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754142':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:39] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754154':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:39] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754141':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:39] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754153':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:39] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754058':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:40] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:40] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754152':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:40] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:40] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754057':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:40] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:40] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754151':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:40] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:40] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754056':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:40] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:40] [ERROR] Lỗi khi tìm sản phẩm theo ID '39387422':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:41] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:41] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754055':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:41] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:41] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754149':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:41] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:41] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753016':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:41] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:41] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:41] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754148':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:41] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752806':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:42] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:42] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:42] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753145':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:42] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754147':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:42] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:42] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754146':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:42] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:42] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752028':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754144':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753447':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752117':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754143':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754177':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754181':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi khi tìm sản phẩm theo ID '38778024':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:43] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754176':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754180':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752953':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754175':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753053':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752389':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754179':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754174':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:44] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752125':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:45] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:45] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754178':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:45] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:45] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754173':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:45] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:45] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752124':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:45] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:45] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:45] [ERROR] Lỗi khi tìm sản phẩm theo ID '40751869':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:46] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:46] [ERROR] Lỗi khi tìm sản phẩm theo ID '39387432':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:46] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:46] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754172':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:46] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:46] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753390':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:46] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:46] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754171':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:46] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:46] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:46] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754170':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:47] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:47] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754169':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:47] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:47] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754168':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:47] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:47] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754167':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:48] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:48] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754166':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:48] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:48] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754165':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:48] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754221':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:48] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754234':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:48] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:48] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754164':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754200':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754233':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754163':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754199':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754232':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754162':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754198':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754231':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:49] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754161':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754197':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754230':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754159':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754196':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754229':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754158':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754195':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:50] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754228':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754157':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754194':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754227':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754226':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754193':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754192':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:51] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754225':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:52] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:52] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:52] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754191':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:52] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754224':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:52] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:52] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:52] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754190':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:52] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754223':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:53] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:53] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754189':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:53] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:53] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754222':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:53] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:53] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754188':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:53] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:53] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753532':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:53] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752276':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:53] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:53] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754187':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753531':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754253':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754186':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754252':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754185':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754251':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:54] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754184':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:55] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:55] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754250':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:55] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:55] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754183':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:55] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:55] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754249':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:55] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:55] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754182':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:56] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:56] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:56] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754248':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:56] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:56] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754247':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:56] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:56] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754246':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:57] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:57] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754245':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:57] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:57] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754244':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:57] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:57] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754243':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:58] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:58] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754242':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:58] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:58] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754241':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:58] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:58] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754240':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:59] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:59] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754239':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:59] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:23:59] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754238':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:23:59] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:24:00] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754237':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:24:00] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:24:00] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754236':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:24:00] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:24:00] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754235':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:24:01] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:24:25] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753528':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:24:25] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:24:25] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753527':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:24:25] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:24:25] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752278':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:24:26] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:25:56] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752770':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:25:57] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:25:57] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752687':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:25:57] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:28:24] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753386':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:28:24] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:29:08] [ERROR] Lỗi khi lấy Access Token Nhanh.vn:
+{
+  "code": "ERR_INVALID_URL",
+  "input": "/app/getaccesstoken?appId=undefined"
+}
+[2026-02-24 14:29:42] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753532':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:29:43] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:29:43] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753531':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:29:43] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:29:43] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752276':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:29:43] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:29:49] [ERROR] Lỗi khi lấy Access Token Nhanh.vn:
+{
+  "code": "ERR_INVALID_URL",
+  "input": "/app/getaccesstoken?appId=undefined"
+}
+[2026-02-24 14:30:16] [ERROR] Lỗi khi lấy Access Token Nhanh.vn:
+{
+  "code": "ERR_INVALID_URL",
+  "input": "/app/getaccesstoken?appId=undefined"
+}
+[2026-02-24 14:31:59] [ERROR] Lỗi khi lấy Access Token Nhanh.vn:
+{
+  "code": "ERR_INVALID_URL",
+  "input": "/app/getaccesstoken?appId=undefined"
+}
+[2026-02-24 14:33:30] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754240':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:30] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754160':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:30] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754230':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:30] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754250':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:30] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754180':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:30] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754150':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:30] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754190':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754229':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754249':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754239':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754159':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754189':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754149':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754179':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754228':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754158':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754238':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754188':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754148':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754178':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754237':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754157':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754227':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:31] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754187':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754248':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754147':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754177':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754236':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754186':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754156':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754226':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754247':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754146':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754176':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754235':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754185':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754155':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754246':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754145':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754175':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:32] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754234':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754144':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754245':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754184':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754154':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754225':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754174':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754233':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754183':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754244':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754143':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754224':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754153':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754173':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754232':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754243':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754142':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754182':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754152':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754223':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754172':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:33] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754231':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754141':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754151':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754242':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754181':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754222':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754171':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754058':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754221':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754241':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754170':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:34] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754057':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754200':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754169':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754168':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754056':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754199':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754055':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754167':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:35] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754198':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753336':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754197':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754166':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754196':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753260':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754195':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:36] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753016':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754165':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752807':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754164':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754194':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752696':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754163':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754193':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752539':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:38] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754162':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:38] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754192':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:38] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754161':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:38] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754191':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:33:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:33:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:35:53] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753528':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:35:53] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:35:53] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753527':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:35:54] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:35:54] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752278':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:35:54] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:38:02] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753331':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:38:02] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:38:39] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754554':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:38:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:38:48] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752027':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:38:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:38:49] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753332':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:38:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:38:49] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752663':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:38:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:11] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753383':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:11] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:11] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753365':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:12] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:12] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753324':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:12] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:12] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753030':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:12] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:12] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752793':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:13] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:13] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753446':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:13] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:13] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753362':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:13] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:13] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752772':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:14] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:24] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754156':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:25] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:25] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754151':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:25] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:25] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754146':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:25] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:25] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754141':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:26] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:26] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752509':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:26] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:26] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753532':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:26] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:26] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753531':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:27] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:27] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752905':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:27] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:27] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752276':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:28] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:28] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752030':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:29] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:39:29] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753259':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:39:29] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:40:09] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754186':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:40:09] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:40:09] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754181':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:40:09] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:40:09] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752507':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:40:10] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:40:16] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754196':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:40:16] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:40:16] [ERROR] Lỗi khi tìm sản phẩm theo ID '40754191':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:40:16] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:40:19] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752530':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:40:19] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:40:37] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752687':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:40:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:40:38] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752712':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:40:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:40:45] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752546':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:40:45] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:40:45] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752941':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:40:46] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:41:03] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752538':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:41:03] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:41:17] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752389':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:41:18] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:41:18] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752125':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:41:18] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:41:18] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752124':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:41:18] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:41:18] [ERROR] Lỗi khi tìm sản phẩm theo ID '40751869':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:41:19] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:41:19] [ERROR] Lỗi khi tìm sản phẩm theo ID '39387422':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:41:19] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:41:29] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753528':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:41:29] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:41:29] [ERROR] Lỗi khi tìm sản phẩm theo ID '40753527':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:41:29] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:41:29] [ERROR] Lỗi khi tìm sản phẩm theo ID '40752278':
+{
+  "code": "ERR_INVALID_URL",
+  "input": "product/list?appId=undefined&businessId=undefined"
+}
+[2026-02-24 14:41:30] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:43:49] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:43:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:43:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:45:04] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:45:05] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:45:10] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:45:12] [INFO] Đã lưu Access Token và Business ID (106124) vào database thành công.
+[2026-02-24 14:45:25] [ERROR] Response từ Nhanh.vn không hợp lệ:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_DATA",
+  "messages": [
+    "Invalid appId or accessCode or secretKey"
+  ]
+}
+[2026-02-24 14:45:40] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:45:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:45:50] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:45:51] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:45:52] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:45:52] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:45:53] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:45:53] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:46:23] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:46:23] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:46:24] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:46:24] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:46:40] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:46:49] [ERROR] Response từ Nhanh.vn không hợp lệ:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_DATA",
+  "messages": [
+    "Invalid appId or accessCode or secretKey"
+  ]
+}
+[2026-02-24 14:47:30] [ERROR] Response từ Nhanh.vn không hợp lệ:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_DATA",
+  "messages": [
+    "Invalid appId or accessCode or secretKey"
+  ]
+}
+[2026-02-24 14:51:40] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:10] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:11] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:12] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:12] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:13] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:31] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:36] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:37] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:38] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:52:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:53:20] [INFO] Đã lưu Access Token và Business ID (106124) vào database thành công.
+[2026-02-24 14:54:20] [ERROR] Response từ Nhanh.vn không hợp lệ:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_DATA",
+  "messages": [
+    "Invalid appId or accessCode or secretKey"
+  ]
+}
+[2026-02-24 14:55:47] [INFO] Đã lưu Access Token và Business ID (106124) vào database thành công.
+[2026-02-24 14:56:49] [ERROR] Response từ Nhanh.vn không hợp lệ:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_DATA",
+  "messages": [
+    "Invalid appId or accessCode or secretKey"
+  ]
+}
+[2026-02-24 14:56:56] [ERROR] Response từ Nhanh.vn không hợp lệ:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_DATA",
+  "messages": [
+    "Invalid appId or accessCode or secretKey"
+  ]
+}
+[2026-02-24 14:57:18] [ERROR] Response từ Nhanh.vn không hợp lệ:
+{
+  "code": 0,
+  "errorCode": "ERR_INVALID_DATA",
+  "messages": [
+    "Invalid appId or accessCode or secretKey"
+  ]
+}
+[2026-02-24 14:58:09] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:58:10] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:58:10] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:58:11] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:58:11] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:59:00] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:59:00] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 14:59:01] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:00:05] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:00:15] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:00:16] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:00:16] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:00:17] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:00:17] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:01:11] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:01:12] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:01:12] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:01:13] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:01:13] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:03:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:03:40] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:03:40] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:04:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:04:39] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:04:44] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:04:44] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:06:08] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:06:08] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:06:09] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:06:09] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:06:10] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:06:10] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:08:00] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:08:01] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:08:01] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:08:02] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:08:02] [ERROR] Lỗi Axios khi đồng bộ tồn kho:
+{
+  "errors": "[API] Invalid API key or access token (unrecognized login or wrong password)"
+}
+[2026-02-24 15:08:52] [INFO] Đã lưu Access Token và Business ID (106124) vào database thành công.
