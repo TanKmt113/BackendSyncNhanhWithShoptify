@@ -30,21 +30,21 @@ export async function getCodeToken(accessCode: string) {
   try {
     const client = createNhanhClient(config);
     const response = await client.post(`/app/getaccesstoken?appId=${config.nhanh_app_id}`, data);
-    
+
     if (response.data?.code === 1 && response.data?.data) {
       const { accessToken, businessId } = response.data.data;
-      
+
       // Lưu accessToken và businessId vào database
       await updateConfig({
         nhanh_app_token: accessToken,
         nhanh_business_id: businessId.toString()
       });
-      
+
       logger.info(`Đã lưu Access Token và Business ID (${businessId}) vào database thành công.`);
-      
+
       return response.data.data;
     }
-    
+
     logger.error("Response từ Nhanh.vn không hợp lệ:", response.data);
     return null;
   } catch (error) {
@@ -188,6 +188,10 @@ export async function createOrderFromShopify(orderData: any) {
       transferAccountId: 0
     };
 
+    if (orderData.shipping_address === null) {
+      orderData.shipping_address = orderData.billing_address || {};
+      logger.warn(`Đơn hàng Shopify ID ${orderData.id} không có địa chỉ giao hàng, sử dụng địa chỉ thanh toán thay thế.`);
+    }
     // Tìm kiếm ID Thành phố và Quận/Huyện trên Nhanh.vn
     const cityId = await searchShipping('CITY', null, orderData.shipping_address?.city);
     const districtId = await searchShipping('DISTRICT', cityId, orderData.shipping_address?.address1);
