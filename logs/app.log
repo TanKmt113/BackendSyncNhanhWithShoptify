@@ -13873,3 +13873,353 @@
 [2026-02-25 09:49:15] [INFO] Bắt đầu xử lý tạo đơn hàng từ Shopify ID: 7246830731573
 [2026-02-25 09:49:15] [WARN] Đơn hàng Shopify ID 7246830731573 không có địa chỉ giao hàng, sử dụng địa chỉ thanh toán thay thế.
 [2026-02-25 09:49:16] [INFO] Tạo đơn hàng thành công trên Nhanh.vn cho đơn Shopify 7246830731573. ID Nhanh: undefined
+[2026-02-25 15:59:29] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267587 trên Shopify.
+[2026-02-25 15:59:30] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267570 trên Shopify.
+[2026-02-25 15:59:31] [INFO] Đã đồng bộ SKU 2000214254662: Số lượng mới 400
+[2026-02-25 16:02:37] [INFO] Đã đồng bộ SKU 2000214266023: Số lượng mới 0
+[2026-02-25 16:02:39] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267563 trên Shopify.
+[2026-02-25 16:02:40] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267556 trên Shopify.
+[2026-02-25 16:02:41] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267549 trên Shopify.
+[2026-02-25 16:02:41] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267532 trên Shopify.
+[2026-02-25 16:02:42] [INFO] Đã đồng bộ SKU 2000214255478: Số lượng mới 57
+[2026-02-25 16:02:43] [INFO] Đã đồng bộ SKU 2000214254679: Số lượng mới 317
+[2026-02-25 16:04:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214278262 trên Shopify.
+[2026-02-25 16:04:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272796 trên Shopify.
+[2026-02-25 16:04:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214269109 trên Shopify.
+[2026-02-25 16:04:49] [INFO] Đã đồng bộ SKU 2000214261325: Số lượng mới 5
+[2026-02-25 16:04:58] [ERROR] Error adding variant to product on Shopify:
+{
+  "errors": {
+    "base": [
+      "Option values provided for 2 unknown option(s)"
+    ]
+  }
+}
+[2026-02-25 16:05:06] [INFO] Đã đồng bộ SKU 2000214253146: Số lượng mới 58
+[2026-02-25 16:05:07] [INFO] Đã đồng bộ SKU 2000214249538: Số lượng mới 58
+[2026-02-25 16:07:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274004 trên Shopify.
+[2026-02-25 16:07:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273953 trên Shopify.
+[2026-02-25 16:07:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273908 trên Shopify.
+[2026-02-25 16:07:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273854 trên Shopify.
+[2026-02-25 16:07:51] [INFO] Đã đồng bộ SKU 2000214256987: Số lượng mới 52
+[2026-02-25 16:10:09] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214257229 trên Shopify.
+[2026-02-25 16:11:40] [INFO] Updated product options for product 10403528147253
+[2026-02-25 16:11:41] [ERROR] Error adding variant to product on Shopify:
+{
+  "errors": {
+    "base": [
+      "Option values provided for 2 unknown option(s)"
+    ]
+  }
+}
+[2026-02-25 16:12:04] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214268263 trên Shopify.
+[2026-02-25 16:14:46] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273984 trên Shopify.
+[2026-02-25 16:14:46] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274981 trên Shopify.
+[2026-02-25 16:14:46] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274882 trên Shopify.
+[2026-02-25 16:14:46] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273977 trên Shopify.
+[2026-02-25 16:14:46] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274387 trên Shopify.
+[2026-02-25 16:14:46] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274974 trên Shopify.
+[2026-02-25 16:14:46] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274875 trên Shopify.
+[2026-02-25 16:14:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273960 trên Shopify.
+[2026-02-25 16:14:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274370 trên Shopify.
+[2026-02-25 16:14:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274967 trên Shopify.
+[2026-02-25 16:14:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274868 trên Shopify.
+[2026-02-25 16:14:47] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273953 trên Shopify.
+[2026-02-25 16:14:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274363 trên Shopify.
+[2026-02-25 16:14:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274950 trên Shopify.
+[2026-02-25 16:14:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274851 trên Shopify.
+[2026-02-25 16:14:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273946 trên Shopify.
+[2026-02-25 16:14:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274356 trên Shopify.
+[2026-02-25 16:14:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274943 trên Shopify.
+[2026-02-25 16:14:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274844 trên Shopify.
+[2026-02-25 16:14:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273939 trên Shopify.
+[2026-02-25 16:14:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274349 trên Shopify.
+[2026-02-25 16:14:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274837 trên Shopify.
+[2026-02-25 16:14:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273922 trên Shopify.
+[2026-02-25 16:14:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274936 trên Shopify.
+[2026-02-25 16:14:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274332 trên Shopify.
+[2026-02-25 16:14:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274820 trên Shopify.
+[2026-02-25 16:14:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273915 trên Shopify.
+[2026-02-25 16:14:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274929 trên Shopify.
+[2026-02-25 16:14:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274325 trên Shopify.
+[2026-02-25 16:14:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273908 trên Shopify.
+[2026-02-25 16:14:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274813 trên Shopify.
+[2026-02-25 16:14:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274318 trên Shopify.
+[2026-02-25 16:14:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274912 trên Shopify.
+[2026-02-25 16:14:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273892 trên Shopify.
+[2026-02-25 16:14:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274806 trên Shopify.
+[2026-02-25 16:14:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274301 trên Shopify.
+[2026-02-25 16:14:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274905 trên Shopify.
+[2026-02-25 16:14:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273885 trên Shopify.
+[2026-02-25 16:14:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274790 trên Shopify.
+[2026-02-25 16:14:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274295 trên Shopify.
+[2026-02-25 16:14:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274899 trên Shopify.
+[2026-02-25 16:14:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273878 trên Shopify.
+[2026-02-25 16:14:53] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273861 trên Shopify.
+[2026-02-25 16:14:53] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273854 trên Shopify.
+[2026-02-25 16:14:54] [INFO] Đã đồng bộ SKU 2000214265316: Số lượng mới 16
+[2026-02-25 16:14:54] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273021 trên Shopify.
+[2026-02-25 16:14:55] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273014 trên Shopify.
+[2026-02-25 16:14:55] [INFO] Đã đồng bộ SKU 2000214257359: Số lượng mới 4
+[2026-02-25 16:14:55] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273007 trên Shopify.
+[2026-02-25 16:14:56] [INFO] Đã đồng bộ SKU 2000214256994: Số lượng mới 69
+[2026-02-25 16:14:56] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272994 trên Shopify.
+[2026-02-25 16:14:57] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214262445 trên Shopify.
+[2026-02-25 16:14:58] [INFO] Đã đồng bộ SKU 2000214260304: Số lượng mới 112
+[2026-02-25 16:15:10] [INFO] Đã đồng bộ SKU 2000214257212: Số lượng mới 3
+[2026-02-25 16:15:17] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214275421 trên Shopify.
+[2026-02-25 16:15:17] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214275377 trên Shopify.
+[2026-02-25 16:15:18] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214275322 trên Shopify.
+[2026-02-25 16:15:18] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214275278 trên Shopify.
+[2026-02-25 16:15:19] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267891 trên Shopify.
+[2026-02-25 16:15:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214255782 trên Shopify.
+[2026-02-25 16:15:50] [INFO] Đã đồng bộ SKU 2000214253146: Số lượng mới 57
+[2026-02-25 16:15:51] [INFO] Đã đồng bộ SKU 2000214253139: Số lượng mới 51
+[2026-02-25 16:15:52] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214247732 trên Shopify.
+[2026-02-25 16:15:53] [INFO] Đã đồng bộ SKU 2000214249538: Số lượng mới 57
+[2026-02-25 16:15:54] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272727 trên Shopify.
+[2026-02-25 16:15:55] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272710 trên Shopify.
+[2026-02-25 16:15:56] [INFO] Đã đồng bộ SKU 2000214260908: Số lượng mới 21
+[2026-02-25 16:15:57] [INFO] Đã đồng bộ SKU 2000214266047: Số lượng mới 1
+[2026-02-25 16:15:57] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214275520 trên Shopify.
+[2026-02-25 16:15:58] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214255898 trên Shopify.
+[2026-02-25 16:15:59] [INFO] Đã đồng bộ SKU 2000214262988: Số lượng mới 9
+[2026-02-25 16:16:00] [INFO] Đã đồng bộ SKU 2000214252170: Số lượng mới 2
+[2026-02-25 16:16:01] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267600 trên Shopify.
+[2026-02-25 16:16:02] [INFO] Đã đồng bộ SKU 2000214267501: Số lượng mới 9
+[2026-02-25 16:16:02] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267594 trên Shopify.
+[2026-02-25 16:16:03] [INFO] Đã đồng bộ SKU 2000214252194: Số lượng mới 22
+[2026-02-25 16:16:03] [INFO] Đã đồng bộ SKU 2000214266146: Số lượng mới 23
+[2026-02-25 16:16:04] [INFO] Đã đồng bộ SKU 2000214254655: Số lượng mới 370
+[2026-02-25 16:16:42] [INFO] Updated product options for product 10403528147253
+[2026-02-25 16:16:43] [INFO] Successfully added variant test 0002 to product 10403528147253
+[2026-02-25 16:17:00] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272987 trên Shopify.
+[2026-02-25 16:17:01] [INFO] Đã đồng bộ SKU 2000214263732: Số lượng mới 18
+[2026-02-25 16:17:45] [INFO] Đã đồng bộ SKU 2000214265910: Số lượng mới 5
+[2026-02-25 16:18:09] [INFO] Đã đồng bộ SKU 2000214258653: Số lượng mới 7
+[2026-02-25 16:18:09] [ERROR] Error adding variant to product on Shopify:
+{
+  "errors": {
+    "name": [
+      "of Option is not unique"
+    ],
+    "base": [
+      "You need to add option values for Màu"
+    ]
+  }
+}
+[2026-02-25 16:18:10] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214275445 trên Shopify.
+[2026-02-25 16:18:10] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214275391 trên Shopify.
+[2026-02-25 16:18:11] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214275346 trên Shopify.
+[2026-02-25 16:18:12] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214275292 trên Shopify.
+[2026-02-25 16:18:12] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267914 trên Shopify.
+[2026-02-25 16:19:06] [INFO] Đã đồng bộ SKU 2000214256970: Số lượng mới 9
+[2026-02-25 16:20:53] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214255782 trên Shopify.
+[2026-02-25 16:20:54] [INFO] Đã đồng bộ SKU 2000214253146: Số lượng mới 57
+[2026-02-25 16:20:54] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274042 trên Shopify.
+[2026-02-25 16:20:55] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273991 trên Shopify.
+[2026-02-25 16:20:55] [INFO] Đã đồng bộ SKU 2000214253139: Số lượng mới 51
+[2026-02-25 16:20:55] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273946 trên Shopify.
+[2026-02-25 16:20:55] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214247732 trên Shopify.
+[2026-02-25 16:20:56] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214273892 trên Shopify.
+[2026-02-25 16:20:56] [INFO] Đã đồng bộ SKU 2000214249545: Số lượng mới 51
+[2026-02-25 16:20:57] [INFO] Đã đồng bộ SKU 2000214256758: Số lượng mới 4
+[2026-02-25 16:21:05] [WARN] Option 1 name mismatch: expected "Màu", got "Kiểu dáng". Keeping existing name.
+[2026-02-25 16:21:06] [ERROR] Failed to update variant 52319965282613:
+{
+  "errors": {
+    "base": [
+      "Option values provided for 2 unknown option(s)"
+    ]
+  }
+}
+[2026-02-25 16:21:06] [ERROR] Failed to update variant 52319965315381:
+{
+  "errors": {
+    "base": [
+      "Option values provided for 2 unknown option(s)"
+    ]
+  }
+}
+[2026-02-25 16:21:07] [ERROR] Failed to update variant 52319965348149:
+{
+  "errors": {
+    "base": [
+      "Option values provided for 2 unknown option(s)"
+    ]
+  }
+}
+[2026-02-25 16:21:07] [ERROR] Failed to update variant 52319965380917:
+{
+  "errors": {
+    "base": [
+      "Option values provided for 2 unknown option(s)"
+    ]
+  }
+}
+[2026-02-25 16:21:08] [ERROR] Failed to update variant 52370805358901:
+{
+  "errors": {
+    "base": [
+      "Option values provided for 2 unknown option(s)"
+    ]
+  }
+}
+[2026-02-25 16:21:08] [ERROR] Error adding variant to product on Shopify:
+{
+  "errors": {
+    "name": [
+      "of Option is not unique"
+    ]
+  }
+}
+[2026-02-25 16:22:05] [INFO] Đã đồng bộ SKU 2000214261318: Số lượng mới 0
+[2026-02-25 16:22:05] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214256789 trên Shopify.
+[2026-02-25 16:22:06] [INFO] Đã đồng bộ SKU 2000214265330: Số lượng mới 24
+[2026-02-25 16:22:07] [INFO] Đã đồng bộ SKU 2000214258738: Số lượng mới 8
+[2026-02-25 16:23:05] [INFO] Đã đồng bộ SKU 2000214251173: Số lượng mới 3
+[2026-02-25 16:23:10] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267600 trên Shopify.
+[2026-02-25 16:23:11] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267594 trên Shopify.
+[2026-02-25 16:23:12] [INFO] Đã đồng bộ SKU 2000214254655: Số lượng mới 370
+[2026-02-25 16:23:12] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214278361 trên Shopify.
+[2026-02-25 16:23:16] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267563 trên Shopify.
+[2026-02-25 16:23:17] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267556 trên Shopify.
+[2026-02-25 16:23:54] [INFO] Đã đồng bộ SKU 2000214262537: Số lượng mới 7
+[2026-02-25 16:24:28] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267587 trên Shopify.
+[2026-02-25 16:24:29] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267570 trên Shopify.
+[2026-02-25 16:24:31] [INFO] Đã đồng bộ SKU 2000214254662: Số lượng mới 398
+[2026-02-25 16:25:22] [INFO] Adding 2 new option(s) to product 10403528147253
+[2026-02-25 16:25:22] [ERROR] Failed to update variant 52319965282613:
+{
+  "errors": {
+    "base": [
+      "Option values provided for 2 unknown option(s)"
+    ]
+  }
+}
+[2026-02-25 16:25:23] [ERROR] Failed to update variant 52319965315381:
+{
+  "errors": {
+    "base": [
+      "Option values provided for 2 unknown option(s)"
+    ]
+  }
+}
+[2026-02-25 16:25:23] [ERROR] Failed to update variant 52319965348149:
+{
+  "errors": {
+    "base": [
+      "Option values provided for 2 unknown option(s)"
+    ]
+  }
+}
+[2026-02-25 16:25:23] [ERROR] Failed to update variant 52319965380917:
+{
+  "errors": {
+    "base": [
+      "Option values provided for 2 unknown option(s)"
+    ]
+  }
+}
+[2026-02-25 16:25:24] [ERROR] Failed to update product options:
+{
+  "errors": {
+    "base": [
+      "You need to add option values for Size",
+      "You need to add option values for Chất liệu"
+    ]
+  }
+}
+[2026-02-25 16:28:17] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267549 trên Shopify.
+[2026-02-25 16:28:17] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267532 trên Shopify.
+[2026-02-25 16:28:19] [INFO] Đã đồng bộ SKU 2000214255478: Số lượng mới 53
+[2026-02-25 16:29:09] [INFO] Adding 1 new option(s) to product 10403528147253
+[2026-02-25 16:29:10] [INFO] Updated product options and variants for product 10403528147253
+[2026-02-25 16:29:10] [INFO] Adding variant with options: {"option1":"Ghi","option2":"Vải"}
+[2026-02-25 16:29:11] [INFO] Successfully added variant sp0982223 to product 10403528147253
+[2026-02-25 16:31:54] [INFO] Đã đồng bộ SKU 2000214262933: Số lượng mới 5
+[2026-02-25 16:32:06] [INFO] Đã đồng bộ SKU 2000214257366: Số lượng mới 14
+[2026-02-25 16:33:08] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214278262 trên Shopify.
+[2026-02-25 16:33:09] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214257991 trên Shopify.
+[2026-02-25 16:34:56] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}
+[2026-02-25 16:35:21] [INFO] Đã đồng bộ SKU 2000214259933: Số lượng mới 5
+[2026-02-25 16:35:23] [INFO] Đã đồng bộ SKU 2000214258837: Số lượng mới 2
+[2026-02-25 16:37:21] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214277241 trên Shopify.
+[2026-02-25 16:38:50] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267549 trên Shopify.
+[2026-02-25 16:38:51] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267532 trên Shopify.
+[2026-02-25 16:38:52] [INFO] Đã đồng bộ SKU 2000214255478: Số lượng mới 53
+[2026-02-25 16:39:13] [INFO] Successfully created product dsdaxczc on Shopify with ID: 10412326093109
+[2026-02-25 16:39:29] [INFO] Đã đồng bộ SKU 2000214258714: Số lượng mới 23
+[2026-02-25 16:39:45] [INFO] Đã đồng bộ SKU 2000214258868: Số lượng mới 5
+[2026-02-25 16:39:49] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214264876 trên Shopify.
+[2026-02-25 16:39:55] [INFO] Đã đồng bộ SKU 2000214265606: Số lượng mới 5
+[2026-02-25 16:39:56] [INFO] Đã đồng bộ SKU 2000214265330: Số lượng mới 24
+[2026-02-25 16:43:41] [INFO] Đã đồng bộ SKU 2000214259254: Số lượng mới 8
+[2026-02-25 16:43:43] [INFO] Đã đồng bộ SKU 2000214259254: Số lượng mới 8
+[2026-02-25 16:46:18] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214255799 trên Shopify.
+[2026-02-25 16:46:19] [INFO] Đã đồng bộ SKU 2000214253061: Số lượng mới 0
+[2026-02-25 16:46:20] [INFO] Đã đồng bộ SKU 2000214253054: Số lượng mới 0
+[2026-02-25 16:46:20] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214247749 trên Shopify.
+[2026-02-25 16:46:21] [INFO] Đã đồng bộ SKU 2000214250008: Số lượng mới 0
+[2026-02-25 16:46:56] [INFO] Successfully created product tandev113 on Shopify with ID: 10412335923509
+[2026-02-25 16:47:05] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214277982 trên Shopify.
+[2026-02-25 16:48:10] [INFO] Đã đồng bộ SKU 2000214249545: Số lượng mới 51
+[2026-02-25 16:48:29] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214255782 trên Shopify.
+[2026-02-25 16:48:29] [INFO] Đã đồng bộ SKU 2000214253146: Số lượng mới 57
+[2026-02-25 16:48:30] [INFO] Đã đồng bộ SKU 2000214253139: Số lượng mới 51
+[2026-02-25 16:48:31] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214247732 trên Shopify.
+[2026-02-25 16:48:32] [INFO] Đã đồng bộ SKU 2000214249538: Số lượng mới 57
+[2026-02-25 16:48:33] [INFO] Đã đồng bộ SKU 2000214266160: Số lượng mới 32
+[2026-02-25 16:49:05] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214269598 trên Shopify.
+[2026-02-25 16:49:06] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267549 trên Shopify.
+[2026-02-25 16:49:06] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267532 trên Shopify.
+[2026-02-25 16:49:07] [INFO] Đã đồng bộ SKU 2000214255478: Số lượng mới 53
+[2026-02-25 16:49:08] [INFO] Đã đồng bộ SKU 2000214258776: Số lượng mới 0
+[2026-02-25 16:49:09] [INFO] Đã đồng bộ SKU 2000214259292: Số lượng mới 9
+[2026-02-25 16:50:05] [INFO] Successfully created product sp tandev113 on Shopify with ID: 10412338676021
+[2026-02-25 16:50:07] [INFO] Đã đồng bộ SKU 2000214258851: Số lượng mới 9
+[2026-02-25 16:50:10] [INFO] Đã đồng bộ SKU 2000214251173: Số lượng mới 3
+[2026-02-25 16:50:16] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267587 trên Shopify.
+[2026-02-25 16:50:17] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267570 trên Shopify.
+[2026-02-25 16:50:18] [INFO] Đã đồng bộ SKU 2000214254662: Số lượng mới 398
+[2026-02-25 16:50:19] [INFO] Đã đồng bộ SKU 2000214247411: Số lượng mới 4
+[2026-02-25 16:50:20] [INFO] Đã đồng bộ SKU 2000214259162: Số lượng mới 14
+[2026-02-25 16:51:19] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214257229 trên Shopify.
+[2026-02-25 16:51:26] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274806 trên Shopify.
+[2026-02-25 16:51:27] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274752 trên Shopify.
+[2026-02-25 16:51:27] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274707 trên Shopify.
+[2026-02-25 16:51:28] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274653 trên Shopify.
+[2026-02-25 16:51:28] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214266696 trên Shopify.
+[2026-02-25 16:51:50] [INFO] Đã đồng bộ SKU 2000214266771: Số lượng mới 2
+[2026-02-25 16:52:19] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274325 trên Shopify.
+[2026-02-25 16:52:19] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214274271 trên Shopify.
+[2026-02-25 16:52:20] [INFO] Đã đồng bộ SKU 2000214256673: Số lượng mới 35
+[2026-02-25 16:52:38] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214277975 trên Shopify.
+[2026-02-25 16:52:40] [INFO] Đã đồng bộ SKU 2000214265651: Số lượng mới 20
+[2026-02-25 16:52:41] [INFO] Đã đồng bộ SKU 2000214259377: Số lượng mới 3
+[2026-02-25 16:52:42] [INFO] Đã đồng bộ SKU 2000214257359: Số lượng mới 4
+[2026-02-25 16:52:43] [INFO] Đã đồng bộ SKU 2000214252194: Số lượng mới 22
+[2026-02-25 16:52:44] [INFO] Đã đồng bộ SKU 2000214262704: Số lượng mới 5
+[2026-02-25 16:52:45] [INFO] Đã đồng bộ SKU 2000214247398: Số lượng mới 7
+[2026-02-25 16:52:46] [INFO] Đã đồng bộ SKU 2000214262629: Số lượng mới 9
+[2026-02-25 16:55:48] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214272444 trên Shopify.
+[2026-02-25 16:56:58] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267563 trên Shopify.
+[2026-02-25 16:56:59] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267556 trên Shopify.
+[2026-02-25 16:57:00] [INFO] Đã đồng bộ SKU 2000214254679: Số lượng mới 313
+[2026-02-25 17:01:37] [INFO] Successfully created product SP áo test 01 on Shopify with ID: 10412348932405
+[2026-02-25 17:02:12] [INFO] Đã đồng bộ SKU 2000214257960: Số lượng mới 11
+[2026-02-25 17:02:16] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267587 trên Shopify.
+[2026-02-25 17:02:16] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214267570 trên Shopify.
+[2026-02-25 17:02:17] [INFO] Đã đồng bộ SKU 2000214254662: Số lượng mới 395
+[2026-02-25 17:03:10] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214278262 trên Shopify.
+[2026-02-25 17:03:10] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214276862 trên Shopify.
+[2026-02-25 17:03:11] [INFO] Đã đồng bộ SKU 2000214265330: Số lượng mới 23
+[2026-02-25 17:03:12] [INFO] Đã đồng bộ SKU 2000214259681: Số lượng mới 0
+[2026-02-25 17:03:13] [INFO] Đã đồng bộ SKU 2000214253184: Số lượng mới 76

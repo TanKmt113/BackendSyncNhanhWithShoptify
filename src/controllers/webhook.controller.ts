@@ -4,6 +4,7 @@ import * as SyncService from "../services/sync.service";
 import * as ShopifyService from "../services/shopify.service";
 import * as OrderService from "../services/order.service";
 import { getConfig } from "../services/config.service";
+import { Json } from "sequelize/types/utils";
 
 
 export async function shopifyOrderCreated(req: Request, res: Response, next: NextFunction) {
@@ -69,9 +70,17 @@ export async function syncDataNhanh(req: Request, res: Response, next: NextFunct
   try {
     const webhookData = req.body;
     const { event, data } = webhookData;
+
     switch (event) {
       case 'orderUpdate':
         const { channel, info } = data;
+
+        // Validate channel and appOrderId exist
+        if (!channel || !channel.appOrderId) {
+          console.warn(`[Webhook Nhanh] orderUpdate missing channel.appOrderId`, data);
+          return res.status(200).json({ success: true, message: "No appOrderId to process" });
+        }
+
         const parts = channel.appOrderId.split('_');
         const NHANH_APP_ID_FROM_ORDER = parts[1];
         if (Number(NHANH_APP_ID_FROM_ORDER) === Number(config.nhanh_app_id)) {
@@ -85,9 +94,11 @@ export async function syncDataNhanh(req: Request, res: Response, next: NextFunct
         await SyncService.syncInventoryFromNhanhWebhook(data);
         break;
       case 'productAdd':
+        console.log(`[Webhook Nhanh] Received productAdd event for product: ${JSON.stringify(data)}`);
         await SyncService.syncProductAddFromNhanhWebhook(data);
         break;
       default:
+        console.warn(`[Webhook Nhanh] Unknown event type: ${event}`);
         break;
     }
     return res.status(200).json({ success: true, message: "Received" });

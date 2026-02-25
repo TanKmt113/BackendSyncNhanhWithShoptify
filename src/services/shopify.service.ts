@@ -392,8 +392,6 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
 
       // If parent has unique barcode, add it as first variant
       if (parentIsDifferent) {
-        console.log(`[createProductOnShopify] Parent has unique barcode: ${parentBarcode}, adding as variant`);
-
         const parentVariant: any = {
           sku: parentBarcode,
           price: productDetails.prices?.retail?.toString() || "0",
@@ -461,6 +459,20 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
       });
     } else {
       // Single product, no variants
+      // If product has attributes, add them as options to the single variant
+      if (productDetails?.attributes && Array.isArray(productDetails.attributes) && productDetails.attributes.length > 0) {
+        productDetails.attributes.forEach((attr: any, index: number) => {
+          const optionKey = `option${index + 1}`;
+          variant[optionKey] = attr.value;
+          
+          // Collect option for options array
+          if (!optionsMap.has(attr.name)) {
+            optionsMap.set(attr.name, new Set<string>());
+          }
+          optionsMap.get(attr.name)!.add(attr.value);
+        });
+      }
+      
       variants.push(variant);
     }
 
@@ -472,14 +484,6 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
         options.push({
           name: name,
           values: Array.from(values)
-        });
-      });
-    } else if (productDetails?.attributes && Array.isArray(productDetails.attributes)) {
-      // Fallback: Build from parent attributes if no variants
-      productDetails.attributes.forEach((attr: any) => {
-        options.push({
-          name: attr.name,
-          values: [attr.value]
         });
       });
     }
@@ -564,6 +568,217 @@ export async function getOrderById(shopifyOrderId: string | number) {
       logger.error(`Error fetching order ${shopifyOrderId} from Shopify:`, error);
     }
     return null;
+  }
+}
+
+/**
+ * Add a new variant to an existing product on Shopify
+ * @param parentBarcode Barcode of parent product to find on Shopify
+ * @param variantData Variant data from Nhanh.vn
+ * @returns true if successful, false otherwise
+ */
+export async function addVariantToProduct(parentBarcode: string, variantData: any): Promise<boolean> {
+  const config = await getConfig();
+  try {
+    const client = createShoptify(config);
+
+    // 1. Find parent product by barcode and get full product details
+    const query = `
+      {
+        productVariants(first: 1, query: "sku:${parentBarcode}") {
+          edges {
+            node {
+              id
+              product {
+                id
+                options {
+                  id
+                  name
+                  values
+                  position
+                }
+              }
+            }
+          }
+        }
+      }
+    `;
+
+    const queryRes = await client.post("/graphql.json", { query });
+
+    if (queryRes.data.errors || !queryRes.data?.data?.productVariants?.edges?.length) {
+      logger.error(`Product with barcode ${parentBarcode} not found on Shopify`);
+      return false;
+    }
+
+    const productData = queryRes.data.data.productVariants.edges[0].node.product;
+    const productId = productData.id;
+    const existingOptions = productData.options || [];
+    
+    // Extract numeric ID from GraphQL ID (gid://shopify/Product/1234567890)
+    const numericProductId = productId.split('/').pop();
+    console.log(`Found parent product on Shopify with ID: ${numericProductId} for barcode: ${parentBarcode}`);
+
+    // 2. Get product details via REST API to update options if needed
+    const productRes = await client.get(`/products/${numericProductId}.json`);
+    const product = productRes.data.product;
+
+    // 3. Build option mapping: match Nhanh attributes with Shopify options by NAME
+    const variantAttributes = variantData.attributes || [];
+    
+    if (variantAttributes.length === 0) {
+      logger.error("Variant data has no attributes");
+      return false;
+    }
+
+    // Create a map of existing option names to their positions
+    const existingOptionsMap = new Map<string, number>();
+    product.options.forEach((opt: any, index: number) => {
+      existingOptionsMap.set(opt.name, index);
+    });
+
+    // Determine which options need to be added and build the final options array
+    const finalOptions = [...product.options];
+    const attributeToOptionPosition = new Map<string, number>(); // attribute name -> option position (1-based)
+    
+    variantAttributes.forEach((attr: any) => {
+      const existingPosition = existingOptionsMap.get(attr.name);
+      
+      if (existingPosition !== undefined) {
+        // Option already exists, use its position
+        attributeToOptionPosition.set(attr.name, existingPosition);
+        
+        // Add value if not already present
+        if (!finalOptions[existingPosition].values.includes(attr.value)) {
+          finalOptions[existingPosition].values.push(attr.value);
+        }
+      } else {
+        // Option doesn't exist, add it
+        const newPosition = finalOptions.length;
+        finalOptions.push({
+          name: attr.name,
+          values: [attr.value]
+        });
+        existingOptionsMap.set(attr.name, newPosition);
+        attributeToOptionPosition.set(attr.name, newPosition);
+      }
+    });
+
+    // 4. Update product options if they changed
+    const optionsChanged = finalOptions.length !== product.options.length || 
+      finalOptions.some((opt: any, i: number) => {
+        const original = product.options[i];
+        return !original || opt.name !== original.name || 
+          opt.values.length !== original.values.length ||
+          opt.values.some((v: string) => !original.values.includes(v));
+      });
+
+    if (optionsChanged) {
+      const newOptionsCount = finalOptions.length - product.options.length;
+      
+      if (newOptionsCount > 0) {
+        logger.info(`Adding ${newOptionsCount} new option(s) to product ${numericProductId}`);
+        
+        // Build updated variants array with default values for new options
+        const existingVariants = product.variants || [];
+        const updatedVariants = existingVariants.map((variant: any) => {
+          const updatedVariant: any = {
+            id: variant.id,
+            option1: variant.option1,
+            option2: variant.option2,
+            option3: variant.option3
+          };
+
+          // Add "Default" value for new options
+          for (let i = product.options.length; i < finalOptions.length; i++) {
+            const optionKey = `option${i + 1}`;
+            updatedVariant[optionKey] = "Default";
+          }
+
+          return updatedVariant;
+        });
+
+        // Update product with new options AND updated variants in one request
+        try {
+          await client.put(`/products/${numericProductId}.json`, {
+            product: {
+              id: numericProductId,
+              options: finalOptions,
+              variants: updatedVariants
+            }
+          });
+          logger.info(`Updated product options and variants for product ${numericProductId}`);
+        } catch (err: any) {
+          logger.error(`Failed to update product options and variants:`, err.response?.data || err.message);
+          return false;
+        }
+      } else {
+        // Just update options (no new options added, just values changed)
+        try {
+          await client.put(`/products/${numericProductId}.json`, {
+            product: {
+              id: numericProductId,
+              options: finalOptions
+            }
+          });
+          logger.info(`Updated product options for product ${numericProductId}`);
+        } catch (err: any) {
+          logger.error(`Failed to update product options:`, err.response?.data || err.message);
+          return false;
+        }
+      }
+    }
+
+    // 5. Build variant payload with correct option mapping
+    const variantPayload: any = {
+      sku: variantData.barcode || variantData.code,
+      price: variantData.prices?.retail?.toString() || "0",
+      compare_at_price: variantData.prices?.old?.toString() || undefined,
+      cost: variantData.prices?.import?.toString() || undefined,
+      inventory_management: "shopify",
+      inventory_policy: "deny",
+      inventory_quantity: variantData.inventory?.available || 0,
+    };
+
+    // Map attributes to correct option positions
+    variantAttributes.forEach((attr: any) => {
+      const position = attributeToOptionPosition.get(attr.name);
+      if (position !== undefined) {
+        const optionKey = `option${position + 1}`;
+        variantPayload[optionKey] = attr.value;
+      }
+    });
+
+    // Add shipping weight
+    if (variantData.shipping?.weight) {
+      variantPayload.weight = variantData.shipping.weight;
+      variantPayload.weight_unit = "g";
+    }
+
+    logger.info(`Adding variant with options:`, JSON.stringify({
+      option1: variantPayload.option1,
+      option2: variantPayload.option2,
+      option3: variantPayload.option3
+    }));
+
+    // 6. Add variant to product using REST API
+    const response = await client.post(`/products/${numericProductId}/variants.json`, {
+      variant: variantPayload
+    });
+
+    if (response.data?.variant?.id) {
+      logger.info(`Successfully added variant ${variantData.name} to product ${numericProductId}`);
+      return true;
+    }
+
+    return false;
+  } catch (error: any) {
+    if (axios.isAxiosError(error)) {
+      logger.error("Error adding variant to product on Shopify:", error.response?.data || error.message);
+    } else {
+      logger.error("Error adding variant to product on Shopify:", error);
+    }
+    return false;
   }
 }
 
