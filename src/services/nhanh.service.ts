@@ -244,6 +244,7 @@ export async function createOrderFromShopify(orderData: any) {
     );
 
     if (res.data.code === 1) {
+      console.log('res', res.data);
       logger.info(`Tạo đơn hàng thành công trên Nhanh.vn cho đơn Shopify ${orderData.id}. ID Nhanh: ${res.data.data?.orderId}`);
     } else {
       logger.error(`Lỗi khi tạo đơn hàng trên Nhanh.vn cho đơn Shopify ${orderData.id}:`, res.data);

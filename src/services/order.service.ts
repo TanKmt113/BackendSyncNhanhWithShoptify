@@ -33,7 +33,7 @@ export async function processShopifyOrder(shopifyOrder: any) {
       // 3. Update DB based on result
       if (nhanhResponse && nhanhResponse.code === 1) {
         const nhanhOrderId = nhanhResponse.data.id;
-        
+
         if (existingOrder) {
           // Update existing failed order
           await existingOrder.update({
@@ -64,7 +64,7 @@ export async function processShopifyOrder(shopifyOrder: any) {
 
       } else {
         const errorMsg = nhanhResponse ? JSON.stringify(nhanhResponse) : "Unknown Error from Nhanh API";
-        
+
         if (existingOrder) {
           // Update existing order
           await existingOrder.update({
@@ -99,7 +99,7 @@ export async function processShopifyOrder(shopifyOrder: any) {
         status: "FAILED",
         response_payload: { error: error.message },
       });
-      
+
       if (existingOrder) {
         // Update existing order
         await existingOrder.update({
@@ -132,8 +132,7 @@ export async function retryFailedOrder(orderId: number) {
   try {
     // 1. Tìm order thất bại từ database
     const order = await Order.findByPk(orderId);
-    console.log('Retrying order:', order?.id);
-    
+
     if (!order) {
       throw new Error("Order not found");
     }
@@ -143,7 +142,8 @@ export async function retryFailedOrder(orderId: number) {
     }
 
     // 2. Lấy thông tin đơn hàng từ database (đã lưu khi nhận webhook)
-    const shopifyOrder = order.order_data;
+    const shopifyOrder = JSON.parse(order.order_data as string);
+    console.log(`Retrying order ID ${orderId} with Shopify Order ID ${shopifyOrder.id}`);
 
     if (!shopifyOrder) {
       throw new Error(`Order data not found in database for order ${order.shopify_order_id}. Order must be created via webhook.`);
@@ -162,7 +162,7 @@ export async function retryFailedOrder(orderId: number) {
       // 5. Cập nhật kết quả
       if (nhanhResponse && nhanhResponse.code === 1) {
         const nhanhOrderId = nhanhResponse.data.id;
-        
+
         await order.update({
           nhanh_order_id: nhanhOrderId,
           status: "SUCCESS",
@@ -181,7 +181,7 @@ export async function retryFailedOrder(orderId: number) {
         return { success: true, nhanhOrderId };
       } else {
         const errorMsg = nhanhResponse ? JSON.stringify(nhanhResponse) : "Unknown Error from Nhanh API";
-        
+
         await order.update({
           error_message: errorMsg,
         });
