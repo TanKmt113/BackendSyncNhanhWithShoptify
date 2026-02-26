@@ -2,36 +2,56 @@ import axios from "axios";
 import { logger } from "../utils/logger";
 import createShoptify from "../integrations/shopifyClient";
 import { getConfig } from "./config.service";
+import {
+  ShopifyOrderStatus,
+  FulfillmentOrder,
+  ShopifyVariant,
+  ShopifyProductPayload,
+  ShopifyProductOption,
+  ShopifyImage,
+  GraphQLResponse,
+  ProductVariantEdge,
+  LocationEdge
+} from "../types/shopify.types";
+import { NhanhProductDetails, NhanhProductChild } from "../types/nhanh.types";
+import {
+  handleApiError,
+  executeGraphQL,
+  extractVariantEdges,
+  extractLocationEdges,
+  isResourceAlreadyInState,
+  buildInventorySetQuantitiesMutation,
+  buildProductVariantQuery,
+  extractNumericId,
+  validateApiResponse,
+  buildProductDescription,
+  buildProductTags
+} from "../utils/apiHelper";
 
-async function updateOrderArchived(shopifyOrderId: number) {
+async function updateOrderArchived(shopifyOrderId: number): Promise<boolean> {
   const config = await getConfig();
   try {
     // 1. Cố gắng cập nhật trạng thái Fulfilled trước (nếu chưa Fulfilled)
     // Điều này đảm bảo đơn hàng Archive là đơn hàng đã hoàn tất giao hàng
     await updateOrderFulfilled(shopifyOrderId);
     // 2. Sau đó thực hiện lưu trữ (Close order)
-    const client = createShoptify(config)
+    const client = createShoptify(config);
     await client.post(`/orders/${shopifyOrderId}/close.json`);
     logger.info(`Đã lưu trữ (archive) đơn hàng ${shopifyOrderId} trên Shopify.`);
     return true;
   } catch (error: any) {
-    if (axios.isAxiosError(error)) {
-      logger.error("Lỗi khi lưu trữ đơn hàng trên Shopify:", error.response?.data || error.message);
-    } else {
-      logger.error("Lỗi khi lưu trữ đơn hàng trên Shopify:", error);
-    }
-    return false;
+    return handleApiError(error, "Lỗi khi lưu trữ đơn hàng trên Shopify");
   }
 }
 
 
-async function updateOrderFulfilled(shopifyOrderId: number) {
+async function updateOrderFulfilled(shopifyOrderId: number): Promise<boolean> {
   const config = await getConfig();
   try {
     // 1. Lấy danh sách các yêu cầu thực hiện đơn hàng (fulfillment orders) cho đơn hàng này.
-    const client = createShoptify(config)
+    const client = createShoptify(config);
     const fulfillmentOrdersRes = await client.get(`/orders/${shopifyOrderId}/fulfillment_orders.json`);
-    const fulfillmentOrders = fulfillmentOrdersRes.data.fulfillment_orders;
+    const fulfillmentOrders: FulfillmentOrder[] = fulfillmentOrdersRes.data.fulfillment_orders;
 
     if (!fulfillmentOrders || fulfillmentOrders.length === 0) {
       logger.warn(`Không tìm thấy yêu cầu thực hiện (fulfillment orders) cho đơn hàng ${shopifyOrderId}`);
@@ -39,7 +59,7 @@ async function updateOrderFulfilled(shopifyOrderId: number) {
     }
 
     // Tìm đơn thực hiện nào đang ở trạng thái 'open' (mở)
-    const openFulfillmentOrder = fulfillmentOrders.find((fo: any) => fo.status === 'open');
+    const openFulfillmentOrder = fulfillmentOrders.find(fo => fo.status === 'open');
 
     // Nếu không còn đơn nào mở (đã hoàn thành hoặc đã hủy)
     if (!openFulfillmentOrder) {
@@ -65,38 +85,27 @@ async function updateOrderFulfilled(shopifyOrderId: number) {
     return true;
 
   } catch (error: any) {
-    // Xử lý lỗi
-    if (axios.isAxiosError(error)) {
-      logger.error("Lỗi khi cập nhật trạng thái đơn hàng (Fulfilled) trên Shopify:", error.response?.data || error.message);
-    } else {
-      logger.error("Lỗi khi cập nhật trạng thái đơn hàng (Fulfilled) trên Shopify:", error);
-    }
-    return false;
+    return handleApiError(error, "Lỗi khi cập nhật trạng thái đơn hàng (Fulfilled) trên Shopify");
   }
 }
 
 
-async function updateOrderCanceled(shopifyOrderId: number) {
+async function updateOrderCanceled(shopifyOrderId: number): Promise<boolean> {
   const config = await getConfig();
   try {
-    const client = createShoptify(config)
+    const client = createShoptify(config);
     await client.post(`/orders/${shopifyOrderId}/cancel.json`);
     logger.info(`Đã hủy đơn hàng ${shopifyOrderId} trên Shopify.`);
     return true;
   } catch (error: any) {
-    if (axios.isAxiosError(error)) {
-      // Shopify trả về lỗi 422 nếu đơn hàng đã bị hủy hoặc không thể hủy
-      if (error.response?.status === 422) {
-        logger.warn(`Đơn hàng ${shopifyOrderId} có thể đã được hủy trước đó hoặc không thể hủy: ${JSON.stringify(error.response.data)}`);
-        return true;
-      }
-      logger.error("Lỗi khi hủy đơn hàng trên Shopify:", error.response?.data || error.message);
-    } else {
-      logger.error("Lỗi khi hủy đơn hàng trên Shopify:", error);
+    // Shopify trả về lỗi 422 nếu đơn hàng đã bị hủy hoặc không thể hủy
+    if (isResourceAlreadyInState(error, `Đơn hàng ${shopifyOrderId}`, "canceled")) {
+      return true;
     }
-    return false;
+    return handleApiError(error, "Lỗi khi hủy đơn hàng trên Shopify");
   }
 }
+
 
 
 /**
@@ -105,10 +114,10 @@ async function updateOrderCanceled(shopifyOrderId: number) {
  * @param newQuantity Số lượng tồn kho mới.
  * @returns true nếu cập nhật thành công, false nếu có lỗi.
  */
-export async function updateInventoryByBarcode(sku: string, newQuantity: number) {
+export async function updateInventoryByBarcode(sku: string, newQuantity: number): Promise<boolean> {
   const config = await getConfig();
   try {
-
+    const client = createShoptify(config);
 
     // 1. Truy vấn GraphQL để lấy ID của InventoryItem từ SKU và Location ID của cửa hàng.
     const query = `
@@ -133,18 +142,15 @@ export async function updateInventoryByBarcode(sku: string, newQuantity: number)
       }
     `;
 
-    // Gửi request query đến Shopify
-    const client = createShoptify(config)
-    const queryRes = await client.post("/graphql.json", { query });
+    const queryRes = await executeGraphQL<{
+      productVariants: { edges: ProductVariantEdge[] };
+      locations: { edges: LocationEdge[] };
+    }>(client, query);
 
-    // Kiểm tra lỗi trong phản hồi query
-    if (queryRes.data.errors) {
-      logger.error("Lỗi GraphQL Shopify (Query):", JSON.stringify(queryRes.data.errors, null, 2));
-      return false;
-    }
+    if (!queryRes) return false;
 
-    const variantEdges = queryRes.data?.data?.productVariants?.edges || [];
-    const locationEdges = queryRes.data?.data?.locations?.edges || [];
+    const variantEdges = extractVariantEdges(queryRes);
+    const locationEdges = extractLocationEdges(queryRes);
 
     // Nếu không tìm thấy biến thể sản phẩm với SKU tương ứng
     if (variantEdges.length === 0) {
@@ -163,55 +169,15 @@ export async function updateInventoryByBarcode(sku: string, newQuantity: number)
     const locationId = locationEdges[0].node.id;
 
     // 2. Tạo mutation GraphQL để cập nhật số lượng tồn kho.
-    const mutation = `
-      mutation {
-        inventorySetQuantities(input: {
-          name: "available",
-          reason: "correction",
-          ignoreCompareQuantity: true,
-          quantities: [
-            {
-              inventoryItemId: "${inventoryItemId}",
-              locationId: "${locationId}",
-              quantity: ${newQuantity}
-            }
-          ]
-        }) {
-          inventoryAdjustmentGroup {
-            reason
-            changes {
-              name
-              delta
-            }
-          }
-          userErrors {
-            field
-            message
-          }
-        }
-      }
-    `;
+    const mutation = buildInventorySetQuantitiesMutation(inventoryItemId, locationId, newQuantity);
 
     // Gửi request mutation cập nhật tồn kho
-    const mutationRes = await client.post("/graphql.json", { query: mutation });
+    const mutationRes = await executeGraphQL(client, mutation);
 
-    // Kiểm tra lỗi trong phản hồi mutation
-    if (mutationRes.data.errors) {
-      logger.error("Lỗi GraphQL Shopify (Mutation):", JSON.stringify(mutationRes.data.errors, null, 2));
-      return false;
-    }
-
-    const result = mutationRes.data?.data?.inventorySetQuantities;
+    if (!mutationRes) return false;
 
     // Kiểm tra kết quả trả về
-    if (!result) {
-      logger.error("Phản hồi không mong đợi từ Shopify:", JSON.stringify(mutationRes.data, null, 2));
-      return false;
-    }
-
-    // Kiểm tra lỗi người dùng trả về từ Shopify (ví dụ: logic nghiệp vụ)
-    if (result.userErrors.length > 0) {
-      logger.error("Lỗi đồng bộ Shopify:", result.userErrors);
+    if (!validateApiResponse(mutationRes, 'data.inventorySetQuantities')) {
       return false;
     }
 
@@ -219,38 +185,25 @@ export async function updateInventoryByBarcode(sku: string, newQuantity: number)
     return true;
 
   } catch (error: any) {
-    // Xử lý lỗi ngoại lệ (ví dụ: lỗi mạng, lỗi thư viện axios)
-    if (axios.isAxiosError(error)) {
-      logger.error("Lỗi Axios khi đồng bộ tồn kho:", error.response?.data || error.message);
-    } else {
-      logger.error("Lỗi khi đồng bộ tồn kho lên Shopify:", error);
-    }
-    return false;
+    return handleApiError(error, "Lỗi khi đồng bộ tồn kho lên Shopify");
   }
 }
 
 export async function getInventoryBySku(sku: string): Promise<number | null> {
   const config = await getConfig();
   try {
-    const query = `
-          {
-            productVariants(first: 1, query: "sku:${sku}") {
-              edges {
-                node {
-                  inventoryQuantity
-                }
-              }
-            }
-          }
-        `;
+    const query = buildProductVariantQuery(sku, "inventoryQuantity");
 
-    const client = createShoptify(config)
-    const queryRes = await client.post("/graphql.json", { query });
-    if (queryRes.data.errors) return null;
+    const client = createShoptify(config);
+    const queryRes = await executeGraphQL<{
+      productVariants: { edges: ProductVariantEdge[] };
+    }>(client, query);
 
-    const edges = queryRes.data?.data?.productVariants?.edges;
-    if (edges && edges.length > 0) {
-      return edges[0].node.inventoryQuantity;
+    if (!queryRes) return null;
+
+    const edges = extractVariantEdges(queryRes);
+    if (edges.length > 0) {
+      return edges[0].node.inventoryQuantity || 0;
     }
     return null;
   } catch (error) {
@@ -267,28 +220,21 @@ export async function getInventoryBySku(sku: string): Promise<number | null> {
 export async function checkProductExistsBySku(sku: string): Promise<string | null> {
   const config = await getConfig();
   try {
-    const query = `
-      {
-        productVariants(first: 1, query: "sku:${sku}") {
-          edges {
-            node {
-              id
-              product {
-                id
-              }
-            }
-          }
-        }
+    const query = buildProductVariantQuery(sku, `
+      product {
+        id
       }
-    `;
+    `);
 
     const client = createShoptify(config);
-    const queryRes = await client.post("/graphql.json", { query });
+    const queryRes = await executeGraphQL<{
+      productVariants: { edges: ProductVariantEdge[] };
+    }>(client, query);
 
-    if (queryRes.data.errors) return null;
+    if (!queryRes) return null;
 
-    const edges = queryRes.data?.data?.productVariants?.edges;
-    if (edges && edges.length > 0) {
+    const edges = extractVariantEdges(queryRes);
+    if (edges.length > 0) {
       return edges[0].node.id;
     }
     return null;
@@ -304,14 +250,13 @@ export async function checkProductExistsBySku(sku: string): Promise<string | nul
  * @param status Trạng thái mới từ hệ thống bên ngoài (ví dụ: Nhanh.vn).
  * @returns true nếu cập nhật thành công hoặc không cần cập nhật, false nếu lỗi.
  */
-export async function updateOrderStatus(shopifyOrderId: number, status: string) {
-
+export async function updateOrderStatus(shopifyOrderId: number, status: string): Promise<boolean> {
   switch (status) {
-    case 'Archived':
+    case ShopifyOrderStatus.ARCHIVED:
       return await updateOrderArchived(shopifyOrderId);
-    case 'Fulfilled':
+    case ShopifyOrderStatus.FULFILLED:
       return await updateOrderFulfilled(shopifyOrderId);
-    case 'Canceled':
+    case ShopifyOrderStatus.CANCELED:
       return await updateOrderCanceled(shopifyOrderId);
     default:
       logger.info(`Trạng thái đơn hàng '${status}' không được hỗ trợ cập nhật lên Shopify.`);
@@ -326,7 +271,7 @@ export async function updateOrderStatus(shopifyOrderId: number, status: string) 
  * @param nhanhData Full product data from Nhanh.vn API (optional, will fetch if not provided)
  * @returns true if successful, false otherwise
  */
-export async function createProductOnShopify(product: any, nhanhData?: any): Promise<boolean> {
+export async function createProductOnShopify(product: any, nhanhData?: NhanhProductDetails): Promise<boolean> {
   const config = await getConfig();
   try {
     const client = createShoptify(config);
@@ -340,172 +285,38 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
     }
 
     // Build description from Nhanh data
-    let bodyHtml = productDetails?.description || productDetails?.content || "<p>Product from Nhanh.vn</p>";
-
-    // Add product details to description
-    if (productDetails?.content) {
-      bodyHtml += `<br><br>${productDetails.content}`;
-    }
+    const bodyHtml = buildProductDescription(productDetails?.description, productDetails?.content);
 
     // Build images array
-    const images: any[] = [];
-    if (productDetails?.images?.avatar) {
-      images.push({ src: productDetails.images.avatar });
-    }
-    if (productDetails?.images?.others && Array.isArray(productDetails.images.others)) {
-      productDetails.images.others.forEach((img: string) => {
-        images.push({ src: img });
-      });
-    }
-    // Fallback to product.image from database
-    if (images.length === 0 && product.image) {
-      images.push({ src: product.image });
-    }
+    const { buildProductImages, buildVariantsAndOptions, buildProductOptions } = await import("../utils/productHelper");
+    const images = buildProductImages(productDetails, product.image);
 
-    // Build variant with full info
-    const variant: any = {
-      sku: productDetails?.barcode || productDetails?.code || product.sku_nhanh,
-      price: productDetails?.prices?.retail?.toString() || "0",
-      compare_at_price: productDetails?.prices?.old?.toString() || undefined,
-      cost: productDetails?.prices?.import?.toString() || undefined,
-      inventory_management: "shopify",
-      inventory_policy: "deny",
-      inventory_quantity: productDetails?.inventory?.available || 0,
-    };
+    // Build variants and options
+    const { variants, optionsMap } = buildVariantsAndOptions(productDetails || {
+      barcode: product.sku_nhanh,
+      code: product.sku_nhanh,
+      name: product.name,
+      inventory: { available: 0 }
+    });
 
-    // Add shipping dimensions if available
-    if (productDetails?.shipping) {
-      if (productDetails.shipping.weight) {
-        variant.weight = productDetails.shipping.weight;
-        variant.weight_unit = "g"; // Nhanh.vn uses grams
-      }
-    }
+    const options = buildProductOptions(optionsMap);
 
-    // Handle product variants (childs) if exists
-    const variants: any[] = [];
-    const optionsMap = new Map<string, Set<string>>(); // To collect all option names and their values
-
-    if (productDetails?.childs && Array.isArray(productDetails.childs) && productDetails.childs.length > 0) {
-      // Product has variants
-
-      // Check if parent barcode is different from all child barcodes
-      const parentBarcode = productDetails.barcode || productDetails.code;
-      const childBarcodes = productDetails.childs.map((c: any) => c.barcode || c.code);
-      const parentIsDifferent = parentBarcode && !childBarcodes.includes(parentBarcode);
-
-      // If parent has unique barcode, add it as first variant
-      if (parentIsDifferent) {
-        const parentVariant: any = {
-          sku: parentBarcode,
-          price: productDetails.prices?.retail?.toString() || "0",
-          compare_at_price: productDetails.prices?.old?.toString() || undefined,
-          cost: productDetails.prices?.import?.toString() || undefined,
-          inventory_management: "shopify",
-          inventory_policy: "deny",
-          inventory_quantity: productDetails.inventory?.available || 0,
-        };
-
-        // Add default option values for parent and collect them
-        if (productDetails.childs[0].attributes && Array.isArray(productDetails.childs[0].attributes)) {
-          productDetails.childs[0].attributes.forEach((attr: any, index: number) => {
-            const optionKey = `option${index + 1}`;
-            parentVariant[optionKey] = "Default"; // Or use parent's attribute if exists
-
-            // Collect option name and "Default" value
-            if (!optionsMap.has(attr.name)) {
-              optionsMap.set(attr.name, new Set<string>());
-            }
-            optionsMap.get(attr.name)!.add("Default");
-          });
-        }
-
-        if (productDetails.shipping?.weight) {
-          parentVariant.weight = productDetails.shipping.weight;
-          parentVariant.weight_unit = "g";
-        }
-
-        variants.push(parentVariant);
-      }
-
-      // Add child variants
-      productDetails.childs.forEach((child: any) => {
-        const childVariant: any = {
-          sku: child.barcode || child.code,
-          price: child.prices?.retail?.toString() || "0",
-          compare_at_price: child.prices?.old?.toString() || undefined,
-          cost: child.prices?.import?.toString() || undefined,
-          inventory_management: "shopify",
-          inventory_policy: "deny",
-          inventory_quantity: child.inventory?.available || 0,
-        };
-
-        // Add variant options from attributes
-        if (child.attributes && Array.isArray(child.attributes)) {
-          child.attributes.forEach((attr: any, index: number) => {
-            const optionKey = `option${index + 1}`;
-            childVariant[optionKey] = attr.value;
-
-            // Collect option names and values for product options
-            if (!optionsMap.has(attr.name)) {
-              optionsMap.set(attr.name, new Set<string>());
-            }
-            optionsMap.get(attr.name)!.add(attr.value);
-          });
-        }
-
-        if (child.shipping?.weight) {
-          childVariant.weight = child.shipping.weight;
-          childVariant.weight_unit = "g";
-        }
-
-        variants.push(childVariant);
-      });
-    } else {
-      // Single product, no variants
-      // If product has attributes, add them as options to the single variant
-      if (productDetails?.attributes && Array.isArray(productDetails.attributes) && productDetails.attributes.length > 0) {
-        productDetails.attributes.forEach((attr: any, index: number) => {
-          const optionKey = `option${index + 1}`;
-          variant[optionKey] = attr.value;
-
-          // Collect option for options array
-          if (!optionsMap.has(attr.name)) {
-            optionsMap.set(attr.name, new Set<string>());
-          }
-          optionsMap.get(attr.name)!.add(attr.value);
-        });
-      }
-
-      variants.push(variant);
-    }
-
-    // Build product options from collected variant attributes
-    const options: any[] = [];
-    if (optionsMap.size > 0) {
-      // Build options from variants attributes
-      optionsMap.forEach((values, name) => {
-        options.push({
-          name: name,
-          values: Array.from(values)
-        });
-      });
-    }
-
-    const productPayload = {
+    // Build product payload
+    const productPayload: ShopifyProductPayload = {
       product: {
         title: productDetails?.name || product.name || product.sku_nhanh,
         body_html: bodyHtml,
         vendor: productDetails?.brand?.name || "Nhanh.vn",
         product_type: productDetails?.category?.name || productDetails?.internalCategory?.name || "Imported",
         status: "draft", // Set to draft for user review before publishing
-        tags: [
+        tags: buildProductTags([
           productDetails?.category?.name,
           productDetails?.brand?.name,
           productDetails?.type?.name
-        ].filter(Boolean).join(", "),
-        variants: variants,
-        images: images.length > 0 ? images : undefined,
-        options: options.length > 0 ? options : undefined,
+        ]),
+        variants,
+        ...(images.length > 0 && { images }),
+        ...(options.length > 0 && { options }),
         metafields: [
           {
             namespace: "nhanh",
@@ -535,12 +346,7 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
     }
     return false;
   } catch (error: any) {
-    if (axios.isAxiosError(error)) {
-      logger.error("Error creating product on Shopify:", error.response?.data || error.message);
-    } else {
-      logger.error("Error creating product on Shopify:", error);
-    }
-    return false;
+    return handleApiError(error, "Error creating product on Shopify");
   }
 }
 
@@ -550,45 +356,44 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
  * @param variantData Variant data from Nhanh.vn
  * @returns true if successful, false otherwise
  */
-export async function addVariantToProduct(parentBarcode: string, variantData: any): Promise<boolean> {
+export async function addVariantToProduct(parentBarcode: string, variantData: NhanhProductChild): Promise<boolean> {
   const config = await getConfig();
   try {
     const client = createShoptify(config);
 
     // 1. Find parent product by barcode and get full product details
-    const query = `
-      {
-        productVariants(first: 1, query: "sku:${parentBarcode}") {
-          edges {
-            node {
-              id
-              product {
-                id
-                options {
-                  id
-                  name
-                  values
-                  position
-                }
-              }
-            }
-          }
+    const query = buildProductVariantQuery(parentBarcode, `
+      product {
+        id
+        options {
+          id
+          name
+          values
+          position
         }
       }
-    `;
+    `);
 
-    const queryRes = await client.post("/graphql.json", { query });
+    const queryRes = await executeGraphQL<{
+      productVariants: { edges: ProductVariantEdge[] };
+    }>(client, query);
 
-    if (queryRes.data.errors || !queryRes.data?.data?.productVariants?.edges?.length) {
+    if (!queryRes) {
       logger.error(`Product with barcode ${parentBarcode} not found on Shopify`);
       return false;
     }
 
-    const productData = queryRes.data.data.productVariants.edges[0].node.product;
-    const productId = productData.id;
+    const edges = extractVariantEdges(queryRes);
+    if (edges.length === 0) {
+      logger.error(`Product with barcode ${parentBarcode} not found on Shopify`);
+      return false;
+    }
 
-    // Extract numeric ID from GraphQL ID (gid://shopify/Product/1234567890)
-    const numericProductId = productId.split('/').pop();
+    const productData = edges[0].node.product;
+    const productId = productData!.id;
+
+    // Extract numeric ID from GraphQL ID
+    const numericProductId = extractNumericId(productId);
 
     // 2. Get product details via REST API to update options if needed
     const productRes = await client.get(`/products/${numericProductId}.json`);
@@ -610,9 +415,9 @@ export async function addVariantToProduct(parentBarcode: string, variantData: an
 
     // Determine which options need to be added and build the final options array
     const finalOptions = [...product.options];
-    const attributeToOptionPosition = new Map<string, number>(); // attribute name -> option position (1-based)
+    const attributeToOptionPosition = new Map<string, number>();
 
-    variantAttributes.forEach((attr: any) => {
+    variantAttributes.forEach(attr => {
       const existingPosition = existingOptionsMap.get(attr.name);
 
       if (existingPosition !== undefined) {
@@ -680,8 +485,7 @@ export async function addVariantToProduct(parentBarcode: string, variantData: an
           });
           logger.info(`Updated product options and variants for product ${numericProductId}`);
         } catch (err: any) {
-          logger.error(`Failed to update product options and variants:`, err.response?.data || err.message);
-          return false;
+          return handleApiError(err, "Failed to update product options and variants");
         }
       } else {
         // Just update options (no new options added, just values changed)
@@ -694,37 +498,24 @@ export async function addVariantToProduct(parentBarcode: string, variantData: an
           });
           logger.info(`Updated product options for product ${numericProductId}`);
         } catch (err: any) {
-          logger.error(`Failed to update product options:`, err.response?.data || err.message);
-          return false;
+          return handleApiError(err, "Failed to update product options");
         }
       }
     }
 
     // 5. Build variant payload with correct option mapping
-    const variantPayload: any = {
-      sku: variantData.barcode || variantData.code,
-      price: variantData.prices?.retail?.toString() || "0",
-      compare_at_price: variantData.prices?.old?.toString() || undefined,
-      cost: variantData.prices?.import?.toString() || undefined,
-      inventory_management: "shopify",
-      inventory_policy: "deny",
-      inventory_quantity: variantData.inventory?.available || 0,
-    };
+    const { buildShopifyVariant } = await import("../utils/productHelper");
+    const variantPayload = buildShopifyVariant(variantData);
 
     // Map attributes to correct option positions
-    variantAttributes.forEach((attr: any) => {
+    variantAttributes.forEach(attr => {
       const position = attributeToOptionPosition.get(attr.name);
       if (position !== undefined) {
-        const optionKey = `option${position + 1}`;
-        variantPayload[optionKey] = attr.value;
+        if (position === 0) variantPayload.option1 = attr.value;
+        else if (position === 1) variantPayload.option2 = attr.value;
+        else if (position === 2) variantPayload.option3 = attr.value;
       }
     });
-
-    // Add shipping weight
-    if (variantData.shipping?.weight) {
-      variantPayload.weight = variantData.shipping.weight;
-      variantPayload.weight_unit = "g";
-    }
 
     logger.info(`Adding variant with options:`, JSON.stringify({
       option1: variantPayload.option1,
@@ -744,11 +535,6 @@ export async function addVariantToProduct(parentBarcode: string, variantData: an
 
     return false;
   } catch (error: any) {
-    if (axios.isAxiosError(error)) {
-      logger.error("Error adding variant to product on Shopify:", error.response?.data || error.message);
-    } else {
-      logger.error("Error adding variant to product on Shopify:", error);
-    }
-    return false;
+    return handleApiError(error, "Error adding variant to product on Shopify");
   }
 }

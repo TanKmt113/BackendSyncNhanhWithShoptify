@@ -10,7 +10,6 @@ import logoRoutes from "./logo.routes";
 import { LogController } from "../controllers/log.controller";
 
 const router = Router();
-
 router.use("/", dashboardRoutes);
 router.use("/sync", syncRoutes);
 router.use("/notifications", notificationRoutes);
@@ -20,9 +19,5 @@ router.use("/webhooks", webhookRoutes);
 router.use("/auth", authRoutes);
 router.use("/logo", logoRoutes);
 router.get("/logs", LogController.viewLogs);
-
-
-
-
 
 export default router;

@@ -1,6 +1,12 @@
 import createNhanhClient from "../integrations/nhanhClient";
 import { logger } from "../utils/logger";
 import { getConfig, updateConfig } from "./config.service";
+import {
+  NhanhApiResponse,
+  NhanhProductListPayload,
+  NhanhProductDetails,
+  NhanhPaginator
+} from "../types/nhanh.types";
 
 /**
  * Lấy URL cài đặt ứng dụng Nhanh.vn (OAuth).
@@ -58,7 +64,7 @@ export async function getCodeToken(accessCode: string) {
  * @param payload Dữ liệu gửi đi (bao gồm paginator, filters...).
  * @returns Dữ liệu danh sách sản phẩm.
  */
-export async function getProducts(payload: any = {}) {
+export async function getProducts(payload: NhanhProductListPayload = {}): Promise<NhanhApiResponse | null> {
   const config = await getConfig();
   try {
     const client = createNhanhClient(config);
@@ -78,13 +84,13 @@ export async function getProducts(payload: any = {}) {
 /**
  * Lấy toàn bộ danh sách sản phẩm từ Nhanh.vn (có phân trang theo cursor/next).
  */
-export async function getAllProducts() {
+export async function getAllProducts(): Promise<any[]> {
   let allProducts: any[] = [];
   let hasMore = true;
-  let nextCursor = null;
+  let nextCursor: string | null = null;
 
   // Initial payload
-  let payload: any = {
+  let payload: NhanhProductListPayload = {
     paginator: {
       size: 50
     }
@@ -95,7 +101,7 @@ export async function getAllProducts() {
   while (hasMore) {
     pageCount++;
     if (nextCursor) {
-      payload.paginator.next = nextCursor;
+      payload.paginator!.next = nextCursor;
     }
 
     const res = await getProducts(payload);
@@ -132,11 +138,10 @@ export async function getAllProducts() {
 
 /**
  * Lấy thông tin chi tiết sản phẩm theo ID từ Nhanh.vn.
- * @param req Đối tượng request.
  * @param id ID của sản phẩm.
  * @returns Dữ liệu chi tiết sản phẩm.
  */
-export async function getByIdProduct(id: number) {
+export async function getByIdProduct(id: number): Promise<NhanhApiResponse<NhanhProductDetails> | null> {
   const config = await getConfig();
   try {
     const client = createNhanhClient(config);
