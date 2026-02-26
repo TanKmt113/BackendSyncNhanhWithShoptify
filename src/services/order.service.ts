@@ -1,4 +1,4 @@
-import { Order, Inventory, Product, SyncLog } from "../models";
+import { Order, SyncLog } from "../models";
 import * as NhanhService from "./nhanh.service";
 import { NotificationController } from "../controllers/notification.controller";
 
@@ -143,7 +143,6 @@ export async function retryFailedOrder(orderId: number) {
 
     // 2. Lấy thông tin đơn hàng từ database (đã lưu khi nhận webhook)
     const shopifyOrder = JSON.parse(order.order_data as string);
-    console.log(`Retrying order ID ${orderId} with Shopify Order ID ${shopifyOrder.id}`);
 
     if (!shopifyOrder) {
       throw new Error(`Order data not found in database for order ${order.shopify_order_id}. Order must be created via webhook.`);

@@ -35,11 +35,8 @@ function writeLog(level: string, message: string, data?: any) {
     }
   });
 
-  // Vẫn in ra console để debug nếu cần (tùy chọn)
   if (level === 'ERROR') {
       console.error(logMessage);
-  } else {
-      console.log(logMessage);
   }
 }
 

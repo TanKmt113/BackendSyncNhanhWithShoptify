@@ -3,6 +3,102 @@ import { logger } from "../utils/logger";
 import createShoptify from "../integrations/shopifyClient";
 import { getConfig } from "./config.service";
 
+async function updateOrderArchived(shopifyOrderId: number) {
+  const config = await getConfig();
+  try {
+    // 1. Cố gắng cập nhật trạng thái Fulfilled trước (nếu chưa Fulfilled)
+    // Điều này đảm bảo đơn hàng Archive là đơn hàng đã hoàn tất giao hàng
+    await updateOrderFulfilled(shopifyOrderId);
+    // 2. Sau đó thực hiện lưu trữ (Close order)
+    const client = createShoptify(config)
+    await client.post(`/orders/${shopifyOrderId}/close.json`);
+    logger.info(`Đã lưu trữ (archive) đơn hàng ${shopifyOrderId} trên Shopify.`);
+    return true;
+  } catch (error: any) {
+    if (axios.isAxiosError(error)) {
+      logger.error("Lỗi khi lưu trữ đơn hàng trên Shopify:", error.response?.data || error.message);
+    } else {
+      logger.error("Lỗi khi lưu trữ đơn hàng trên Shopify:", error);
+    }
+    return false;
+  }
+}
+
+
+async function updateOrderFulfilled(shopifyOrderId: number) {
+  const config = await getConfig();
+  try {
+    // 1. Lấy danh sách các yêu cầu thực hiện đơn hàng (fulfillment orders) cho đơn hàng này.
+    const client = createShoptify(config)
+    const fulfillmentOrdersRes = await client.get(`/orders/${shopifyOrderId}/fulfillment_orders.json`);
+    const fulfillmentOrders = fulfillmentOrdersRes.data.fulfillment_orders;
+
+    if (!fulfillmentOrders || fulfillmentOrders.length === 0) {
+      logger.warn(`Không tìm thấy yêu cầu thực hiện (fulfillment orders) cho đơn hàng ${shopifyOrderId}`);
+      return false;
+    }
+
+    // Tìm đơn thực hiện nào đang ở trạng thái 'open' (mở)
+    const openFulfillmentOrder = fulfillmentOrders.find((fo: any) => fo.status === 'open');
+
+    // Nếu không còn đơn nào mở (đã hoàn thành hoặc đã hủy)
+    if (!openFulfillmentOrder) {
+      logger.info(`Đơn hàng ${shopifyOrderId} đã được giao hoặc không có yêu cầu thực hiện nào đang mở.`);
+      return true;
+    }
+
+    // 2. Tạo payload để thực hiện fulfillment (đánh dấu đã giao).
+    const fulfillmentPayload = {
+      fulfillment: {
+        line_items_by_fulfillment_order: [
+          {
+            fulfillment_order_id: openFulfillmentOrder.id
+          }
+        ]
+      }
+    };
+
+    // Gửi request tạo fulfillment
+    const fulfillRes = await client.post("/fulfillments.json", fulfillmentPayload);
+    logger.info(`Đã cập nhật giao hàng thành công cho đơn hàng ${shopifyOrderId}. ID Fulfillment: ${fulfillRes.data.fulfillment.id}`);
+
+    return true;
+
+  } catch (error: any) {
+    // Xử lý lỗi
+    if (axios.isAxiosError(error)) {
+      logger.error("Lỗi khi cập nhật trạng thái đơn hàng (Fulfilled) trên Shopify:", error.response?.data || error.message);
+    } else {
+      logger.error("Lỗi khi cập nhật trạng thái đơn hàng (Fulfilled) trên Shopify:", error);
+    }
+    return false;
+  }
+}
+
+
+async function updateOrderCanceled(shopifyOrderId: number) {
+  const config = await getConfig();
+  try {
+    const client = createShoptify(config)
+    await client.post(`/orders/${shopifyOrderId}/cancel.json`);
+    logger.info(`Đã hủy đơn hàng ${shopifyOrderId} trên Shopify.`);
+    return true;
+  } catch (error: any) {
+    if (axios.isAxiosError(error)) {
+      // Shopify trả về lỗi 422 nếu đơn hàng đã bị hủy hoặc không thể hủy
+      if (error.response?.status === 422) {
+        logger.warn(`Đơn hàng ${shopifyOrderId} có thể đã được hủy trước đó hoặc không thể hủy: ${JSON.stringify(error.response.data)}`);
+        return true;
+      }
+      logger.error("Lỗi khi hủy đơn hàng trên Shopify:", error.response?.data || error.message);
+    } else {
+      logger.error("Lỗi khi hủy đơn hàng trên Shopify:", error);
+    }
+    return false;
+  }
+}
+
+
 /**
  * Cập nhật số lượng tồn kho trên Shopify dựa trên mã SKU (Barcode).
  * @param sku Mã SKU của sản phẩm.
@@ -223,98 +319,6 @@ export async function updateOrderStatus(shopifyOrderId: number, status: string) 
   }
 }
 
-async function updateOrderArchived(shopifyOrderId: number) {
-  const config = await getConfig();
-  try {
-    // 1. Cố gắng cập nhật trạng thái Fulfilled trước (nếu chưa Fulfilled)
-    // Điều này đảm bảo đơn hàng Archive là đơn hàng đã hoàn tất giao hàng
-    await updateOrderFulfilled(shopifyOrderId);
-    // 2. Sau đó thực hiện lưu trữ (Close order)
-    const client = createShoptify(config)
-    await client.post(`/orders/${shopifyOrderId}/close.json`);
-    logger.info(`Đã lưu trữ (archive) đơn hàng ${shopifyOrderId} trên Shopify.`);
-    return true;
-  } catch (error: any) {
-    if (axios.isAxiosError(error)) {
-      logger.error("Lỗi khi lưu trữ đơn hàng trên Shopify:", error.response?.data || error.message);
-    } else {
-      logger.error("Lỗi khi lưu trữ đơn hàng trên Shopify:", error);
-    }
-    return false;
-  }
-}
-
-async function updateOrderFulfilled(shopifyOrderId: number) {
-  const config = await getConfig();
-  try {
-    // 1. Lấy danh sách các yêu cầu thực hiện đơn hàng (fulfillment orders) cho đơn hàng này.
-    const client = createShoptify(config)
-    const fulfillmentOrdersRes = await client.get(`/orders/${shopifyOrderId}/fulfillment_orders.json`);
-    const fulfillmentOrders = fulfillmentOrdersRes.data.fulfillment_orders;
-
-    if (!fulfillmentOrders || fulfillmentOrders.length === 0) {
-      logger.warn(`Không tìm thấy yêu cầu thực hiện (fulfillment orders) cho đơn hàng ${shopifyOrderId}`);
-      return false;
-    }
-
-    // Tìm đơn thực hiện nào đang ở trạng thái 'open' (mở)
-    const openFulfillmentOrder = fulfillmentOrders.find((fo: any) => fo.status === 'open');
-
-    // Nếu không còn đơn nào mở (đã hoàn thành hoặc đã hủy)
-    if (!openFulfillmentOrder) {
-      logger.info(`Đơn hàng ${shopifyOrderId} đã được giao hoặc không có yêu cầu thực hiện nào đang mở.`);
-      return true;
-    }
-
-    // 2. Tạo payload để thực hiện fulfillment (đánh dấu đã giao).
-    const fulfillmentPayload = {
-      fulfillment: {
-        line_items_by_fulfillment_order: [
-          {
-            fulfillment_order_id: openFulfillmentOrder.id
-          }
-        ]
-      }
-    };
-
-    // Gửi request tạo fulfillment
-    const fulfillRes = await client.post("/fulfillments.json", fulfillmentPayload);
-    logger.info(`Đã cập nhật giao hàng thành công cho đơn hàng ${shopifyOrderId}. ID Fulfillment: ${fulfillRes.data.fulfillment.id}`);
-
-    return true;
-
-  } catch (error: any) {
-    // Xử lý lỗi
-    if (axios.isAxiosError(error)) {
-      logger.error("Lỗi khi cập nhật trạng thái đơn hàng (Fulfilled) trên Shopify:", error.response?.data || error.message);
-    } else {
-      logger.error("Lỗi khi cập nhật trạng thái đơn hàng (Fulfilled) trên Shopify:", error);
-    }
-    return false;
-  }
-}
-
-async function updateOrderCanceled(shopifyOrderId: number) {
-  const config = await getConfig();
-  try {
-    const client = createShoptify(config)
-    await client.post(`/orders/${shopifyOrderId}/cancel.json`);
-    logger.info(`Đã hủy đơn hàng ${shopifyOrderId} trên Shopify.`);
-    return true;
-  } catch (error: any) {
-    if (axios.isAxiosError(error)) {
-      // Shopify trả về lỗi 422 nếu đơn hàng đã bị hủy hoặc không thể hủy
-      if (error.response?.status === 422) {
-        logger.warn(`Đơn hàng ${shopifyOrderId} có thể đã được hủy trước đó hoặc không thể hủy: ${JSON.stringify(error.response.data)}`);
-        return true;
-      }
-      logger.error("Lỗi khi hủy đơn hàng trên Shopify:", error.response?.data || error.message);
-    } else {
-      logger.error("Lỗi khi hủy đơn hàng trên Shopify:", error);
-    }
-    return false;
-  }
-}
 
 /**
  * Create a new product on Shopify with full details from Nhanh.vn
@@ -324,7 +328,6 @@ async function updateOrderCanceled(shopifyOrderId: number) {
  */
 export async function createProductOnShopify(product: any, nhanhData?: any): Promise<boolean> {
   const config = await getConfig();
-  let productPayload: any; // Declare outside try block to access in catch
   try {
     const client = createShoptify(config);
 
@@ -464,7 +467,7 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
         productDetails.attributes.forEach((attr: any, index: number) => {
           const optionKey = `option${index + 1}`;
           variant[optionKey] = attr.value;
-          
+
           // Collect option for options array
           if (!optionsMap.has(attr.name)) {
             optionsMap.set(attr.name, new Set<string>());
@@ -472,7 +475,7 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
           optionsMap.get(attr.name)!.add(attr.value);
         });
       }
-      
+
       variants.push(variant);
     }
 
@@ -488,8 +491,7 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
       });
     }
 
-    // Build final product payload
-    productPayload = {
+    const productPayload = {
       product: {
         title: productDetails?.name || product.name || product.sku_nhanh,
         body_html: bodyHtml,
@@ -520,6 +522,7 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
         ]
       }
     };
+
     const response = await client.post("/products.json", productPayload);
     if (response.data?.product?.id) {
       logger.info(`Successfully created product ${productDetails?.name || product.name} on Shopify with ID: ${response.data.product.id}`);
@@ -538,36 +541,6 @@ export async function createProductOnShopify(product: any, nhanhData?: any): Pro
       logger.error("Error creating product on Shopify:", error);
     }
     return false;
-  }
-}
-
-/**
- * Lấy thông tin đơn hàng từ Shopify theo ID
- * @param shopifyOrderId ID của đơn hàng trên Shopify
- * @returns Order data hoặc null nếu không tìm thấy
- */
-export async function getOrderById(shopifyOrderId: string | number) {
-  const config = await getConfig();
-  try {
-    const client = createShoptify(config);
-    // Lấy đầy đủ thông tin order bao gồm shipping_address, billing_address, line_items, customer, etc.
-    // Không truyền fields parameter để lấy tất cả thông tin như webhook
-    const response = await client.get(`/orders/${shopifyOrderId}.json`, {});
-
-    if (response.data && response.data.order) {
-      const order = response.data.order;
-      return order;
-    }
-
-    logger.warn(`Order ${shopifyOrderId} not found on Shopify`);
-    return null;
-  } catch (error: any) {
-    if (axios.isAxiosError(error)) {
-      logger.error(`Error fetching order ${shopifyOrderId} from Shopify:`, error.response?.data || error.message);
-    } else {
-      logger.error(`Error fetching order ${shopifyOrderId} from Shopify:`, error);
-    }
-    return null;
   }
 }
 
@@ -613,11 +586,9 @@ export async function addVariantToProduct(parentBarcode: string, variantData: an
 
     const productData = queryRes.data.data.productVariants.edges[0].node.product;
     const productId = productData.id;
-    const existingOptions = productData.options || [];
-    
+
     // Extract numeric ID from GraphQL ID (gid://shopify/Product/1234567890)
     const numericProductId = productId.split('/').pop();
-    console.log(`Found parent product on Shopify with ID: ${numericProductId} for barcode: ${parentBarcode}`);
 
     // 2. Get product details via REST API to update options if needed
     const productRes = await client.get(`/products/${numericProductId}.json`);
@@ -625,7 +596,7 @@ export async function addVariantToProduct(parentBarcode: string, variantData: an
 
     // 3. Build option mapping: match Nhanh attributes with Shopify options by NAME
     const variantAttributes = variantData.attributes || [];
-    
+
     if (variantAttributes.length === 0) {
       logger.error("Variant data has no attributes");
       return false;
@@ -640,14 +611,14 @@ export async function addVariantToProduct(parentBarcode: string, variantData: an
     // Determine which options need to be added and build the final options array
     const finalOptions = [...product.options];
     const attributeToOptionPosition = new Map<string, number>(); // attribute name -> option position (1-based)
-    
+
     variantAttributes.forEach((attr: any) => {
       const existingPosition = existingOptionsMap.get(attr.name);
-      
+
       if (existingPosition !== undefined) {
         // Option already exists, use its position
         attributeToOptionPosition.set(attr.name, existingPosition);
-        
+
         // Add value if not already present
         if (!finalOptions[existingPosition].values.includes(attr.value)) {
           finalOptions[existingPosition].values.push(attr.value);
@@ -665,20 +636,20 @@ export async function addVariantToProduct(parentBarcode: string, variantData: an
     });
 
     // 4. Update product options if they changed
-    const optionsChanged = finalOptions.length !== product.options.length || 
+    const optionsChanged = finalOptions.length !== product.options.length ||
       finalOptions.some((opt: any, i: number) => {
         const original = product.options[i];
-        return !original || opt.name !== original.name || 
+        return !original || opt.name !== original.name ||
           opt.values.length !== original.values.length ||
           opt.values.some((v: string) => !original.values.includes(v));
       });
 
     if (optionsChanged) {
       const newOptionsCount = finalOptions.length - product.options.length;
-      
+
       if (newOptionsCount > 0) {
         logger.info(`Adding ${newOptionsCount} new option(s) to product ${numericProductId}`);
-        
+
         // Build updated variants array with default values for new options
         const existingVariants = product.variants || [];
         const updatedVariants = existingVariants.map((variant: any) => {
@@ -781,4 +752,3 @@ export async function addVariantToProduct(parentBarcode: string, variantData: an
     return false;
   }
 }
-

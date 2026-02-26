@@ -64,7 +64,6 @@ class AuthService {
         return { token, user };
     }
 
-
     async getMe(userId: number) {
         const user = await User.findByPk(userId, {
             attributes: { exclude: ["password"] }

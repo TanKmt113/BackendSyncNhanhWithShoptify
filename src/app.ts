@@ -38,7 +38,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use((err: any, req: any, res: any, next: any) => {
   if (err instanceof SyntaxError && "body" in err) {
-    console.error("⚠️ Bad JSON received:", err.message);
     if ((req as any).rawBody) {
       console.error("⚠️ Raw Body Content:", (req as any).rawBody.toString());
     }

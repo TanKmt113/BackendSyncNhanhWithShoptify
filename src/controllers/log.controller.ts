@@ -4,18 +4,13 @@ import path from "path";
 
 export class LogController {
   static async viewLogs(req: Request, res: Response) {
-    console.log("Processing GET /logs request...");
     try {
       const logFilePath = path.join(process.cwd(), "logs", "app.log");
-      console.log("Reading log file from:", logFilePath);
-
       let logContent = "";
 
       if (fs.existsSync(logFilePath)) {
         logContent = fs.readFileSync(logFilePath, "utf-8");
-        console.log("Log file read successfully. Size:", logContent.length);
       } else {
-        console.log("Log file not found.");
         logContent = "Log file not found or empty.";
       }
 
@@ -117,7 +112,6 @@ export class LogController {
 
       res.send(html);
     } catch (error) {
-      console.error("Error reading log file:", error);
       res.status(500).send("Internal Server Error");
     }
   }

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Product, Inventory, Order, SyncLog } from "../models";
+import { Product, Inventory, Order } from "../models";
 import * as NhanhService from "../services/nhanh.service";
 import * as ShopifyService from "../services/shopify.service";
 import * as SyncService from "../services/sync.service";
@@ -24,7 +24,6 @@ export class DashboardController {
     try {
       // Trigger background sync without awaiting
       SyncService.syncAllProductsFromNhanh().catch(err => {
-        console.error("Background sync failed:", err);
       });
 
       res.json({
@@ -152,7 +151,7 @@ export class DashboardController {
       const allProducts = await Product.findAll({
         order: [['createdAt', 'DESC']]
       });
-      
+
       // Add sync status to each product
       const productsWithStatus = allProducts.map(p => {
         const isSynced = !!(p.sku_shopify && p.sku_shopify !== '');
@@ -168,12 +167,9 @@ export class DashboardController {
           syncStatus: isSynced ? 'SYNCED' : 'NOT_SYNCED'
         };
       });
-      
-      console.log(`Total products: ${productsWithStatus.length}, Synced: ${productsWithStatus.filter(p => p.syncStatus === 'SYNCED').length}, Not synced: ${productsWithStatus.filter(p => p.syncStatus === 'NOT_SYNCED').length}`);
-      
+
       res.json(productsWithStatus);
     } catch (error: any) {
-      console.error('Error fetching Nhanh products:', error);
       res.status(500).json({ error: error.message });
     }
   }
@@ -182,19 +178,18 @@ export class DashboardController {
     const { id } = req.params;
     try {
       const result = await OrderService.retryFailedOrder(Number(id));
-      
+
       if (result.success) {
-        res.json({ 
-          message: "Order retried successfully", 
-          nhanhOrderId: result.nhanhOrderId 
+        res.json({
+          message: "Order retried successfully",
+          nhanhOrderId: result.nhanhOrderId
         });
       } else {
-        res.status(400).json({ 
-          error: result.error || "Failed to retry order" 
+        res.status(400).json({
+          error: result.error || "Failed to retry order"
         });
       }
     } catch (error: any) {
-      console.error('Error retrying order:', error);
       res.status(500).json({ error: error.message });
     }
   }

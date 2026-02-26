@@ -14223,3 +14223,8 @@
 [2026-02-25 17:03:11] [INFO] Đã đồng bộ SKU 2000214265330: Số lượng mới 23
 [2026-02-25 17:03:12] [INFO] Đã đồng bộ SKU 2000214259681: Số lượng mới 0
 [2026-02-25 17:03:13] [INFO] Đã đồng bộ SKU 2000214253184: Số lượng mới 76
+[2026-02-25 17:05:04] [INFO] Đồng bộ tồn kho: Không tìm thấy mã SKU 2000214264883 trên Shopify.
+[2026-02-25 17:05:41] [INFO] Adding 1 new option(s) to product 10403528147253
+[2026-02-25 17:05:42] [INFO] Updated product options and variants for product 10403528147253
+[2026-02-25 17:05:42] [INFO] Adding variant with options: {"option2":"S"}
+[2026-02-25 17:05:42] [INFO] Successfully added variant SP test 01 to product 10403528147253

@@ -83,9 +83,8 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
 
         if (!barcode) return;
 
-        // Case 1: parentId = -2 hoặc -1 => Đây là sản phẩm cha, tạo mới trên Shopify với childs (nếu có)
+        // Case 1: parentId = -2 hoặc -1
         if (parentId === -2 || parentId === -1) {
-            // Check if product already exists on Shopify
             const productExists = await ShopifyService.checkProductExistsBySku(barcode);
 
             if (productExists) {
@@ -93,7 +92,6 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
                 return;
             }
 
-            // Find or create product in local database
             let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
 
             if (!product) {
@@ -116,18 +114,13 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
                 });
             }
 
-            // Filter childs: chỉ giữ lại những child chưa có trên Shopify
             let filteredChilds: any[] = [];
             if (productData.childs && Array.isArray(productData.childs) && productData.childs.length > 0) {
                 for (const child of productData.childs) {
                     const childBarcode = child.barcode || child.code;
                     if (childBarcode) {
                         const childExists = await ShopifyService.checkProductExistsBySku(childBarcode);
-                        if (!childExists) {
-                            filteredChilds.push(child);
-                        } else {
-                            console.log(`[syncProductAdd] Child variant ${childBarcode} already exists on Shopify, skipping`);
-                        }
+                        if (!childExists) filteredChilds.push(child);
                     }
                 }
             }
@@ -135,7 +128,7 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
             // Create parent product on Shopify with filtered childs
             const productDataWithFilteredChilds = { ...productData, childs: filteredChilds };
             const success = await ShopifyService.createProductOnShopify(product, productDataWithFilteredChilds);
-            
+
             if (success) {
                 await product.update({ sku_shopify: barcode });
                 const variantInfo = filteredChilds.length > 0 ? ` với ${filteredChilds.length} biến thể` : "";
@@ -148,7 +141,6 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
             return;
         }
 
-        // Case 2: parentId > 0 => Đây là biến thể con, cần thêm vào sản phẩm cha trên Shopify
         if (parentId > 0) {
             // Lấy thông tin sản phẩm cha từ Nhanh.vn
             const { getByIdProduct } = await import("./nhanh.service");
@@ -177,7 +169,7 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
 
             // Kiểm tra biến thể con đã tồn tại trên Shopify chưa
             const variantExists = await ShopifyService.checkProductExistsBySku(barcode);
-            
+
             if (variantExists) {
                 await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Biến thể "${name}" đã tồn tại trên Shopify.`);
                 return;
@@ -188,7 +180,7 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
 
             if (success) {
                 await NotificationController.createSystemNotification("SUCCESS", `Webhook Nhanh.vn: Đã thêm biến thể "${name}" vào sản phẩm cha "${parentData.name}" trên Shopify.`);
-                
+
                 // Save variant to local database
                 let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
                 if (!product) {
@@ -225,7 +217,6 @@ export async function syncAllProductsFromNhanh() {
     try {
         const products = await getAllProducts();
 
-        console.log(`Found ${products.length} products from Nhanh.`);
         io.emit("sync_progress", { message: `Found ${products.length} products. Starting inventory sync...`, total: products.length });
 
         // Tạo thông báo bắt đầu
@@ -249,8 +240,6 @@ export async function syncAllProductsFromNhanh() {
             let success = false;
 
             if (!productExists) {
-                // Product doesn't exist on Shopify, skip it
-                console.log(`Skipping product ${name} (${barcode}) - not found on Shopify`);
                 skippedCount++;
                 continue;
             } else {
@@ -309,7 +298,6 @@ export async function syncAllProductsFromNhanh() {
                 });
             }
         }
-        console.log(`Synced ${syncedCount} products (${skippedCount} skipped - not found on Shopify).`);
         const successMsg = `Đồng bộ hoàn tất! Cập nhật ${syncedCount}/${products.length} sản phẩm (${skippedCount} chưa có trên Shopify).`;
 
         io.emit("sync_complete", {

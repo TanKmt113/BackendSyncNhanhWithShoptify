@@ -108,8 +108,6 @@ export class SyncController {
 
       if (existsOnShopify) {
         // Product already on Shopify, just update inventory
-        console.log(`Product ${product.name} already exists on Shopify, updating inventory...`);
-        
         // Get latest data from Nhanh to update
         if (product.nhanh_id) {
           const nhanhData = await NhanhService.getByIdProduct(parseInt(product.nhanh_id));
@@ -124,7 +122,6 @@ export class SyncController {
         }
       } else {
         // Product not on Shopify, create new
-        console.log(`Creating product ${product.name} on Shopify...`);
         success = await ShopifyService.createProductOnShopify(product);
         message = success
           ? `Đã tạo sản phẩm ${product.name} trên Shopify`

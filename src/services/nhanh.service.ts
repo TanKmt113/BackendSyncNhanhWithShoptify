@@ -255,48 +255,6 @@ export async function createOrderFromShopify(orderData: any) {
   }
 }
 
-// /**
-//  * Đồng bộ tồn kho từ Nhanh.vn sang Shopify.
-//  */
-// export async function syncInventoryFromNhanhToShopify() {
-//   const config = await getConfig();
-//   try {
-//     logger.info("Bắt đầu quy trình đồng bộ tồn kho từ Nhanh.vn sang Shopify...");
-//     const client = createNhanhClient(config);
-//     // Logic đồng bộ sẽ được thực hiện ở đây
-//   } catch (error) {
-//     logger.error("Lỗi trong quy trình đồng bộ tồn kho:", error);
-//   }
-// }
-
-// --- Các hàm tiện ích (Helper functions) ---
-
-/**
- * Tìm kiếm ID địa lý (Tỉnh/Thành, Quận/Huyện) trên Nhanh.vn dựa trên tên.
- */
-async function searchShipping(type: string, parentId: number | null, name: string) {
-  const config = await getConfig();
-  try {
-    if (!name) return null;
-    const client = createNhanhClient(config);
-    const data = {
-      filters: {
-        locationVersion: "v1",
-        type: type,
-        parentId: parentId
-      }
-    };
-    const response = await client.post(`shipping/location?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`, data);
-    if (response.data.code === 1) {
-      return response.data.data.find((e: any) => normalize(e.name) === normalize(name))?.id || null;
-    }
-    return null;
-  } catch (error) {
-    logger.error(`Lỗi khi tìm kiếm địa chỉ (${type}) '${name}':`, error);
-    return null;
-  }
-}
-
 /**
  * Lấy ID sản phẩm trên Nhanh.vn dựa trên Barcode/SKU.
  */
@@ -338,7 +296,6 @@ export async function getItemWithID(id: number) {
       }
     };
     const url = `product/list?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`;
-    console.log('url', url);
     const response = await client.post(url, data);
     if (response?.data?.code === 1) {
       return response.data?.data[0]?.barcode || null;
@@ -349,6 +306,8 @@ export async function getItemWithID(id: number) {
     return null;
   }
 }
+
+// --- Các hàm tiện ích (Helper functions) ---
 
 /**
  * Chuẩn hóa chuỗi tiếng Việt (xóa dấu, xóa tiền tố, chuyển về chữ thường) để so sánh địa chỉ.
@@ -363,3 +322,29 @@ const normalize = (str: string) => {
     .replace(/\s+/g, " ")          // Xóa khoảng trắng thừa
     .trim();
 };
+
+/**
+ * Tìm kiếm ID địa lý (Tỉnh/Thành, Quận/Huyện) trên Nhanh.vn dựa trên tên.
+ */
+async function searchShipping(type: string, parentId: number | null, name: string) {
+  const config = await getConfig();
+  try {
+    if (!name) return null;
+    const client = createNhanhClient(config);
+    const data = {
+      filters: {
+        locationVersion: "v1",
+        type: type,
+        parentId: parentId
+      }
+    };
+    const response = await client.post(`shipping/location?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`, data);
+    if (response.data.code === 1) {
+      return response.data.data.find((e: any) => normalize(e.name) === normalize(name))?.id || null;
+    }
+    return null;
+  } catch (error) {
+    logger.error(`Lỗi khi tìm kiếm địa chỉ (${type}) '${name}':`, error);
+    return null;
+  }
+}
