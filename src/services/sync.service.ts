@@ -148,9 +148,7 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
             const parentData = parentResponse?.data;
 
             if (!parentData) {
-                await syncProductAddFromNhanhWebhook(parentData); // Retry after parent product is created
-                await NotificationController.createSystemNotification("WARNING", `Webhook Nhanh.vn: Sản phẩm cha "${parentData.name}" chưa có barcode. Đang chờ để đồng bộ biến thể "${name}".`);
-                // await NotificationController.createSystemNotification("ERROR", `Webhook Nhanh.vn: Không tìm thấy sản phẩm cha với ID ${parentId} trên Nhanh.vn.`);
+                await NotificationController.createSystemNotification("ERROR", `Webhook Nhanh.vn: Không tìm thấy sản phẩm cha với ID ${parentId} trên Nhanh.vn.`);
                 return;
             }
 
@@ -165,8 +163,8 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
             const parentProductExists = await ShopifyService.checkProductExistsBySku(parentBarcode);
 
             if (!parentProductExists) {
-                await NotificationController.createSystemNotification("WARNING", `Webhook Nhanh.vn: Sản phẩm cha "${parentData.name}" chưa tồn tại trên Shopify. Không thể thêm biến thể.`);
-
+                if (parentData.parentId < 0) await syncProductAddFromNhanhWebhook(parentData);
+                await NotificationController.createSystemNotification("WARNING", `Webhook Nhanh.vn: Sản phẩm cha với ID ${parentId} chưa tồn tại trên Nhanh.vn. Đang chờ để tạo biến thể "${name}".`);
                 return;
             }
 
