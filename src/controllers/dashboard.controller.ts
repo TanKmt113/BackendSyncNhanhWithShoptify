@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { Product, Inventory, Order } from "../models";
+import { Op } from "sequelize";
 import * as NhanhService from "../services/nhanh.service";
 import * as ShopifyService from "../services/shopify.service";
 import * as SyncService from "../services/sync.service";
@@ -15,12 +16,25 @@ export class DashboardController {
       const page = parseInt(req.query.page as string) || 1;
       const limit = parseInt(req.query.limit as string) || 20;
       const offset = (page - 1) * limit;
+      const search = req.query.search as string;
+
+      // Build where clause for search
+      const whereClause: any = {};
+      if (search) {
+        whereClause[Op.or] = [
+          { '$product.name$': { [Op.like]: `%${search}%` } },
+          { '$product.sku_nhanh$': { [Op.like]: `%${search}%` } },
+          { '$product.sku_shopify$': { [Op.like]: `%${search}%` } }
+        ];
+      }
 
       const result = await Inventory.findAndCountAll({
+        where: whereClause,
         limit,
         offset,
         include: [{ model: Product, as: "product" }],
         order: [["id", "ASC"]],
+        distinct: true, // Để count đúng khi join
       });
 
       res.json({
@@ -135,8 +149,19 @@ export class DashboardController {
       const page = parseInt(req.query.page as string) || 1;
       const limit = parseInt(req.query.limit as string) || 20;
       const offset = (page - 1) * limit;
+      const search = req.query.search as string;
+
+      // Build where clause for search
+      const whereClause: any = {};
+      if (search) {
+        whereClause[Op.or] = [
+          { shopify_order_id: { [Op.like]: `%${search}%` } },
+          { nhanh_order_id: { [Op.like]: `%${search}%` } }
+        ];
+      }
 
       const result = await Order.findAndCountAll({
+        where: whereClause,
         limit,
         offset,
         order: [['createdAt', 'DESC']]
@@ -178,9 +203,21 @@ export class DashboardController {
       const page = parseInt(req.query.page as string) || 1;
       const limit = parseInt(req.query.limit as string) || 20;
       const offset = (page - 1) * limit;
+      const search = req.query.search as string;
+
+      // Build where clause for search
+      const whereClause: any = {};
+      if (search) {
+        whereClause[Op.or] = [
+          { name: { [Op.like]: `%${search}%` } },
+          { sku_nhanh: { [Op.like]: `%${search}%` } },
+          { nhanh_id: { [Op.like]: `%${search}%` } }
+        ];
+      }
 
       // Get products with pagination
       const result = await Product.findAndCountAll({
+        where: whereClause,
         limit,
         offset,
         order: [['createdAt', 'DESC']]
