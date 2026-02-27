@@ -11,10 +11,25 @@ export class DashboardController {
 
   static async getInventory(req: Request, res: Response) {
     try {
-      const inventory = await Inventory.findAll({
+      // Lấy page và limit từ query, mặc định page=1, limit=20
+      const page = parseInt(req.query.page as string) || 1;
+      const limit = parseInt(req.query.limit as string) || 20;
+      const offset = (page - 1) * limit;
+
+      const result = await Inventory.findAndCountAll({
+        limit,
+        offset,
         include: [{ model: Product, as: "product" }],
+        order: [["id", "ASC"]],
       });
-      res.json(inventory);
+
+      res.json({
+        docs: result.rows,
+        total: result.count,
+        pages: Math.ceil(result.count / limit),
+        page,
+        limit,
+      });
     } catch (error: any) {
       res.status(500).json({ error: error.message });
     }
@@ -117,10 +132,23 @@ export class DashboardController {
 
   static async getOrders(req: Request, res: Response) {
     try {
-      const orders = await Order.findAll({
+      const page = parseInt(req.query.page as string) || 1;
+      const limit = parseInt(req.query.limit as string) || 20;
+      const offset = (page - 1) * limit;
+
+      const result = await Order.findAndCountAll({
+        limit,
+        offset,
         order: [['createdAt', 'DESC']]
       });
-      res.json(orders);
+
+      res.json({
+        docs: result.rows,
+        total: result.count,
+        pages: Math.ceil(result.count / limit),
+        page,
+        limit,
+      });
     } catch (error: any) {
       res.status(500).json({ error: error.message });
     }
@@ -147,13 +175,19 @@ export class DashboardController {
 
   static async getNhanhProducts(req: Request, res: Response) {
     try {
-      // Get all products from Nhanh
-      const allProducts = await Product.findAll({
+      const page = parseInt(req.query.page as string) || 1;
+      const limit = parseInt(req.query.limit as string) || 20;
+      const offset = (page - 1) * limit;
+
+      // Get products with pagination
+      const result = await Product.findAndCountAll({
+        limit,
+        offset,
         order: [['createdAt', 'DESC']]
       });
 
       // Add sync status to each product
-      const productsWithStatus = allProducts.map(p => {
+      const productsWithStatus = result.rows.map(p => {
         const isSynced = !!(p.sku_shopify && p.sku_shopify !== '');
         return {
           id: p.id,
@@ -168,7 +202,13 @@ export class DashboardController {
         };
       });
 
-      res.json(productsWithStatus);
+      res.json({
+        docs: productsWithStatus,
+        total: result.count,
+        pages: Math.ceil(result.count / limit),
+        page,
+        limit,
+      });
     } catch (error: any) {
       res.status(500).json({ error: error.message });
     }

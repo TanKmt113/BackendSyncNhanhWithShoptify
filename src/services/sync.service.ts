@@ -85,19 +85,41 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
 
         // Case 1: parentId = -2 hoặc -1
         if (parentId === -2 || parentId === -1) {
-            const productExists = await ShopifyService.checkProductExistsBySku(barcode);
-
-            if (productExists) {
-                await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Sản phẩm ${name} đã tồn tại trên Shopify.`);
-                return;
-            }
-
+            // Kiểm tra xem sản phẩm đã tồn tại trong database local chưa
             let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
 
             if (!product) {
                 product = await Product.findOne({ where: { sku_nhanh: barcode } });
             }
 
+            // Nếu đã tồn tại trong database và đã có sku_shopify, tức là đã được sync rồi
+            if (product && product.sku_shopify) {
+                await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Sản phẩm ${name} đã được đồng bộ trước đó.`);
+                return;
+            }
+
+            // Kiểm tra trên Shopify
+            const productExists = await ShopifyService.checkProductExistsBySku(barcode);
+
+            if (productExists) {
+                // Nếu đã có trên Shopify nhưng chưa có trong database, tạo record
+                if (!product) {
+                    await Product.create({
+                        nhanh_id: nhanhId,
+                        sku_nhanh: barcode,
+                        sku_shopify: barcode,
+                        name: name,
+                        image: image
+                    });
+                } else {
+                    // Update sku_shopify nếu chưa có
+                    await product.update({ sku_shopify: barcode, name: name, image: image });
+                }
+                await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Sản phẩm ${name} đã tồn tại trên Shopify.`);
+                return;
+            }
+
+            // Nếu chưa có trong database, tạo mới
             if (!product) {
                 product = await Product.create({
                     nhanh_id: nhanhId,
@@ -107,8 +129,8 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
                     image: image
                 });
             } else {
+                // Nếu đã có trong database nhưng chưa sync, update thông tin
                 await product.update({
-                    nhanh_id: nhanhId,
                     name: name,
                     image: image
                 });
@@ -163,8 +185,24 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
             const parentProductExists = await ShopifyService.checkProductExistsBySku(parentBarcode);
 
             if (!parentProductExists) {
-                if (parentData.parentId < 0) await syncProductAddFromNhanhWebhook(parentData);
-                await NotificationController.createSystemNotification("WARNING", `Webhook Nhanh.vn: Sản phẩm cha với ID ${parentId} chưa tồn tại trên Nhanh.vn. Đang chờ để tạo biến thể "${name}".`);
+                // Tạo sản phẩm cha nếu chưa có (chỉ khi parentData có parentId < 0)
+                if (parentData.parentId === -2 || parentData.parentId === -1) {
+                    await syncProductAddFromNhanhWebhook(parentData);
+                }
+                await NotificationController.createSystemNotification("WARNING", `Webhook Nhanh.vn: Sản phẩm cha với ID ${parentId} chưa tồn tại trên Shopify. Đang chờ để tạo biến thể "${name}".`);
+                return;
+            }
+
+            // Kiểm tra biến thể đã tồn tại trong database local chưa
+            let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
+            
+            if (!product) {
+                product = await Product.findOne({ where: { sku_nhanh: barcode } });
+            }
+
+            // Nếu đã tồn tại và đã có sku_shopify, tức là đã được sync
+            if (product && product.sku_shopify) {
+                await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Biến thể "${name}" đã được đồng bộ trước đó.`);
                 return;
             }
 
@@ -172,6 +210,18 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
             const variantExists = await ShopifyService.checkProductExistsBySku(barcode);
 
             if (variantExists) {
+                // Nếu có trên Shopify nhưng chưa có trong database, tạo record
+                if (!product) {
+                    await Product.create({
+                        nhanh_id: nhanhId,
+                        sku_nhanh: barcode,
+                        sku_shopify: barcode,
+                        name: name,
+                        image: image
+                    });
+                } else {
+                    await product.update({ sku_shopify: barcode, name: name, image: image });
+                }
                 await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Biến thể "${name}" đã tồn tại trên Shopify.`);
                 return;
             }
@@ -183,7 +233,6 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
                 await NotificationController.createSystemNotification("SUCCESS", `Webhook Nhanh.vn: Đã thêm biến thể "${name}" vào sản phẩm cha "${parentData.name}" trên Shopify.`);
 
                 // Save variant to local database
-                let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
                 if (!product) {
                     await Product.create({
                         nhanh_id: nhanhId,
@@ -194,7 +243,7 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
                     });
                 } else {
                     await product.update({
-                        sku_nhanh: barcode,
+                        sku_shopify: barcode,
                         name: name,
                         image: image
                     });

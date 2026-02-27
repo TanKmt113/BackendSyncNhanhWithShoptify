@@ -22,6 +22,7 @@ Product.init(
     nhanh_id: {
       type: DataTypes.STRING,
       allowNull: true,
+      unique: true, // Đảm bảo mỗi sản phẩm từ Nhanh.vn chỉ có 1 bản ghi
     },
     sku_nhanh: {
       type: DataTypes.STRING,

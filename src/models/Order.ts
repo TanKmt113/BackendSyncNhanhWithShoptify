@@ -22,7 +22,7 @@ Order.init(
     shopify_order_id: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
+      // unique constraint đã được tạo qua migration, không cần ở đây
     },
     nhanh_order_id: {
       type: DataTypes.STRING,

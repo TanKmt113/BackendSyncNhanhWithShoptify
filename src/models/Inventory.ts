@@ -9,6 +9,7 @@ class Inventory extends Model {
   public status!: "MATCH" | "MISMATCH";
 }
 
+
 Inventory.init(
   {
     id: {
