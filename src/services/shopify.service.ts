@@ -1,15 +1,10 @@
-import axios from "axios";
 import { logger } from "../utils/logger";
 import createShoptify from "../integrations/shopifyClient";
 import { getConfig } from "./config.service";
 import {
   ShopifyOrderStatus,
   FulfillmentOrder,
-  ShopifyVariant,
   ShopifyProductPayload,
-  ShopifyProductOption,
-  ShopifyImage,
-  GraphQLResponse,
   ProductVariantEdge,
   LocationEdge
 } from "../types/shopify.types";
@@ -27,6 +22,70 @@ import {
   buildProductDescription,
   buildProductTags
 } from "../utils/apiHelper";
+
+/**
+ * Kiểm tra và cập nhật trạng thái sản phẩm về "unlisted" nếu tất cả biến thể đều hết hàng
+ * @param client Shopify client instance
+ * @param variantId ID của biến thể GraphQL
+ * @returns true nếu thành công hoặc không cần cập nhật, false nếu có lỗi
+ */
+async function checkAndUpdateProductStatusIfOutOfStock(client: any, variantId: string): Promise<boolean> {
+  try {
+    // Lấy Product ID và tất cả variants từ variant
+    const getProductQuery = `
+      {
+        productVariant(id: "${variantId}") {
+          product {
+            id
+            variants(first: 100) {
+              edges {
+                node {
+                  id
+                  inventoryQuantity
+                }
+              }
+            }
+          }
+        }
+      }
+    `;
+
+    const productQueryRes = await executeGraphQL<{
+      productVariant: {
+        product: {
+          id: string;
+          variants: { edges: Array<{ node: { id: string; inventoryQuantity: number } }> };
+        };
+      };
+    }>(client, getProductQuery);
+
+    if (!productQueryRes || !productQueryRes.data) return true;
+
+    const product = productQueryRes.data.productVariant.product;
+    const allVariants = product.variants.edges;
+
+    // Kiểm tra xem tất cả biến thể có inventory < 1 không
+    const allVariantsOutOfStock = allVariants.every(edge =>
+      (edge.node.inventoryQuantity || 0) < 1
+    );
+
+    if (allVariantsOutOfStock) {
+      // Chuyển trạng thái sản phẩm về unlisted nếu tất cả biến thể đều hết hàng
+      const numericProductId = extractNumericId(product.id);
+
+      await client.put(`/products/${numericProductId}.json`, {
+        product: {
+          status: "unlisted"
+        }
+      });
+      logger.info(`Đã chuyển sản phẩm (ID: ${numericProductId}) về trạng thái unlisted do tất cả biến thể hết hàng`);
+    }
+
+    return true;
+  } catch (error: any) {
+    return handleApiError(error, "Lỗi khi kiểm tra và cập nhật trạng thái sản phẩm");
+  }
+}
 
 async function updateOrderArchived(shopifyOrderId: number): Promise<boolean> {
   const config = await getConfig();
@@ -182,6 +241,13 @@ export async function updateInventoryByBarcode(sku: string, newQuantity: number)
     }
 
     logger.info(`Đã đồng bộ SKU ${sku}: Số lượng mới ${newQuantity}`);
+
+    // Nếu số lượng < 1, kiểm tra và cập nhật trạng thái sản phẩm nếu cần
+    if (newQuantity < 1) {
+      const variantId = variantEdges[0].node.id;
+      await checkAndUpdateProductStatusIfOutOfStock(client, variantId);
+    }
+
     return true;
 
   } catch (error: any) {
