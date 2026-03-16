@@ -86,6 +86,9 @@ export async function syncDataNhanh(req: Request, res: Response, next: NextFunct
       case 'productAdd':
         await SyncService.syncProductAddFromNhanhWebhook(data);
         break;
+      case 'productUpdate':
+        await SyncService.syncProductUpdateFromNhanhWebhook(data);
+        break;
       default:
         console.warn(`[Webhook Nhanh] Unknown event type: ${event}`);
         break;

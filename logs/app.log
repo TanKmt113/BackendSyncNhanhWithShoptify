@@ -14253,3 +14253,11 @@
 [2026-02-26 16:44:47] [INFO] Successfully created product Túi rút áo Puffy on Shopify with ID: 10414465909045
 [2026-02-27 14:06:53] [INFO] Đã đồng bộ SKU 2000214279733: Số lượng mới 0
 [2026-02-27 14:06:59] [INFO] Đã đồng bộ SKU 2000214279733: Số lượng mới 0
+[2026-03-10 11:38:08] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}

@@ -261,6 +261,70 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
     }
 }
 
+export async function syncProductUpdateFromNhanhWebhook(productData: any) {
+    try {
+        if (!productData || !productData.id) {
+            console.warn("Missing product data in Nhanh webhook");
+            return;
+        }
+
+        const nhanhId = String(productData.id);
+        const barcode = productData.barcode || productData.code;
+        const name = productData.name || `Product ${nhanhId}`;
+
+        if (!barcode) {
+            await NotificationController.createSystemNotification("WARNING", `Webhook Nhanh.vn: Sản phẩm ${name} không có mã SKU để cập nhật giá.`);
+            return;
+        }
+
+        // Lấy thông tin giá từ productData
+        const newPrice = productData.prices?.retail;
+        const compareAtPrice = productData.prices?.old;
+        const cost = productData.prices?.import;
+
+        if (!newPrice && newPrice !== 0) {
+            await NotificationController.createSystemNotification("WARNING", `Webhook Nhanh.vn: Sản phẩm ${name} không có thông tin giá để cập nhật.`);
+            return;
+        }
+
+        // Tìm variant trên Shopify bằng SKU
+        const success = await ShopifyService.updateProductPriceBySku(barcode, {
+            price: newPrice,
+            compareAtPrice: compareAtPrice,
+            cost: cost
+        });
+
+        if (success) {
+            // Update local database if needed
+            try {
+                let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
+                
+                if (!product) {
+                    product = await Product.findOne({ where: { sku_nhanh: barcode } });
+                }
+
+                if (product) {
+                    await product.update({
+                        name: name,
+                        image: productData.images?.avatar || product.image
+                    });
+                }
+            } catch (error: any) {
+                console.error(`Error updating local product ${nhanhId}:`, error);
+            }
+
+            const priceStr = newPrice.toLocaleString('vi-VN');
+            await NotificationController.createSystemNotification("SUCCESS", `Webhook Nhanh.vn: Đã cập nhật giá sản phẩm "${name}" thành ${priceStr}đ trên Shopify.`);
+        } else {
+            await NotificationController.createSystemNotification("ERROR", `Webhook Nhanh.vn: Lỗi cập nhật giá sản phẩm "${name}" (SKU: ${barcode}) trên Shopify.`);
+        }
+
+    } catch (error: any) {
+        console.error("[syncProductUpdate] Error:", error);
+        await NotificationController.createSystemNotification("ERROR", `Webhook Nhanh.vn: Lỗi cập nhật sản phẩm - ${error.message}`);
+    }
+}
+
 export async function syncAllProductsFromNhanh() {
     const io = getIO(); // Get socket instance
 

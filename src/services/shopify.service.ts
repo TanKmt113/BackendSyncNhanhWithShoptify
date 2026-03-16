@@ -311,6 +311,74 @@ export async function checkProductExistsBySku(sku: string): Promise<string | nul
 }
 
 /**
+ * Update product price by SKU
+ * @param sku The SKU to search for
+ * @param priceData Object containing price, compareAtPrice, and cost
+ * @returns true if successful, false otherwise
+ */
+export async function updateProductPriceBySku(
+  sku: string,
+  priceData: { price?: number; compareAtPrice?: number; cost?: number }
+): Promise<boolean> {
+  const config = await getConfig();
+  try {
+    const client = createShoptify(config);
+
+    // 1. Find variant by SKU using GraphQL
+    const query = buildProductVariantQuery(sku, `id`);
+
+    const queryRes = await executeGraphQL<{
+      productVariants: { edges: ProductVariantEdge[] };
+    }>(client, query);
+
+    if (!queryRes) {
+      logger.error(`Product with SKU ${sku} not found on Shopify`);
+      return false;
+    }
+
+    const edges = extractVariantEdges(queryRes);
+    if (edges.length === 0) {
+      logger.error(`Product with SKU ${sku} not found on Shopify`);
+      return false;
+    }
+
+    const variantGraphQLId = edges[0].node.id;
+    const numericVariantId = extractNumericId(variantGraphQLId);
+
+    // 2. Build update payload
+    const updatePayload: any = {};
+    
+    if (priceData.price !== undefined && priceData.price !== null) {
+      updatePayload.price = priceData.price.toString();
+    }
+    
+    if (priceData.compareAtPrice !== undefined && priceData.compareAtPrice !== null) {
+      updatePayload.compare_at_price = priceData.compareAtPrice.toString();
+    }
+    
+    if (priceData.cost !== undefined && priceData.cost !== null) {
+      updatePayload.cost = priceData.cost.toString();
+    }
+
+    // 3. Update variant using REST API
+    const response = await client.put(`/variants/${numericVariantId}.json`, {
+      variant: updatePayload
+    });
+
+    if (response.data?.variant?.id) {
+      logger.info(`Successfully updated price for SKU ${sku}: ${JSON.stringify(updatePayload)}`);
+      return true;
+    }
+
+    logger.error(`Failed to update price for SKU ${sku}`);
+    return false;
+
+  } catch (error: any) {
+    return handleApiError(error, `Error updating price for SKU ${sku}`);
+  }
+}
+
+/**
  * Cập nhật trạng thái đơn hàng trên Shopify (Cụ thể là Fulfillment).
  * @param shopifyOrderId ID của đơn hàng trên Shopify.
  * @param status Trạng thái mới từ hệ thống bên ngoài (ví dụ: Nhanh.vn).
