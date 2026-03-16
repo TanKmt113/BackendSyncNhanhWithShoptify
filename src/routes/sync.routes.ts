@@ -6,7 +6,6 @@ const router = Router();
 
 router.post("/inventory/:id", SyncController.syncInventory);
 router.post("/all-products", SyncController.syncAllProducts);
-router.post("/product-to-shopify/:id", SyncController.syncProductToShopify);
 
 // Đồng bộ sản phẩm từ Nhanh.vn bằng ID (thủ công)
 router.post("/product-from-nhanh/:nhanhId", SyncController.syncProductByNhanhId);

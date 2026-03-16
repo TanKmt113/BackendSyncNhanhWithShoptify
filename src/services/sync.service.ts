@@ -80,6 +80,8 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
         const name = productData.name;
         const image = productData.images?.avatar || null;
         const parentId = productData.parentId;
+        if (productData.childs)
+            productData.childs = productData.childs?.filter((e: any) => e.status != 3) || [];
 
         if (!barcode) return;
 
@@ -195,7 +197,7 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
 
             // Kiểm tra biến thể đã tồn tại trong database local chưa
             let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
-            
+
             if (!product) {
                 product = await Product.findOne({ where: { sku_nhanh: barcode } });
             }
@@ -298,7 +300,7 @@ export async function syncProductUpdateFromNhanhWebhook(productData: any) {
             // Update local database if needed
             try {
                 let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
-                
+
                 if (!product) {
                     product = await Product.findOne({ where: { sku_nhanh: barcode } });
                 }

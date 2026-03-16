@@ -14261,3 +14261,44 @@
     ]
   }
 }
+[2026-03-16 10:18:08] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}
+[2026-03-16 10:34:51] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}
+[2026-03-16 10:35:29] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}
+[2026-03-16 10:38:32] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}
+[2026-03-16 10:38:46] [ERROR] Error creating product on Shopify:
+{
+  "errors": {
+    "product": [
+      "Product options must have corresponding variants. Please include variant data with your request."
+    ]
+  }
+}
+[2026-03-16 10:49:24] [INFO] Successfully created product Quần ống rộng on Shopify with ID: 10432712016181
