@@ -11,4 +11,8 @@ router.post("/all-products", SyncController.syncAllProducts);
 router.post("/product-from-nhanh/:nhanhId", SyncController.syncProductByNhanhId);
 router.post("/product-from-nhanh", SyncController.syncProductByNhanhId);
 
+// Đồng bộ ảnh sản phẩm từ Shopify về Nhanh.vn
+router.post("/images/:sku", SyncController.syncProductImages);
+router.post("/images-all", SyncController.syncAllProductImages);
+
 export default router;

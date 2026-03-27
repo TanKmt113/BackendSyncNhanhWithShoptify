@@ -3,6 +3,8 @@ import * as ShopifyService from "./shopify.service";
 import { Product, Inventory } from "../models";
 import { getIO } from "../utils/socket";
 import { NotificationController } from "../controllers/notification.controller";
+import { Op } from "sequelize";
+import { logger } from "../utils/logger";
 
 export async function syncInventoryFromNhanhWebhook(data: any[]) {
     let count = 0;
@@ -439,6 +441,103 @@ export async function syncAllProductsFromNhanh() {
         });
         // Tạo thông báo lỗi
         await NotificationController.createSystemNotification("ERROR", errorMsg);
+        throw error;
+    }
+}
+
+/**
+ * Đồng bộ ảnh sản phẩm từ Shopify về Nhanh.vn cho một SKU cụ thể.
+ * @param sku Mã SKU của sản phẩm.
+ * @returns true nếu thành công, false nếu thất bại.
+ */
+export async function syncProductImagesFromShopifyBySku(sku: string): Promise<boolean> {
+    try {
+        // 1. Tìm sản phẩm trong DB để lấy nhanh_id
+        const product = await Product.findOne({
+            where: {
+                [Op.or]: [
+                    { sku_shopify: sku },
+                    { sku_nhanh: sku }
+                ]
+            }
+        });
+
+        if (!product || !product.nhanh_id) {
+            logger.warn(`Không tìm thấy sản phẩm hoặc nhanhId cho SKU ${sku} trong database local.`);
+            return false;
+        }
+
+        // 2. Lấy ảnh từ Shopify
+        const imageUrls = await ShopifyService.getProductImagesBySku(sku);
+
+        if (imageUrls.length === 0) {
+            logger.info(`Sản phẩm SKU ${sku} không có ảnh trên Shopify.`);
+            return true; // Coi như thành công nếu không có ảnh để đồng bộ
+        }
+
+        // 3. Cập nhật ảnh lên Nhanh.vn
+        const { updateProductImages } = await import("./nhanh.service");
+        const success = await updateProductImages(product.nhanh_id, imageUrls);
+
+        if (success) {
+            // Cập nhật ảnh đại diện vào DB local nếu cần
+            if (imageUrls[0] !== product.image) {
+                await product.update({ image: imageUrls[0] });
+            }
+            return true;
+        }
+
+        return false;
+    } catch (error: any) {
+        logger.error(`Lỗi khi đồng bộ ảnh từ Shopify cho SKU ${sku}:`, error);
+        return false;
+    }
+}
+
+/**
+ * Đồng bộ ảnh cho toàn bộ sản phẩm từ Shopify về Nhanh.vn.
+ */
+export async function syncAllProductImagesFromShopify() {
+    const io = getIO();
+    try {
+        const products = await Product.findAll({
+            where: {
+                nhanh_id: { [Op.ne]: null },
+                sku_shopify: { [Op.ne]: null }
+            }
+        });
+
+        io.emit("sync_progress", { message: `Bắt đầu đồng bộ ảnh cho ${products.length} sản phẩm...`, total: products.length });
+        await NotificationController.createSystemNotification("INFO", `Bắt đầu đồng bộ ảnh cho ${products.length} sản phẩm từ Shopify.`);
+
+        let successCount = 0;
+        let failCount = 0;
+
+        for (const [index, product] of products.entries()) {
+            const sku = product.sku_shopify || product.sku_nhanh;
+            if (!sku) continue;
+
+            const success = await syncProductImagesFromShopifyBySku(sku);
+            if (success) successCount++;
+            else failCount++;
+
+            if ((index + 1) % 5 === 0) {
+                io.emit("sync_progress", {
+                    message: `Đang đồng bộ ảnh ${index + 1}/${products.length}...`,
+                    processed: index + 1,
+                    total: products.length
+                });
+            }
+        }
+
+        const msg = `Hoàn tất đồng bộ ảnh: ${successCount} thành công, ${failCount} thất bại.`;
+        io.emit("sync_complete", { status: "success", message: msg });
+        await NotificationController.createSystemNotification("SUCCESS", msg);
+
+        return { total: products.length, success: successCount, fail: failCount };
+    } catch (error: any) {
+        logger.error("Lỗi đồng bộ toàn bộ ảnh từ Shopify:", error);
+        io.emit("sync_error", { message: `Lỗi đồng bộ ảnh: ${error.message}` });
         throw error;
     }
 }

@@ -84,9 +84,21 @@ export interface ProductVariantEdge {
     inventoryItem?: {
       id: string;
     };
+    image?: {
+      url: string;
+      altText?: string;
+    };
     product?: {
       id: string;
       options?: ShopifyProductOption[];
+      images?: {
+        edges: Array<{
+          node: {
+            url: string;
+            altText?: string;
+          };
+        }>;
+      };
     };
   };
 }

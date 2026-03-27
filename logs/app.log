@@ -14302,3 +14302,132 @@
   }
 }
 [2026-03-16 10:49:24] [INFO] Successfully created product Quần ống rộng on Shopify with ID: 10432712016181
+[2026-03-27 13:11:23] [ERROR] Lỗi khi cập nhật ảnh cho sản phẩm Nhanh ID 40753946:
+{
+  "code": 0,
+  "errorCode": null,
+  "messages": [
+    "Product list is invalid",
+    "appProductId, name required"
+  ],
+  "data": []
+}
+[2026-03-27 13:21:44] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753946 thành công. Số lượng ảnh: 15
+[2026-03-27 13:24:15] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753945 thành công. Số lượng ảnh: 20
+[2026-03-27 13:33:24] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753887 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:05] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753946 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:06] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753945 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:07] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753887 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:07] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753886 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:08] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753885 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:09] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753884 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:10] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753727 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:10] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753694 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:11] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753693 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:12] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753692 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:13] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753690 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:14] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753668 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:14] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753667 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:15] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753666 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:16] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753665 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:17] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753664 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:18] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753663 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:18] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753662 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:19] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753661 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:20] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753660 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:21] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753659 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:21] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753658 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:22] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753657 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:23] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753656 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:23] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753655 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:24] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753654 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:25] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753653 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:25] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753652 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:26] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753651 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:26] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753650 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:27] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753649 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:28] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753647 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:28] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753646 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:29] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753645 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:30] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753643 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:30] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753642 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:31] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753641 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:31] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753640 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:32] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753639 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:33] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753638 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:33] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753637 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:34] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753636 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:35] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753634 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:35] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753633 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:36] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753632 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:37] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753631 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:37] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753624 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:38] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753623 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:39] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753622 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:39] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753619 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:40] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753618 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:41] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753617 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:41] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753616 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:42] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753611 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:43] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753594 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:43] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753593 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:44] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753592 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:45] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753590 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:45] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753589 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:46] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753588 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:46] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753586 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:47] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753585 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:48] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753584 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:48] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753582 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:49] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753581 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:50] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753580 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:51] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753578 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:51] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753577 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:52] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753576 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:52] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753573 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:53] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753572 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:54] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753571 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:54] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753570 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:55] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753569 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:56] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753568 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:56] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753567 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:57] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753566 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:58] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753538 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:58] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753537 thành công. Số lượng ảnh: 1
+[2026-03-27 13:34:59] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753536 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:00] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753523 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:00] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753522 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:01] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753521 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:02] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753520 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:02] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753519 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:03] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753514 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:04] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753513 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:05] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753512 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:05] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753511 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:06] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753510 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:06] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753509 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:07] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753505 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:08] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753504 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:09] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753503 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:09] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753502 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:10] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753501 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:11] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753500 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:12] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753496 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:12] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753495 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:13] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753494 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:14] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753493 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:14] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753492 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:15] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753491 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:15] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753483 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:16] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753482 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:17] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753481 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:17] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753480 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:18] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753479 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:19] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753478 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:19] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753477 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:20] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753476 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:20] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753475 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:21] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753474 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:22] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753473 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:22] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753472 thành công. Số lượng ảnh: 1
+[2026-03-27 13:35:23] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40753471 thành công. Số lượng ảnh: 1

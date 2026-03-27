@@ -379,6 +379,67 @@ export async function updateProductPriceBySku(
 }
 
 /**
+ * Lấy danh sách ảnh của sản phẩm từ Shopify dựa trên SKU.
+ * @param sku Mã SKU của sản phẩm.
+ * @returns Mảng các URL ảnh hoặc mảng rỗng nếu không tìm thấy.
+ */
+export async function getProductImagesBySku(sku: string): Promise<string[]> {
+  const config = await getConfig();
+  try {
+    const client = createShoptify(config);
+    const query = `
+      {
+        productVariants(first: 1, query: "sku:${sku}") {
+          edges {
+            node {
+              id
+              image {
+                url
+              }
+              product {
+                images(first: 1) {
+                  edges {
+                    node {
+                      url
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `;
+
+    const queryRes = await executeGraphQL<{
+      productVariants: { edges: any[] };
+    }>(client, query);
+
+    if (!queryRes || !queryRes.data) return [];
+
+    const variantEdges = queryRes.data.productVariants.edges;
+    if (variantEdges.length === 0) return [];
+
+    const variantNode = variantEdges[0].node;
+    const urls: string[] = [];
+
+    // Prioritize variant image
+    if (variantNode.image?.url) {
+      urls.push(variantNode.image.url);
+    } 
+    // Fallback to first product image if variant has no image
+    else if (variantNode.product?.images?.edges?.length > 0) {
+      urls.push(variantNode.product.images.edges[0].node.url);
+    }
+
+    return urls;
+  } catch (error: any) {
+    logger.error(`Lỗi khi lấy ảnh sản phẩm từ Shopify cho SKU ${sku}:`, error);
+    return [];
+  }
+}
+
+/**
  * Cập nhật trạng thái đơn hàng trên Shopify (Cụ thể là Fulfillment).
  * @param shopifyOrderId ID của đơn hàng trên Shopify.
  * @param status Trạng thái mới từ hệ thống bên ngoài (ví dụ: Nhanh.vn).

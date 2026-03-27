@@ -145,4 +145,45 @@ export class SyncController {
     }
   }
 
+  /**
+   * Đồng bộ ảnh sản phẩm từ Shopify về Nhanh.vn bằng SKU
+   */
+  static async syncProductImages(req: Request, res: Response) {
+    try {
+      const { sku } = req.params;
+      if (!sku) {
+        res.status(400).json({ error: "Missing SKU parameter" });
+        return;
+      }
+
+      const success = await SyncService.syncProductImagesFromShopifyBySku(sku);
+      if (success) {
+        res.json({ success: true, message: `Đã đồng bộ ảnh cho SKU ${sku}` });
+      } else {
+        res.status(500).json({ success: false, message: `Đồng bộ ảnh cho SKU ${sku} thất bại` });
+      }
+    } catch (error: any) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+
+  /**
+   * Đồng bộ toàn bộ ảnh sản phẩm từ Shopify về Nhanh.vn
+   */
+  static async syncAllProductImages(req: Request, res: Response) {
+    try {
+      // Trigger background sync
+      SyncService.syncAllProductImagesFromShopify().catch(err => {
+        console.error("Background image sync failed:", err);
+      });
+
+      res.json({
+        message: "Image synchronization started in background",
+        socket_event: "sync_complete"
+      });
+    } catch (error: any) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+
 }

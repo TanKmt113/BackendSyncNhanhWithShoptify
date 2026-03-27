@@ -353,3 +353,40 @@ async function searchShipping(type: string, parentId: number | null, name: strin
     return null;
   }
 }
+
+/**
+ * Cập nhật ảnh sản phẩm trên Nhanh.vn bằng danh sách URL ảnh từ bên ngoài (Shopify).
+ * @param nhanhId ID của sản phẩm trên Nhanh.vn.
+ * @param imageUrls Danh sách URL ảnh.
+ * @returns true nếu thành công, false nếu thất bại.
+ */
+export async function updateProductImages(nhanhId: string, imageUrls: string[]): Promise<boolean> {
+  const config = await getConfig();
+  try {
+    if (!nhanhId || imageUrls.length === 0) return false;
+
+    const client = createNhanhClient(config);
+    // Payload mới: mảng các đối tượng { id, mode: 'update', images: [...] }
+    const data = [
+      {
+        id: parseInt(nhanhId),
+        mode: "update",
+        images: imageUrls
+      }
+    ];
+
+    const url = `/product/externalimage?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`;
+    const response = await client.post(url, data);
+
+    if (response.data?.code === 1) {
+      logger.info(`Cập nhật ảnh cho sản phẩm Nhanh ID ${nhanhId} thành công. Số lượng ảnh: ${imageUrls.length}`);
+      return true;
+    }
+
+    logger.error(`Lỗi khi cập nhật ảnh cho sản phẩm Nhanh ID ${nhanhId}:`, response.data);
+    return false;
+  } catch (error) {
+    logger.error(`Lỗi ngoại lệ khi cập nhật ảnh cho sản phẩm Nhanh ID ${nhanhId}:`, error);
+    return false;
+  }
+}
