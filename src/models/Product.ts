@@ -8,6 +8,10 @@ class Product extends Model {
   public sku_shopify!: string | null;
   public name!: string;
   public image!: string | null;
+  public nhanh_stock!: number;
+  public shopify_stock!: number;
+  public inventory_status!: "MATCH" | "MISMATCH";
+  public syncStatus!: "SYNCED" | "NOT_SYNCED";
   public createdAt!: Date;
   public updatedAt!: Date;
 }
@@ -39,6 +43,22 @@ Product.init(
     image: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    nhanh_stock: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
+    shopify_stock: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
+    inventory_status: {
+      type: DataTypes.ENUM("MATCH", "MISMATCH"),
+      defaultValue: "MATCH",
+    },
+    syncStatus: {
+      type: DataTypes.ENUM("SYNCED", "NOT_SYNCED"),
+      defaultValue: "NOT_SYNCED",
     },
   },
   {

@@ -1,6 +1,6 @@
 import { getItemWithID, getAllProducts } from "./nhanh.service";
 import * as ShopifyService from "./shopify.service";
-import { Product, Inventory } from "../models";
+import { Product } from "../models";
 import { getIO } from "../utils/socket";
 import { NotificationController } from "../controllers/notification.controller";
 import { Op } from "sequelize";
@@ -28,22 +28,12 @@ export async function syncInventoryFromNhanhWebhook(data: any[]) {
                 }
 
                 if (product) {
-                    let inventory = await Inventory.findOne({ where: { product_id: product.id } });
-
-                    if (!inventory) {
-                        await Inventory.create({
-                            product_id: product.id,
-                            nhanh_stock: available,
-                            shopify_stock: available,
-                            status: "MATCH"
-                        });
-                    } else {
-                        await inventory.update({
-                            nhanh_stock: available,
-                            shopify_stock: available,
-                            status: "MATCH"
-                        });
-                    }
+                    await product.update({
+                        nhanh_stock: available,
+                        shopify_stock: available,
+                        inventory_status: "MATCH",
+                        syncStatus: "SYNCED"
+                    });
                 }
             } catch (error: any) {
                 console.error(`Error updating inventory for product ${id}:`, error);
@@ -352,60 +342,60 @@ export async function syncAllProductsFromNhanh() {
 
             if (!barcode) continue;
 
-            // Check if product exists on Shopify
-            const productExists = await ShopifyService.checkProductExistsBySku(barcode);
-
-            let success = false;
-
-            if (!productExists) {
-                skippedCount++;
-                continue;
+            // 1. Luôn cập nhật hoặc tạo mới sản phẩm trong database local
+            let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
+            if (!product) {
+                product = await Product.findOne({ where: { sku_nhanh: barcode } });
+                if (product) {
+                    await product.update({ nhanh_id: nhanhId, name: name, image: image });
+                } else {
+                    product = await Product.create({
+                        nhanh_id: nhanhId,
+                        sku_nhanh: barcode,
+                        sku_shopify: null, // Mặc định là null cho đến khi tìm thấy trên Shopify
+                        name: name,
+                        image: image,
+                        syncStatus: "NOT_SYNCED"
+                    });
+                }
             } else {
-                // Product exists, update inventory
-                success = await ShopifyService.updateInventoryByBarcode(barcode, stock);
+                await product.update({
+                    sku_nhanh: barcode,
+                    name: name,
+                    image: image
+                });
             }
 
-            if (success) {
-                syncedCount++;
-                let product = await Product.findOne({ where: { nhanh_id: nhanhId } });
+            // 2. Kiểm tra tồn tại trên Shopify
+            const productExists = await ShopifyService.checkProductExistsBySku(barcode);
 
-                if (!product) {
-                    product = await Product.findOne({ where: { sku_nhanh: barcode } });
-                    if (product) {
-                        await product.update({ nhanh_id: nhanhId, name: name, image: image });
-                    } else {
-                        product = await Product.create({
-                            nhanh_id: nhanhId,
-                            sku_nhanh: barcode,
-                            sku_shopify: barcode,
-                            name: name,
-                            image: image
-                        });
-                    }
-                } else {
+            if (productExists) {
+                // Sản phẩm có trên Shopify, cập nhật tồn kho và trạng thái
+                const success = await ShopifyService.updateInventoryByBarcode(barcode, stock);
+                if (success) {
+                    syncedCount++;
                     await product.update({
-                        sku_nhanh: barcode,
                         sku_shopify: barcode,
-                        name: name,
-                        image: image
-                    });
-                }
-
-                let inventory = await Inventory.findOne({ where: { product_id: product.id } });
-                if (!inventory) {
-                    await Inventory.create({
-                        product_id: product.id,
                         nhanh_stock: stock,
                         shopify_stock: stock,
-                        status: "MATCH"
+                        inventory_status: "MATCH",
+                        syncStatus: "SYNCED"
                     });
                 } else {
-                    await inventory.update({
+                    // Cập nhật stock nhưng đánh dấu lỗi sync nếu cần hoặc giữ nguyên
+                    await product.update({
+                        sku_shopify: barcode,
                         nhanh_stock: stock,
-                        shopify_stock: stock,
-                        status: "MATCH"
+                        syncStatus: "SYNCED"
                     });
                 }
+            } else {
+                // Không có trên Shopify
+                skippedCount++;
+                await product.update({
+                    nhanh_stock: stock,
+                    syncStatus: "NOT_SYNCED"
+                });
             }
 
             if ((index + 1) % 10 === 0) {

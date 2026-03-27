@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Product, Inventory } from "../models";
+import { Product } from "../models";
 import * as NhanhService from "../services/nhanh.service";
 import * as ShopifyService from "../services/shopify.service";
 import * as SyncService from "../services/sync.service";
@@ -65,26 +65,17 @@ export class SyncController {
       // 2. Get Shopify Stock
       const shopifyStock = await ShopifyService.getInventoryBySku(product.sku_shopify);
 
-      // 3. Update Inventory Model
-      let inventory = await Inventory.findOne({ where: { product_id: product.id } });
-      if (!inventory) {
-        inventory = await Inventory.create({
-          product_id: product.id,
-          nhanh_stock: nhanhStock,
-          shopify_stock: shopifyStock || 0,
-          status: nhanhStock === (shopifyStock || 0) ? "MATCH" : "MISMATCH"
-        });
-      } else {
-        await inventory.update({
-          nhanh_stock: nhanhStock,
-          shopify_stock: shopifyStock || 0,
-          status: nhanhStock === (shopifyStock || 0) ? "MATCH" : "MISMATCH"
-        });
-      }
+      // 3. Update Product Model
+      await product.update({
+        nhanh_stock: nhanhStock,
+        shopify_stock: shopifyStock || 0,
+        inventory_status: nhanhStock === (shopifyStock || 0) ? "MATCH" : "MISMATCH",
+        syncStatus: "SYNCED"
+      });
 
       await NotificationController.createSystemNotification("SUCCESS", `Đã đồng bộ thủ công sản phẩm ${product.name || product.sku_nhanh}`);
 
-      res.json({ message: `Sync triggered for product ${id}`, data: inventory });
+      res.json({ message: `Sync triggered for product ${id}`, data: product });
     } catch (error: any) {
       await NotificationController.createSystemNotification("ERROR", `Lỗi đồng bộ thủ công sản phẩm ID ${id}: ${error.message}`);
       res.status(500).json({ error: error.message });

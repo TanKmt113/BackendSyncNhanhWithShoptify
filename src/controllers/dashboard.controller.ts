@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Product, Inventory, Order } from "../models";
+import { Product, Order } from "../models";
 import { Op } from "sequelize";
 import * as NhanhService from "../services/nhanh.service";
 import * as ShopifyService from "../services/shopify.service";
@@ -28,13 +28,14 @@ export class DashboardController {
         ];
       }
 
-      const result = await Inventory.findAndCountAll({
-        where: whereClause,
+      const result = await Product.findAndCountAll({
+        where: {
+          ...whereClause,
+          sku_shopify: { [Op.ne]: null } // Chỉ hiện thị sản phẩm đã đồng bộ (có tồn kho 2 bên)
+        },
         limit,
         offset,
-        include: [{ model: Product, as: "product" }],
         order: [["id", "ASC"]],
-        distinct: true, // Để count đúng khi join
       });
 
       res.json({
@@ -118,26 +119,17 @@ export class DashboardController {
       // 2. Get Shopify Stock
       const shopifyStock = await ShopifyService.getInventoryBySku(product.sku_shopify);
 
-      // 3. Update Inventory Model
-      let inventory = await Inventory.findOne({ where: { product_id: product.id } });
-      if (!inventory) {
-        inventory = await Inventory.create({
-          product_id: product.id,
-          nhanh_stock: nhanhStock,
-          shopify_stock: shopifyStock || 0,
-          status: nhanhStock === (shopifyStock || 0) ? "MATCH" : "MISMATCH"
-        });
-      } else {
-        await inventory.update({
-          nhanh_stock: nhanhStock,
-          shopify_stock: shopifyStock || 0,
-          status: nhanhStock === (shopifyStock || 0) ? "MATCH" : "MISMATCH"
-        });
-      }
+      // 3. Update Product Model
+      await product.update({
+        nhanh_stock: nhanhStock,
+        shopify_stock: shopifyStock || 0,
+        inventory_status: nhanhStock === (shopifyStock || 0) ? "MATCH" : "MISMATCH",
+        syncStatus: "SYNCED"
+      });
 
       await NotificationController.createSystemNotification("SUCCESS", `Đã đồng bộ thủ công sản phẩm ${product.name || product.sku_nhanh}`);
 
-      res.json({ message: `Sync triggered for product ${id}`, data: inventory });
+      res.json({ message: `Sync triggered for product ${id}`, data: product });
     } catch (error: any) {
       await NotificationController.createSystemNotification("ERROR", `Lỗi đồng bộ thủ công sản phẩm ID ${id}: ${error.message}`);
       res.status(500).json({ error: error.message });
@@ -183,10 +175,10 @@ export class DashboardController {
     try {
       const totalOrders = await Order.count();
       const failedOrders = await Order.count({ where: { status: "FAILED" } });
-      const inventoryCount = await Inventory.count();
-      const matchCount = await Inventory.count({ where: { status: "MATCH" } });
+      const totalProducts = await Product.count({ where: { sku_shopify: { [Op.ne]: null } } });
+      const matchCount = await Product.count({ where: { inventory_status: "MATCH", sku_shopify: { [Op.ne]: null } } });
 
-      const matchRate = inventoryCount > 0 ? (matchCount / inventoryCount) * 100 : 0;
+      const matchRate = totalProducts > 0 ? (matchCount / totalProducts) * 100 : 0;
 
       res.json({
         totalOrders,
@@ -224,20 +216,7 @@ export class DashboardController {
       });
 
       // Add sync status to each product
-      const productsWithStatus = result.rows.map(p => {
-        const isSynced = !!(p.sku_shopify && p.sku_shopify !== '');
-        return {
-          id: p.id,
-          nhanh_id: p.nhanh_id,
-          sku_nhanh: p.sku_nhanh,
-          sku_shopify: p.sku_shopify,
-          name: p.name,
-          image: p.image,
-          createdAt: p.createdAt,
-          updatedAt: p.updatedAt,
-          syncStatus: isSynced ? 'SYNCED' : 'NOT_SYNCED'
-        };
-      });
+      const productsWithStatus = result.rows;
 
       res.json({
         docs: productsWithStatus,
