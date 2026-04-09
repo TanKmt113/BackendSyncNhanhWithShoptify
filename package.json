@@ -1,5 +1,5 @@
 {
-  "name": "shopify-webhook",
+  "name": "shopify-webhook-tandev",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
