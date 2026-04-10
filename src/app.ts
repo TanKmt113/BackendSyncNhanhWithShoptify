@@ -46,6 +46,13 @@ app.use((err: any, req: any, res: any, next: any) => {
   next();
 });
 app.use("/api", routes);
+app.get("/api/health", (req, res) => {
+  res.json({
+    status: "ok",
+    message: "API is running 🚀",
+    time: new Date()
+  });
+});
 app.use(errorHandler);
 
 export default app;
