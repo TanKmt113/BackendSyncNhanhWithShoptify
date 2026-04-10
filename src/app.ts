@@ -49,7 +49,7 @@ app.use("/api", routes);
 app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
-    message: "API is running 🚀 256",
+    message: "API is running 🚀 2561",
     time: new Date()
   });
 });
