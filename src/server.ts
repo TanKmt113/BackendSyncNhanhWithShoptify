@@ -12,7 +12,7 @@ const server = http.createServer(app);
 // Init Socket.io
 initSocket(server);
 
-sequelize.sync({ alter: true }).then(() => {
+sequelize.sync().then(() => {
     console.log("✅ Database synced");
     server.listen(PORT, () => {
         console.log(`🚀 Server running on port ${PORT}`);

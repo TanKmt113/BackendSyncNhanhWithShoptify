@@ -17833,3 +17833,9 @@
 [2026-03-27 15:09:03] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40752394 thành công. Số lượng ảnh: 1
 [2026-03-27 15:09:04] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40752325 thành công. Số lượng ảnh: 1
 [2026-03-27 15:09:05] [INFO] Cập nhật ảnh cho sản phẩm Nhanh ID 40752324 thành công. Số lượng ảnh: 1
+[2026-04-13 11:50:27] [INFO] Adding 1 new option(s) to product 10467994501429
+[2026-04-13 11:50:28] [INFO] Updated product options and variants for product 10467994501429
+[2026-04-13 11:50:28] [INFO] Adding variant with options: {"option2":"3.0mm"}
+[2026-04-13 11:50:28] [INFO] Successfully added variant Bút Flysea Chrome Marker - 3.0mm to product 10467994501429
+[2026-04-13 11:53:53] [INFO] Adding variant with options: {"option2":"0.7mm"}
+[2026-04-13 11:53:53] [INFO] Successfully added variant Bút Flysea Chrome Marker - 0.7mm to product 10467994501429

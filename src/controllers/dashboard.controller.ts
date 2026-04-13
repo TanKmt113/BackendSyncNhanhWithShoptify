@@ -17,15 +17,21 @@ export class DashboardController {
       const limit = parseInt(req.query.limit as string) || 20;
       const offset = (page - 1) * limit;
       const search = req.query.search as string;
+      const status = req.query.status as string;
 
       // Build where clause for search
       const whereClause: any = {};
       if (search) {
         whereClause[Op.or] = [
-          { '$product.name$': { [Op.like]: `%${search}%` } },
-          { '$product.sku_nhanh$': { [Op.like]: `%${search}%` } },
-          { '$product.sku_shopify$': { [Op.like]: `%${search}%` } }
+          { name: { [Op.like]: `%${search}%` } },
+          { sku_nhanh: { [Op.like]: `%${search}%` } },
+          { sku_shopify: { [Op.like]: `%${search}%` } },
+          { nhanh_id: { [Op.like]: `%${search}%` } }
         ];
+      }
+
+      if (status && status !== "all") {
+        whereClause.inventory_status = status;
       }
 
       const result = await Product.findAndCountAll({
@@ -142,6 +148,7 @@ export class DashboardController {
       const limit = parseInt(req.query.limit as string) || 20;
       const offset = (page - 1) * limit;
       const search = req.query.search as string;
+      const status = req.query.status as string;
 
       // Build where clause for search
       const whereClause: any = {};
@@ -150,6 +157,10 @@ export class DashboardController {
           { shopify_order_id: { [Op.like]: `%${search}%` } },
           { nhanh_order_id: { [Op.like]: `%${search}%` } }
         ];
+      }
+
+      if (status && status !== "all") {
+        whereClause.status = status;
       }
 
       const result = await Order.findAndCountAll({
@@ -196,6 +207,7 @@ export class DashboardController {
       const limit = parseInt(req.query.limit as string) || 20;
       const offset = (page - 1) * limit;
       const search = req.query.search as string;
+      const status = req.query.status as string;
 
       // Build where clause for search
       const whereClause: any = {};
@@ -205,6 +217,10 @@ export class DashboardController {
           { sku_nhanh: { [Op.like]: `%${search}%` } },
           { nhanh_id: { [Op.like]: `%${search}%` } }
         ];
+      }
+
+      if (status && status !== "all") {
+        whereClause.syncStatus = status;
       }
 
       // Get products with pagination

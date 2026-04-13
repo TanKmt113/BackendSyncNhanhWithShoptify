@@ -107,7 +107,6 @@ export class SyncController {
       // 1. Lấy thông tin sản phẩm từ Nhanh.vn
       const productResponse = await NhanhService.getByIdProduct(productId);
 
-      console.log("Nhanh.vn product response:", productResponse);
 
       if (!productResponse || !productResponse.data || !productResponse.code) {
         res.status(404).json({ error: `Không tìm thấy sản phẩm với ID ${productId} trên Nhanh.vn` });

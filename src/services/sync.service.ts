@@ -103,11 +103,12 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
                         sku_nhanh: barcode,
                         sku_shopify: barcode,
                         name: name,
-                        image: image
+                        image: image,
+                        syncStatus: "SYNCED"
                     });
                 } else {
                     // Update sku_shopify nếu chưa có
-                    await product.update({ sku_shopify: barcode, name: name, image: image });
+                    await product.update({ sku_shopify: barcode, name: name, image: image, syncStatus: "SYNCED" });
                 }
                 await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Sản phẩm ${name} đã tồn tại trên Shopify.`);
                 return;
@@ -146,12 +147,11 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
             const success = await ShopifyService.createProductOnShopify(product, productDataWithFilteredChilds);
 
             if (success) {
-                await product.update({ sku_shopify: barcode });
+                await product.update({ sku_shopify: barcode, syncStatus: "SYNCED" });
                 const variantInfo = filteredChilds.length > 0 ? ` với ${filteredChilds.length} biến thể` : "";
                 await NotificationController.createSystemNotification("SUCCESS", `Webhook Nhanh.vn: Đã tạo sản phẩm "${name}"${variantInfo} trên Shopify (Draft).`);
             } else {
                 await NotificationController.createSystemNotification("ERROR", `Webhook Nhanh.vn: Lỗi tạo sản phẩm "${name}" trên Shopify.`);
-                console.error(`[syncProductAdd] Failed to create product ${name} on Shopify`);
             }
 
             return;
@@ -211,10 +211,11 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
                         sku_nhanh: barcode,
                         sku_shopify: barcode,
                         name: name,
-                        image: image
+                        image: image,
+                        syncStatus: "SYNCED"
                     });
                 } else {
-                    await product.update({ sku_shopify: barcode, name: name, image: image });
+                    await product.update({ sku_shopify: barcode, name: name, image: image, syncStatus: "SYNCED" });
                 }
                 await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Biến thể "${name}" đã tồn tại trên Shopify.`);
                 return;
@@ -233,13 +234,15 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
                         sku_nhanh: barcode,
                         sku_shopify: barcode,
                         name: name,
-                        image: image
+                        image: image,
+                        syncStatus: "SYNCED"
                     });
                 } else {
                     await product.update({
                         sku_shopify: barcode,
                         name: name,
-                        image: image
+                        image: image,
+                        syncStatus: "SYNCED"
                     });
                 }
             } else {
@@ -300,7 +303,8 @@ export async function syncProductUpdateFromNhanhWebhook(productData: any) {
                 if (product) {
                     await product.update({
                         name: name,
-                        image: productData.images?.avatar || product.image
+                        image: productData.images?.avatar || product.image,
+                        syncStatus: "SYNCED"
                     });
                 }
             } catch (error: any) {
