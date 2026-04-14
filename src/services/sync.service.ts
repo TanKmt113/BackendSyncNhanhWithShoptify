@@ -87,10 +87,10 @@ export async function syncProductAddFromNhanhWebhook(productData: any) {
             }
 
             // Nếu đã tồn tại trong database và đã có sku_shopify, tức là đã được sync rồi
-            if (product && product.sku_shopify) {
-                await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Sản phẩm ${name} đã được đồng bộ trước đó.`);
-                return;
-            }
+            // if (product && product.sku_shopify) {
+            //     await NotificationController.createSystemNotification("INFO", `Webhook Nhanh.vn: Sản phẩm ${name} đã được đồng bộ trước đó.`);
+            //     return;
+            // }
 
             // Kiểm tra trên Shopify
             const productExists = await ShopifyService.checkProductExistsBySku(barcode);
