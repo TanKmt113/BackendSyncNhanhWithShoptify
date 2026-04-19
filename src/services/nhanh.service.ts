@@ -5,7 +5,7 @@ import {
   NhanhApiResponse,
   NhanhProductListPayload,
   NhanhProductDetails,
-  NhanhPaginator
+  NhanhPaginator,
 } from "../types/nhanh.types";
 
 /**
@@ -16,7 +16,7 @@ export async function getInstallUrl(): Promise<string> {
   const config = await getConfig();
   const returnLink = config.nhanh_return_link;
   const appId = config.nhanh_app_id;
-  const version = '3.0';
+  const version = "3.0";
   return `https://nhanh.vn/oauth?version=${version}&appId=${appId}&returnLink=${returnLink}`;
 }
 
@@ -29,13 +29,16 @@ export async function getInstallUrl(): Promise<string> {
 export async function getCodeToken(accessCode: string) {
   const config = await getConfig();
   let data = {
-    "accessCode": accessCode,
-    "secretKey": config.nhanh_secret_key
+    accessCode: accessCode,
+    secretKey: config.nhanh_secret_key,
   };
 
   try {
     const client = createNhanhClient(config);
-    const response = await client.post(`/app/getaccesstoken?appId=${config.nhanh_app_id}`, data);
+    const response = await client.post(
+      `/app/getaccesstoken?appId=${config.nhanh_app_id}`,
+      data,
+    );
 
     if (response.data?.code === 1 && response.data?.data) {
       const { accessToken, businessId } = response.data.data;
@@ -43,10 +46,12 @@ export async function getCodeToken(accessCode: string) {
       // Lưu accessToken và businessId vào database
       await updateConfig({
         nhanh_app_token: accessToken,
-        nhanh_business_id: businessId.toString()
+        nhanh_business_id: businessId.toString(),
       });
 
-      logger.info(`Đã lưu Access Token và Business ID (${businessId}) vào database thành công.`);
+      logger.info(
+        `Đã lưu Access Token và Business ID (${businessId}) vào database thành công.`,
+      );
 
       return response.data.data;
     }
@@ -64,16 +69,20 @@ export async function getCodeToken(accessCode: string) {
  * @param payload Dữ liệu gửi đi (bao gồm paginator, filters...).
  * @returns Dữ liệu danh sách sản phẩm.
  */
-export async function getProducts(payload: NhanhProductListPayload = {}): Promise<NhanhApiResponse | null> {
+export async function getProducts(
+  payload: NhanhProductListPayload = {},
+): Promise<NhanhApiResponse | null> {
   const config = await getConfig();
   try {
     const client = createNhanhClient(config);
     const data = {
-      ...payload
+      ...payload,
     };
     const url = `/product/list?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`;
     const response = await client.post(url, data);
-    logger.info(`Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: ${JSON.stringify(payload)}).`);
+    logger.info(
+      `Lấy danh sách sản phẩm từ Nhanh.vn thành công (Payload: ${JSON.stringify(payload)}).`,
+    );
     return response.data;
   } catch (error) {
     logger.error("Lỗi khi lấy danh sách sản phẩm từ Nhanh.vn:", error);
@@ -92,8 +101,8 @@ export async function getAllProducts(): Promise<any[]> {
   // Initial payload
   let payload: NhanhProductListPayload = {
     paginator: {
-      size: 50
-    }
+      size: 50,
+    },
   };
 
   let pageCount = 0;
@@ -107,7 +116,11 @@ export async function getAllProducts(): Promise<any[]> {
     const res = await getProducts(payload);
 
     if (res && res.code === 1) {
-      const products = Array.isArray(res.data) ? res.data : (res.data ? Object.values(res.data) : []);
+      const products = Array.isArray(res.data)
+        ? res.data
+        : res.data
+          ? Object.values(res.data)
+          : [];
 
       if (products.length > 0) {
         allProducts = allProducts.concat(products);
@@ -121,7 +134,9 @@ export async function getAllProducts(): Promise<any[]> {
 
         // Safety break
         if (pageCount > 500) {
-          logger.warn("Đạt giới hạn 500 trang, dừng đồng bộ để tránh lặp vô hạn.");
+          logger.warn(
+            "Đạt giới hạn 500 trang, dừng đồng bộ để tránh lặp vô hạn.",
+          );
           hasMore = false;
         }
       } else {
@@ -141,16 +156,21 @@ export async function getAllProducts(): Promise<any[]> {
  * @param id ID của sản phẩm.
  * @returns Dữ liệu chi tiết sản phẩm.
  */
-export async function getByIdProduct(id: number): Promise<NhanhApiResponse<NhanhProductDetails> | null> {
+export async function getByIdProduct(
+  id: number,
+): Promise<NhanhApiResponse<NhanhProductDetails> | null> {
   const config = await getConfig();
   try {
     const client = createNhanhClient(config);
     const data = {
       filters: {
-        id: id
-      }
+        id: id,
+      },
     };
-    const response = await client.post(`/product/detail?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`, data);
+    const response = await client.post(
+      `/product/detail?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`,
+      data,
+    );
     return response.data;
   } catch (error) {
     logger.error(`Lỗi khi lấy thông tin sản phẩm ID ${id} từ Nhanh.vn:`, error);
@@ -179,40 +199,50 @@ export async function createOrderFromShopify(orderData: any) {
           quantity: item.quantity,
           discount: Number(item.total_discount || 0),
         };
-      })
+      }),
     );
 
     // 2. Ánh xạ thông tin thanh toán
-    const isPaid = orderData.financial_status === 'paid';
+    const isPaid = orderData.financial_status === "paid";
     const totalAmount = Number(orderData.total_price || 0);
 
     const paymentPayload = {
       depositAmount: 0,
       depositAccountId: 0,
       transferAmount: isPaid ? totalAmount : 0,
-      transferAccountId: 0
+      transferAccountId: 0,
     };
 
     if (orderData.shipping_address === null) {
       orderData.shipping_address = orderData.billing_address || {};
-      logger.warn(`Đơn hàng Shopify ID ${orderData.id} không có địa chỉ giao hàng, sử dụng địa chỉ thanh toán thay thế.`);
+      logger.warn(
+        `Đơn hàng Shopify ID ${orderData.id} không có địa chỉ giao hàng, sử dụng địa chỉ thanh toán thay thế.`,
+      );
     }
     // Tìm kiếm ID Thành phố và Quận/Huyện trên Nhanh.vn
-    const cityId = await searchShipping('CITY', null, orderData.shipping_address?.city);
-    const districtId = await searchShipping('DISTRICT', cityId, orderData.shipping_address?.address1);
+    const cityId = await searchShipping(
+      "CITY",
+      null,
+      orderData.shipping_address?.city,
+    );
+    const districtId = await searchShipping(
+      "DISTRICT",
+      cityId,
+      orderData.shipping_address?.address1,
+    );
 
     // 3. Xây dựng Payload đơn hàng cho Nhanh.vn
     const payload = {
       info: {
         type: 1,
-        depotId: null,
+        depotId: 107025,
         saleId: null,
         createdById: null,
         description: "Đơn hàng từ Shopify",
       },
       channel: {
         appOrderId: `${orderData.id}_${config.nhanh_app_id}`,
-        sourceName: 'Website'
+        sourceName: "Website",
       },
       shippingAddress: {
         name: orderData.shipping_address?.name || "",
@@ -220,9 +250,10 @@ export async function createOrderFromShopify(orderData: any) {
         cityId: cityId,
         districtId: districtId,
         wardId: null,
-        address: `${orderData.shipping_address?.address1 || ""} ${orderData.shipping_address?.address2 || ""}`.trim(),
+        address:
+          `${orderData.shipping_address?.address1 || ""} ${orderData.shipping_address?.address2 || ""}`.trim(),
         cityName: orderData.shipping_address?.city || "",
-        locationVersion: "v1"
+        locationVersion: "v1",
       },
       carrier: {
         sendCarrierType: 2,
@@ -234,28 +265,36 @@ export async function createOrderFromShopify(orderData: any) {
         declaredValue: totalAmount,
         extraServices: {
           isDocument: 0,
-          handDelivery: 1
-        }
+          handDelivery: 1,
+        },
       },
       products: products,
-      payment: paymentPayload
+      payment: paymentPayload,
     };
 
     const client = createNhanhClient(config);
     const res = await client.post(
       `/order/add?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`,
-      payload
+      payload,
     );
 
     if (res.data.code === 1) {
-      logger.info(`Tạo đơn hàng thành công trên Nhanh.vn cho đơn Shopify ${orderData.id}. ID Nhanh: ${res.data.data?.id}`);
+      logger.info(
+        `Tạo đơn hàng thành công trên Nhanh.vn cho đơn Shopify ${orderData.id}. ID Nhanh: ${res.data.data?.id}`,
+      );
     } else {
-      logger.error(`Lỗi khi tạo đơn hàng trên Nhanh.vn cho đơn Shopify ${orderData.id}:`, res.data);
+      logger.error(
+        `Lỗi khi tạo đơn hàng trên Nhanh.vn cho đơn Shopify ${orderData.id}:`,
+        res.data,
+      );
     }
 
     return res.data;
   } catch (error) {
-    logger.error(`Lỗi ngoại lệ khi tạo đơn hàng từ Shopify ${orderData.id}:`, error);
+    logger.error(
+      `Lỗi ngoại lệ khi tạo đơn hàng từ Shopify ${orderData.id}:`,
+      error,
+    );
     return null;
   }
 }
@@ -271,8 +310,8 @@ export async function getItemWithBarCode(barcode: string) {
     const client = createNhanhClient(config);
     const data = {
       filters: {
-        name: barcode
-      }
+        name: barcode,
+      },
     };
     const url = `product/list?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`;
     const response = await client.post(url, data);
@@ -297,8 +336,8 @@ export async function getItemWithID(id: number) {
     const client = createNhanhClient(config);
     const data = {
       filters: {
-        ids: [id]
-      }
+        ids: [id],
+      },
     };
     const url = `product/list?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`;
     const response = await client.post(url, data);
@@ -321,17 +360,21 @@ const normalize = (str: string) => {
   if (!str) return "";
   return str
     .toLowerCase()
-    .normalize("NFD")              // Khử dấu tiếng Việt
+    .normalize("NFD") // Khử dấu tiếng Việt
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/^(tinh|thanh pho|tp|quan|huyen|phuong|xa)\.?\s+/g, "") // Xóa tiền tố
-    .replace(/\s+/g, " ")          // Xóa khoảng trắng thừa
+    .replace(/\s+/g, " ") // Xóa khoảng trắng thừa
     .trim();
 };
 
 /**
  * Tìm kiếm ID địa lý (Tỉnh/Thành, Quận/Huyện) trên Nhanh.vn dựa trên tên.
  */
-async function searchShipping(type: string, parentId: number | null, name: string) {
+async function searchShipping(
+  type: string,
+  parentId: number | null,
+  name: string,
+) {
   const config = await getConfig();
   try {
     if (!name) return null;
@@ -340,12 +383,19 @@ async function searchShipping(type: string, parentId: number | null, name: strin
       filters: {
         locationVersion: "v1",
         type: type,
-        parentId: parentId
-      }
+        parentId: parentId,
+      },
     };
-    const response = await client.post(`shipping/location?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`, data);
+    const response = await client.post(
+      `shipping/location?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`,
+      data,
+    );
     if (response.data.code === 1) {
-      return response.data.data.find((e: any) => normalize(e.name) === normalize(name))?.id || null;
+      return (
+        response.data.data.find(
+          (e: any) => normalize(e.name) === normalize(name),
+        )?.id || null
+      );
     }
     return null;
   } catch (error) {
@@ -360,7 +410,10 @@ async function searchShipping(type: string, parentId: number | null, name: strin
  * @param imageUrls Danh sách URL ảnh.
  * @returns true nếu thành công, false nếu thất bại.
  */
-export async function updateProductImages(nhanhId: string, imageUrls: string[]): Promise<boolean> {
+export async function updateProductImages(
+  nhanhId: string,
+  imageUrls: string[],
+): Promise<boolean> {
   const config = await getConfig();
   try {
     if (!nhanhId || imageUrls.length === 0) return false;
@@ -371,22 +424,30 @@ export async function updateProductImages(nhanhId: string, imageUrls: string[]):
       {
         id: parseInt(nhanhId),
         mode: "update",
-        images: imageUrls
-      }
+        images: imageUrls,
+      },
     ];
 
     const url = `/product/externalimage?appId=${config.nhanh_app_id}&businessId=${config.nhanh_business_id}`;
     const response = await client.post(url, data);
 
     if (response.data?.code === 1) {
-      logger.info(`Cập nhật ảnh cho sản phẩm Nhanh ID ${nhanhId} thành công. Số lượng ảnh: ${imageUrls.length}`);
+      logger.info(
+        `Cập nhật ảnh cho sản phẩm Nhanh ID ${nhanhId} thành công. Số lượng ảnh: ${imageUrls.length}`,
+      );
       return true;
     }
 
-    logger.error(`Lỗi khi cập nhật ảnh cho sản phẩm Nhanh ID ${nhanhId}:`, response.data);
+    logger.error(
+      `Lỗi khi cập nhật ảnh cho sản phẩm Nhanh ID ${nhanhId}:`,
+      response.data,
+    );
     return false;
   } catch (error) {
-    logger.error(`Lỗi ngoại lệ khi cập nhật ảnh cho sản phẩm Nhanh ID ${nhanhId}:`, error);
+    logger.error(
+      `Lỗi ngoại lệ khi cập nhật ảnh cho sản phẩm Nhanh ID ${nhanhId}:`,
+      error,
+    );
     return false;
   }
 }
