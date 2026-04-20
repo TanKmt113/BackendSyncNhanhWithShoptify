@@ -24,12 +24,11 @@ import {
 } from "../utils/apiHelper";
 
 /**
- * Kiểm tra và cập nhật trạng thái sản phẩm về "unlisted" nếu tất cả biến thể đều hết hàng
- * @param client Shopify client instance
- * @param variantId ID của biến thể GraphQL
- * @returns true nếu thành công hoặc không cần cập nhật, false nếu có lỗi
+ * Cập nhật trạng thái sản phẩm theo tồn kho của tất cả biến thể.
+ * - Tất cả biến thể hết hàng: chuyển về "unlisted".
+ * - Có biến thể còn hàng: nếu đang "unlisted" thì chuyển lại "active".
  */
-async function checkAndUpdateProductStatusIfOutOfStock(client: any, variantId: string): Promise<boolean> {
+async function syncProductStatusByInventory(client: any, variantId: string): Promise<boolean> {
   try {
     // Lấy Product ID và tất cả variants từ variant
     const getProductQuery = `
@@ -68,22 +67,37 @@ async function checkAndUpdateProductStatusIfOutOfStock(client: any, variantId: s
     const allVariantsOutOfStock = allVariants.every(edge =>
       (edge.node.inventoryQuantity || 0) < 1
     );
+    const hasAnyVariantInStock = allVariants.some(edge =>
+      (edge.node.inventoryQuantity || 0) > 0
+    );
+
+    const numericProductId = extractNumericId(product.id);
 
     if (allVariantsOutOfStock) {
       // Chuyển trạng thái sản phẩm về unlisted nếu tất cả biến thể đều hết hàng
-      const numericProductId = extractNumericId(product.id);
-
       await client.put(`/products/${numericProductId}.json`, {
         product: {
           status: "unlisted"
         }
       });
       logger.info(`Đã chuyển sản phẩm (ID: ${numericProductId}) về trạng thái unlisted do tất cả biến thể hết hàng`);
+    } else if (hasAnyVariantInStock) {
+      const productRes = await client.get(`/products/${numericProductId}.json`);
+      const currentStatus = productRes.data?.product?.status;
+
+      if (currentStatus === "unlisted") {
+        await client.put(`/products/${numericProductId}.json`, {
+          product: {
+            status: "active"
+          }
+        });
+        logger.info(`Đã chuyển sản phẩm (ID: ${numericProductId}) từ unlisted sang active do tồn kho lớn hơn 0`);
+      }
     }
 
     return true;
   } catch (error: any) {
-    return handleApiError(error, "Lỗi khi kiểm tra và cập nhật trạng thái sản phẩm");
+    return handleApiError(error, "Lỗi khi đồng bộ trạng thái sản phẩm theo tồn kho");
   }
 }
 
@@ -242,11 +256,8 @@ export async function updateInventoryByBarcode(sku: string, newQuantity: number)
 
     logger.info(`Đã đồng bộ SKU ${sku}: Số lượng mới ${newQuantity}`);
 
-    // Nếu số lượng < 1, kiểm tra và cập nhật trạng thái sản phẩm nếu cần
-    if (newQuantity < 1) {
-      const variantId = variantEdges[0].node.id;
-      await checkAndUpdateProductStatusIfOutOfStock(client, variantId);
-    }
+    const variantId = variantEdges[0].node.id;
+    await syncProductStatusByInventory(client, variantId);
 
     return true;
 
