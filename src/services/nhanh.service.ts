@@ -8,6 +8,99 @@ import {
   NhanhPaginator,
 } from "../types/nhanh.types";
 
+function toNumber(value: any): number {
+  const parsed = Number(value || 0);
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function getMoneyAmount(moneySet: any): number | null {
+  const amount =
+    moneySet?.shop_money?.amount ??
+    moneySet?.presentment_money?.amount ??
+    moneySet?.amount;
+
+  if (amount === undefined || amount === null) return null;
+  return toNumber(amount);
+}
+
+function getLineItemDiscount(item: any): number {
+  const allocationDiscount = Array.isArray(item.discount_allocations)
+    ? item.discount_allocations.reduce(
+        (total: number, allocation: any) =>
+          total +
+          (allocation.amount !== undefined && allocation.amount !== null
+            ? toNumber(allocation.amount)
+            : getMoneyAmount(allocation.amount_set) || 0),
+        0,
+      )
+    : 0;
+
+  return allocationDiscount || toNumber(item.total_discount);
+}
+
+function getProductDiscountAmount(orderData: any): number {
+  const lineItemDiscount = Array.isArray(orderData.line_items)
+    ? orderData.line_items.reduce(
+        (total: number, item: any) => total + getLineItemDiscount(item),
+        0,
+      )
+    : 0;
+
+  if (lineItemDiscount > 0) return lineItemDiscount;
+
+  const discountApplications = Array.isArray(orderData.discount_applications)
+    ? orderData.discount_applications
+    : [];
+  const isShippingOnlyDiscount =
+    discountApplications.length > 0 &&
+    discountApplications.every(
+      (discount: any) => discount?.target_type === "shipping_line",
+    );
+
+  if (isShippingOnlyDiscount) return 0;
+
+  return (
+    toNumber(orderData.current_total_discounts) ||
+    toNumber(orderData.total_discounts)
+  );
+}
+
+function getDiscountCode(orderData: any): string | null {
+  const discountCodes = Array.isArray(orderData.discount_codes)
+    ? orderData.discount_codes
+        .map((discount: any) => discount?.code)
+        .filter(Boolean)
+    : [];
+
+  const applicationCodes = Array.isArray(orderData.discount_applications)
+    ? orderData.discount_applications
+        .map((discount: any) => discount?.code || discount?.title)
+        .filter(Boolean)
+    : [];
+
+  const codes = Array.from(new Set([...discountCodes, ...applicationCodes]));
+  return codes.length > 0 ? codes.join(", ") : null;
+}
+
+function getCustomerShipFee(orderData: any): number {
+  const currentShippingFee = getMoneyAmount(orderData.current_shipping_price_set);
+  if (currentShippingFee !== null) return currentShippingFee;
+
+  if (!Array.isArray(orderData.shipping_lines)) return 0;
+
+  return orderData.shipping_lines.reduce((total: number, line: any) => {
+    const discountedPrice =
+      getMoneyAmount(line.current_discounted_price_set) ??
+      (line.discounted_price !== undefined && line.discounted_price !== null
+        ? toNumber(line.discounted_price)
+        : null) ??
+      getMoneyAmount(line.discounted_price_set) ??
+      toNumber(line.price);
+
+    return total + discountedPrice;
+  }, 0);
+}
+
 /**
  * Lấy URL cài đặt ứng dụng Nhanh.vn (OAuth).
  * @returns Chuỗi URL để người dùng thực hiện kết nối.
@@ -188,6 +281,9 @@ export async function createOrderFromShopify(orderData: any) {
   const config = await getConfig();
   try {
     logger.info(`Bắt đầu xử lý tạo đơn hàng từ Shopify ID: ${orderData.id}`);
+    const productDiscountAmount = getProductDiscountAmount(orderData);
+    const discountCode = getDiscountCode(orderData);
+    const customerShipFee = getCustomerShipFee(orderData);
 
     // 1. Ánh xạ sản phẩm: Tìm ID sản phẩm trên Nhanh.vn dựa trên SKU của Shopify
     const products = await Promise.all(
@@ -197,7 +293,7 @@ export async function createOrderFromShopify(orderData: any) {
           id: itemId,
           price: Number(item.price),
           quantity: item.quantity,
-          discount: Number(item.total_discount || 0),
+          discount: 0,
         };
       }),
     );
@@ -206,12 +302,21 @@ export async function createOrderFromShopify(orderData: any) {
     const isPaid = orderData.financial_status === "paid";
     const totalAmount = Number(orderData.total_price || 0);
 
-    const paymentPayload = {
+    const paymentPayload: any = {
       depositAmount: 0,
       depositAccountId: 0,
       transferAmount: isPaid ? totalAmount : 0,
       transferAccountId: 0,
     };
+
+    if (discountCode) {
+      paymentPayload.couponCode = discountCode;
+    }
+
+    if (productDiscountAmount > 0) {
+      paymentPayload.discountAmount = productDiscountAmount;
+      paymentPayload.discountType = "cash";
+    }
 
     if (orderData.shipping_address === null) {
       orderData.shipping_address = orderData.billing_address || {};
@@ -260,7 +365,7 @@ export async function createOrderFromShopify(orderData: any) {
         id: null,
         serviceCode: null,
         shopId: null,
-        customerShipFee: Number(orderData.shipping_lines?.[0]?.price || 0),
+        customerShipFee: customerShipFee,
         isDeclaredFee: 1,
         declaredValue: totalAmount,
         extraServices: {
